@@ -2,12 +2,6 @@
 
 import Giscus from "@giscus/react";
 
-// TODO: After creating the GitHub repo and enabling Discussions:
-// 1. Go to https://giscus.app
-// 2. Enter repo: Roger-Li/rl-field-notes
-// 3. Copy the repoId and categoryId values
-// 4. Paste them below to replace the empty strings
-
 export function GiscusComments() {
   return (
     <div className="mt-12 pt-8 border-t border-stone-200">
