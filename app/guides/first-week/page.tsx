@@ -1,0 +1,640 @@
+"use client";
+
+import { useState } from "react";
+import { Badge } from "@/components/Badge";
+import { DataTable } from "@/components/Table";
+import { Callout } from "@/components/Callout";
+import { Source } from "@/components/Source";
+import { GiscusComments } from "@/components/GiscusComments";
+
+const sections = [
+  { id: "induction", icon: "\uD83C\uDFE5", title: "The Induction", subtitle: "What's about to happen" },
+  { id: "hospital-bag", icon: "\uD83C\uDF92", title: "Hospital Bag", subtitle: "Pack checklist" },
+  { id: "labor-role", icon: "\uD83D\uDCAA", title: "Your Role in Labor", subtitle: "How to actually help" },
+  { id: "newborn", icon: "\uD83D\uDC76", title: "Newborn Care", subtitle: "First days survival" },
+  { id: "feeding", icon: "\uD83C\uDF7C", title: "Feeding", subtitle: "Schedules & tracking" },
+  { id: "sleep", icon: "\uD83D\uDE34", title: "Safe Sleep", subtitle: "AAP guidelines" },
+  { id: "mother", icon: "\u2764\uFE0F", title: "Caring for Mom", subtitle: "Postpartum recovery" },
+  { id: "danger", icon: "\uD83D\uDEA8", title: "Red Flags", subtitle: "When to call 911" },
+];
+
+function InductionSection() {
+  return (
+    <div>
+      <p className="text-stone-600 leading-relaxed mb-4">
+        An induction at 39–40 weeks is common and well-supported by evidence. The ARRIVE trial (published in the New England Journal of Medicine, 2018) found that elective induction at 39 weeks in low-risk first-time pregnancies actually <strong>reduced</strong> C-section rates compared to waiting. So breathe — this is a well-trodden path.
+      </p>
+
+      <h3 className="font-bold text-stone-800 mt-6 mb-3 text-lg">How induction typically works</h3>
+      <p className="text-stone-600 text-sm mb-2">The process usually happens in stages. Your OB will pick methods based on how &quot;ready&quot; the cervix is (measured by something called a Bishop Score).</p>
+
+      <DataTable
+        headers={["Stage", "Method", "What Happens", "Timeline"]}
+        rows={[
+          [
+            <Badge key="s1" color="blue">Step 1</Badge>,
+            "Cervical Ripening",
+            "Prostaglandin pill (misoprostol) placed vaginally or under tongue, OR a balloon catheter inserted into cervix",
+            "Evening before → overnight",
+          ],
+          [
+            <Badge key="s2" color="blue">Step 2</Badge>,
+            "Pitocin IV",
+            "Synthetic oxytocin drip started — causes contractions to begin/strengthen",
+            "Morning after ripening",
+          ],
+          [
+            <Badge key="s3" color="blue">Step 3</Badge>,
+            "Breaking Water (AROM)",
+            "Doctor uses a small hook to rupture the amniotic sac. Painless — just a warm gush of fluid",
+            "When cervix is dilated enough",
+          ],
+          [
+            <Badge key="s4" color="amber">Variable</Badge>,
+            "Epidural",
+            "Anesthesia placed in the spine for pain management. Partner's choice — not a failure",
+            "Whenever she requests it",
+          ],
+        ]}
+      />
+
+      <Callout type="warn" title="Expect it to take a while">
+        For first-time mothers, inductions commonly take 24–36+ hours from the start of cervical ripening to delivery. Many hospitals admit you the evening before. Pack entertainment, snacks, and patience.
+      </Callout>
+
+      <div className="mt-3 flex flex-wrap gap-3">
+        <Source name="UCLA Health – Induction" url="https://www.uclahealth.org/news/article/what-expect-with-labor-induction" />
+        <Source name="Nebraska Medicine – Induction" url="https://www.nebraskamed.com/health/conditions-and-services/womens-health/what-to-expect-during-labor-induction" />
+        <Source name="ARRIVE Trial (NEJM)" url="https://www.nejm.org/doi/full/10.1056/NEJMoa1800566" />
+      </div>
+    </div>
+  );
+}
+
+function HospitalBagSection() {
+  return (
+    <div>
+      <p className="text-stone-600 leading-relaxed mb-4">
+        You may be there 2–4 days total (induction + recovery). Pack for both of you, plus baby&apos;s going-home outfit.
+      </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {[
+          {
+            title: "For Her",
+            color: "bg-rose-50 border-rose-200",
+            items: [
+              "ID, insurance card, hospital paperwork",
+              "Birth plan (printed copies)",
+              "Comfortable robe / nursing-friendly gown",
+              "Slippers with grip + flip flops for shower",
+              "Lip balm (hospitals are DRY)",
+              "Hair ties, toiletries",
+              "Nursing bra & breast pads",
+              "Going-home outfit (maternity size — she'll still look ~6mo pregnant)",
+              "Phone charger (long cable!)",
+              "Pillow from home (put a colored case so it's not confused)",
+            ],
+          },
+          {
+            title: "For You",
+            color: "bg-sky-50 border-sky-200",
+            items: [
+              "Change of clothes (2–3 days worth)",
+              "Toiletries + deodorant",
+              "Snacks (protein bars, nuts, jerky)",
+              "Phone charger + portable battery",
+              "Cash for vending machines / cafeteria",
+              "Entertainment (book, tablet, headphones)",
+              "Comfortable shoes",
+              "A jacket (hospitals run cold)",
+              "A pillow + blanket (your 'bed' will be a chair)",
+            ],
+          },
+          {
+            title: "For Baby",
+            color: "bg-amber-50 border-amber-200",
+            items: [
+              "Infant car seat (installed and inspected!)",
+              "Going-home outfit (newborn + 0-3mo size)",
+              "Receiving blanket",
+              "Hat and socks/mittens",
+              "Diapers + wipes (hospital usually provides but bring backup)",
+              "Swaddle blanket",
+            ],
+          },
+        ].map((col) => (
+          <div key={col.title} className={`rounded-lg border p-4 ${col.color}`}>
+            <h4 className="font-bold text-stone-800 mb-3">{col.title}</h4>
+            <ul className="space-y-1.5">
+              {col.items.map((item, i) => (
+                <li key={i} className="text-sm text-stone-600 flex items-start gap-2">
+                  <span className="text-stone-400 mt-0.5">{"\u25FB"}</span> {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+      <Callout type="tip" title="Pro tip: Install the car seat NOW">
+        Many hospitals won&apos;t discharge the baby without seeing a properly installed car seat. Rear-facing, in the back seat, at a 45° angle. Your local fire station will often inspect it for free.
+      </Callout>
+    </div>
+  );
+}
+
+function LaborRoleSection() {
+  return (
+    <div>
+      <p className="text-stone-600 leading-relaxed mb-4">
+        Your job is simple in concept, hard in execution: <strong>be present, be calm, be her advocate</strong>. You can&apos;t take the pain away, but you can make it more bearable. Here&apos;s a concrete breakdown.
+      </p>
+
+      <DataTable
+        headers={["Phase", "Duration", "What She Feels", "What YOU Do"]}
+        rows={[
+          [
+            <span key="p1"><Badge color="green">Early Labor</Badge><br/><span className="text-xs text-stone-400">0–6 cm</span></span>,
+            "Hours to a day+",
+            "Mild → moderate contractions, can still talk through them",
+            "Keep her hydrated, fed (if allowed), relaxed. Time contractions. Watch shows together. Let her rest.",
+          ],
+          [
+            <span key="p2"><Badge color="amber">Active Labor</Badge><br/><span className="text-xs text-stone-400">6–8 cm</span></span>,
+            "2–8 hours",
+            "Strong contractions 3–5 min apart, can't talk through them",
+            "Counter-pressure on lower back. Ice chips. Breathing cues. Verbal encouragement. DON'T take mood changes personally.",
+          ],
+          [
+            <span key="p3"><Badge color="red">Transition</Badge><br/><span className="text-xs text-stone-400">8–10 cm</span></span>,
+            "30 min – 2 hrs",
+            "Most intense phase. Nausea, shaking, \"I can't do this\" is common",
+            "Stay close. One contraction at a time. Hold her hand. Wipe her face. She may yell at you — that's normal and not personal.",
+          ],
+          [
+            <span key="p4"><Badge color="purple">Pushing</Badge><br/><span className="text-xs text-stone-400">10 cm</span></span>,
+            "20 min – 3 hrs",
+            "Urge to push, intense pressure",
+            "Support her position (hold a leg, support her back). Count during pushes if she wants. Encourage. Stay near her head unless she wants you elsewhere.",
+          ],
+        ]}
+      />
+
+      <h3 className="font-bold text-stone-800 mt-6 mb-3 text-lg">Concrete things to say (and not say)</h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
+          <h4 className="font-bold text-emerald-800 mb-2">{"\u2713"} Say This</h4>
+          <ul className="text-sm text-emerald-700 space-y-1.5">
+            <li>&quot;You&apos;re doing amazing&quot;</li>
+            <li>&quot;One contraction at a time&quot;</li>
+            <li>&quot;I&apos;m right here&quot;</li>
+            <li>&quot;What do you need right now?&quot;</li>
+            <li>&quot;Breathe with me&quot; (then actually breathe slow)</li>
+            <li>&quot;Whatever you decide is the right call&quot; (re: epidural, etc.)</li>
+          </ul>
+        </div>
+        <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+          <h4 className="font-bold text-red-800 mb-2">{"\u2717"} Don&apos;t Say This</h4>
+          <ul className="text-sm text-red-700 space-y-1.5">
+            <li>&quot;I know how you feel&quot; (you don&apos;t)</li>
+            <li>&quot;Calm down&quot; / &quot;Relax&quot;</li>
+            <li>&quot;My mom says you should...&quot;</li>
+            <li>&quot;Are you sure you need the epidural?&quot;</li>
+            <li>Anything about how tired/hungry/bored YOU are</li>
+            <li>Don&apos;t narrate what you see happening down there unless asked</li>
+          </ul>
+        </div>
+      </div>
+
+      <Callout type="info" title="You're also her translator">
+        Know her birth plan. If she can&apos;t speak during contractions, YOU communicate her preferences to the nurses and doctors. This is one of the most valuable things you can do.
+      </Callout>
+
+      <div className="mt-3">
+        <Source name="Cleveland Clinic – Labor Support" url="https://health.clevelandclinic.org/how-to-support-your-partner-during-labor" />
+      </div>
+    </div>
+  );
+}
+
+function NewbornSection() {
+  return (
+    <div>
+      <p className="text-stone-600 leading-relaxed mb-4">
+        Newborns are simultaneously tougher and more fragile than you&apos;d expect. Here&apos;s the stuff that actually matters in the first week.
+      </p>
+
+      <h3 className="font-bold text-stone-800 mt-4 mb-3 text-lg">Immediately after birth</h3>
+      <DataTable
+        headers={["What Happens", "Details"]}
+        rows={[
+          ["Skin-to-skin contact", "Baby goes directly on mom's chest. This regulates baby's temperature, heart rate, and breathing. AAP recommends at least 1 hour. Dad gets skin-to-skin too — do it as much as possible."],
+          ["First breastfeed", "Usually attempted within the first hour. Don't panic if it doesn't go perfectly."],
+          ["APGAR scores", "Nurses score baby at 1 and 5 minutes (appearance, pulse, grimace, activity, respiration). Scale of 0-10. 7+ is normal."],
+          ["Newborn procedures", "Vitamin K shot (prevents bleeding disorder), erythromycin eye ointment (prevents infection), hepatitis B vaccine, hearing screen, blood spot screen."],
+          ["Weight & measurements", "Average is 6–9 lbs, 19–21 inches. Baby will lose up to 10% of birth weight in first days — this is NORMAL."],
+        ]}
+      />
+
+      <h3 className="font-bold text-stone-800 mt-6 mb-3 text-lg">Daily care basics</h3>
+      <DataTable
+        headers={["Task", "How-To", "Frequency"]}
+        compact
+        rows={[
+          ["Diaper changes", "Wipe front to back (especially girls). Wait for the umbilical cord stump area to dry. Use petroleum jelly on circumcision site.", "8-12x/day"],
+          ["Umbilical cord care", "Keep it dry and clean. Fold diaper below it. It falls off in 1–3 weeks. No rubbing alcohol needed (outdated advice).", "Every change"],
+          ["Bathing", "Sponge baths ONLY until cord falls off. Warm water, mild soap. Support head/neck at all times.", "2-3x/week max"],
+          ["Temperature check", "Rectal thermometer is the gold standard for newborns. Normal: 97.7–99.5°F (36.5–37.5°C).", "When baby feels warm/cool"],
+          ["Holding/supporting", "ALWAYS support the head and neck. The neck muscles are very weak for the first ~4 months.", "Every single time"],
+          ["Tummy time", "Start within days of birth. Short sessions (3–5 min) while baby is awake and supervised. Builds neck/core strength.", "Several times/day"],
+        ]}
+      />
+
+      <Callout type="tip" title="The 5 S's — your secret weapon for soothing">
+        From Dr. Harvey Karp&apos;s method, widely endorsed by pediatricians: <strong>Swaddle</strong> (snug wrap), <strong>Side/Stomach</strong> position (for holding — NOT sleeping), <strong>Shush</strong> (loud white noise), <strong>Swing</strong> (gentle rhythmic motion), <strong>Suck</strong> (pacifier or finger). These mimic the womb and can stop crying fast.
+      </Callout>
+
+      <Callout type="info" title="Schedule the first pediatrician visit">
+        AAP recommends baby be seen 3–5 days after birth and within 48–72 hours of hospital discharge. Book this appointment NOW if you haven&apos;t already.
+      </Callout>
+
+      <div className="mt-3 flex flex-wrap gap-3">
+        <Source name="AAP – Newborn Visit" url="https://www.aap.org/en/patient-care/newborn-and-infant-nutrition/newborn-and-infant-health-assessment-and-promotion/newborn-visit/" />
+        <Source name="AAP – First Office Visit" url="https://www.aap.org/en/patient-care/newborn-and-infant-nutrition/newborn-and-infant-health-assessment-and-promotion/first-office-visit-3-5-days/" />
+      </div>
+    </div>
+  );
+}
+
+function FeedingSection() {
+  return (
+    <div>
+      <p className="text-stone-600 leading-relaxed mb-4">
+        Feeding is the #1 thing you&apos;ll be doing. Whether breast or formula, here&apos;s what to know.
+      </p>
+
+      <h3 className="font-bold text-stone-800 mt-4 mb-3 text-lg">Breastfeeding</h3>
+      <p className="text-sm text-stone-600 mb-3">
+        Interesting fact: breast milk doesn&apos;t &quot;come in&quot; for 2–5 days. Before that, the breasts produce <strong>colostrum</strong> — a thick, yellow, nutrient-dense liquid that&apos;s basically liquid gold for the baby&apos;s immune system. It comes in tiny amounts, but a newborn&apos;s stomach is only marble-sized, so it&apos;s enough.
+      </p>
+
+      <DataTable
+        headers={["Day", "Baby's Stomach Size", "Feed Amount", "Expected Diapers (wet/dirty)"]}
+        compact
+        rows={[
+          ["Day 1", "Cherry (~5-7 mL)", "1-2 tsp per feed", "1 wet / 1 dirty"],
+          ["Day 2", "Walnut (~15 mL)", "~0.5 oz per feed", "2 wet / 2 dirty"],
+          ["Day 3", "Walnut–Apricot (~25 mL)", "~0.5-1 oz per feed", "3 wet / 3 dirty (transitioning stool)"],
+          ["Day 5+", "Egg (~50 mL)", "1-2 oz per feed", "6+ wet / 3-4 dirty (yellow, seedy)"],
+          ["Week 2+", "Peach", "2-3 oz per feed", "6+ wet / 3+ dirty"],
+        ]}
+      />
+
+      <Callout type="info" title="How YOU help with breastfeeding">
+        You can&apos;t physically do this part, but you are CRITICAL to its success. Bring her water (she&apos;ll be incredibly thirsty). Get pillows arranged. Burp the baby after feeds. Track feeds in an app. Handle all diaper changes you can. Learn to spot hunger cues — rooting (turning head), lip smacking, fist sucking — before baby starts crying (crying is a late hunger signal).
+      </Callout>
+
+      <h3 className="font-bold text-stone-800 mt-6 mb-3 text-lg">Formula feeding</h3>
+      <DataTable
+        headers={["Detail", "Guidance"]}
+        rows={[
+          ["Amount", "~2-3 oz every 2-3 hours after the first few days (~20 oz/day)"],
+          ["Type", "Always use iron-fortified formula (AAP recommendation)"],
+          ["Prep", "Follow instructions EXACTLY. Don't dilute or concentrate. Use room-temp or warm water (never microwave)."],
+          ["Vitamin D", "If breastfed: 400 IU liquid vitamin D drops daily, starting in first few days. Formula-fed: once baby drinks 32+ oz/day of formula, supplementation isn't needed."],
+        ]}
+      />
+
+      <h3 className="font-bold text-stone-800 mt-6 mb-3 text-lg">Burping</h3>
+      <p className="text-sm text-stone-600">
+        Burp after every 2-3 oz (formula) or when switching breasts. Three positions: over your shoulder, sitting on your lap with chin supported, or face-down across your lap. Pat gently but firmly on the back. Some burps take a minute — be patient.
+      </p>
+
+      <div className="mt-4 flex flex-wrap gap-3">
+        <Source name="AAP – Newborn Nutrition" url="https://www.aap.org/en/patient-care/newborn-and-infant-nutrition/" />
+      </div>
+    </div>
+  );
+}
+
+function SleepSection() {
+  return (
+    <div>
+      <p className="text-stone-600 leading-relaxed mb-4">
+        This is life-or-death important. About 3,500 infants die from sleep-related causes annually in the US. The good news: most of these deaths are preventable by following simple rules.
+      </p>
+
+      <div className="bg-stone-900 text-white rounded-xl p-6 my-4">
+        <h3 className="text-lg font-bold mb-4 text-amber-400">The ABCs of Safe Sleep (AAP 2022 Guidelines)</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="text-center">
+            <div className="text-4xl font-black text-amber-400 mb-2">A</div>
+            <div className="font-bold text-lg">Alone</div>
+            <p className="text-sm text-stone-300 mt-1">No blankets, pillows, bumpers, stuffed animals, or other people in the sleep space. Nothing but baby + fitted sheet.</p>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-black text-amber-400 mb-2">B</div>
+            <div className="font-bold text-lg">Back</div>
+            <p className="text-sm text-stone-300 mt-1">Always on their back. Every nap, every night. Until age 1. Even if they seem to prefer their side or stomach.</p>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-black text-amber-400 mb-2">C</div>
+            <div className="font-bold text-lg">Crib</div>
+            <p className="text-sm text-stone-300 mt-1">Firm, flat mattress in a safety-approved crib or bassinet. No incline. No Rock &apos;n Play. No couch. No adult bed.</p>
+          </div>
+        </div>
+      </div>
+
+      <DataTable
+        headers={["Rule", "Why"]}
+        rows={[
+          ["Room-share (don't bed-share)", "Baby sleeps in YOUR room but in their own crib/bassinet. Reduces SIDS risk by up to 50%. Ideally for 6 months, at minimum."],
+          ["No weighted swaddles or sleep products", "No evidence they help. They may increase risk."],
+          ["Use a wearable blanket (sleep sack)", "Keeps baby warm without loose fabric. Safer than blankets."],
+          ["Stop swaddling when baby shows rolling signs", "Usually around 3–4 months. A swaddled baby who rolls to their stomach can suffocate."],
+          ["Offer a pacifier at sleep time", "Associated with reduced SIDS risk. If breastfeeding, wait until breastfeeding is established (~3-4 weeks)."],
+          ["No smoking around baby", "Secondhand smoke is a major SIDS risk factor."],
+          ["Don't let baby overheat", "Dress in one layer more than you'd wear. Feel their chest — if sweaty, they're too warm."],
+        ]}
+      />
+
+      <Callout type="danger" title="The most dangerous moments">
+        The highest risk for sleep-related death is in the first 6 months, and it often happens when an exhausted parent falls asleep holding the baby on a couch or recliner. If you&apos;re too tired to stay awake, put the baby down in the crib. A briefly crying baby in a safe crib is infinitely safer than a sleeping baby on your chest while you doze off on a couch.
+      </Callout>
+
+      <h3 className="font-bold text-stone-800 mt-6 mb-3 text-lg">Newborn sleep patterns</h3>
+      <p className="text-sm text-stone-600 mb-2">
+        Newborns sleep 16–17 hours a day, but in 1–3 hour bursts. They have no concept of day vs. night. You cannot &quot;train&quot; a newborn to sleep through the night — they need to eat too frequently. Your strategy is survival: <strong>sleep when the baby sleeps</strong> and take shifts with your partner.
+      </p>
+
+      <div className="mt-4 flex flex-wrap gap-3">
+        <Source name="CDC – Safe Sleep" url="https://www.cdc.gov/sudden-infant-death/sleep-safely/index.html" />
+        <Source name="AAP – Safe Sleep Policy" url="https://publications.aap.org/pediatrics/article/150/1/e2022057990/188304/Sleep-Related-Infant-Deaths-Updated-2022" />
+        <Source name="HealthyChildren.org – Safe Sleep" url="https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/a-parents-guide-to-safe-sleep.aspx" />
+      </div>
+    </div>
+  );
+}
+
+function MotherSection() {
+  return (
+    <div>
+      <p className="text-stone-600 leading-relaxed mb-4">
+        Here&apos;s the thing nobody tells dads directly enough: <strong>your partner just went through a major medical event</strong>. Even a &quot;normal&quot; vaginal delivery involves significant tissue damage, blood loss, and hormonal upheaval. Your job for the first 6 weeks is to be her teammate, protector, and personal assistant.
+      </p>
+
+      <h3 className="font-bold text-stone-800 mt-4 mb-3 text-lg">Physical recovery — what to expect</h3>
+      <DataTable
+        headers={["What", "Details", "How You Help"]}
+        rows={[
+          [
+            "Vaginal pain / tearing",
+            "Most women have some degree of tearing. Stitches dissolve on their own in 1–2 weeks. Sitting is painful.",
+            "Have ice packs ready. Set up her peri bottle (squirt warm water while peeing). Get a donut pillow. Don't rush her to do anything physical.",
+          ],
+          [
+            "Bleeding (lochia)",
+            "Heavy vaginal bleeding for 2–4 weeks, tapering off. Similar to a very heavy period. This is the uterus shedding its lining.",
+            "Stock up on heavy-duty maternity pads (NOT tampons). Don't be alarmed by clots — they're normal unless larger than a golf ball.",
+          ],
+          [
+            "Uterine cramping",
+            "The uterus contracts back to normal size. Worse during breastfeeding (oxytocin triggers contractions). Called 'afterpains.'",
+            "OTC ibuprofen (ask her OB). Heating pad on belly.",
+          ],
+          [
+            "Breast engorgement",
+            "When milk comes in (~day 3–5), breasts become hard, swollen, and painful.",
+            "Warm compresses before feeding, cold compresses after. Help her get the baby latched quickly. Have a lactation consultant's number ready.",
+          ],
+          [
+            "Sweating / hormonal shifts",
+            "Night sweats, hair changes, mood swings — all from the massive progesterone/estrogen drop after delivery.",
+            "Keep extra sheets nearby. Be patient. This is biochemistry, not personality.",
+          ],
+          [
+            "Constipation",
+            "Very common. Fear of the first postpartum bowel movement is real.",
+            "Stool softeners (colace), high-fiber foods, lots of water. Encourage her to not hold it.",
+          ],
+        ]}
+      />
+
+      <h3 className="font-bold text-stone-800 mt-6 mb-3 text-lg">Your concrete daily tasks</h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 my-4">
+        {[
+          "Cook meals or organize meal deliveries",
+          "Handle ALL visitors / gatekeep her rest",
+          "Do laundry (you'll go through SO much laundry)",
+          "Bring her water every time she nurses",
+          "Change diapers — take the night shifts you can",
+          "Handle groceries and errands",
+          "Take baby so she can shower / nap / exist as a human",
+          "Keep the house reasonably clean",
+          "Manage communication with family (updates, photos, boundaries)",
+          "Tell her she's doing a great job — and mean it",
+        ].map((task, i) => (
+          <div key={i} className="bg-stone-50 rounded-lg px-4 py-2.5 text-sm text-stone-700 flex items-start gap-2">
+            <span className="text-emerald-500 font-bold mt-0.5">{"\u2192"}</span> {task}
+          </div>
+        ))}
+      </div>
+
+      <h3 className="font-bold text-stone-800 mt-6 mb-3 text-lg">Mental health — the big one</h3>
+      <Callout type="warn" title="Baby Blues vs. Postpartum Depression">
+        <strong>Baby blues</strong> (70–80% of mothers): Mood swings, tearfulness, anxiety, irritability. Starts a few days after birth, resolves within 2 weeks. This is normal hormonal adjustment.
+        <br/><br/>
+        <strong>Postpartum depression</strong> (10–15% of mothers): Symptoms persist beyond 2 weeks. Includes persistent sadness, withdrawal from baby, inability to sleep even when baby sleeps, loss of appetite, feelings of worthlessness, or thoughts of self-harm. <strong>This requires professional help immediately.</strong>
+        <br/><br/>
+        The AAP recommends screening with the Edinburgh Postnatal Depression Scale at 1, 2, 4, and 6 months. You don&apos;t need to wait — if you notice these signs, bring it up gently and contact her OB.
+      </Callout>
+
+      <Callout type="info" title="Don't forget about YOUR mental health">
+        Paternal postpartum depression is real and affects roughly 8–10% of new dads. Sleep deprivation, identity shift, relationship stress, and feeling helpless are all legitimate struggles. If you&apos;re not okay, seek help too.
+      </Callout>
+
+      <p className="text-sm text-stone-500 mt-2">
+        ACOG recommends postpartum evaluation within the first 3 weeks after delivery (phone or in-person), with a comprehensive visit within 6–12 weeks.
+      </p>
+
+      <div className="mt-3 flex flex-wrap gap-3">
+        <Source name="Mayo Clinic – Postpartum Care" url="https://www.mayoclinic.org/healthy-lifestyle/labor-and-delivery/in-depth/postpartum-care/art-20047233" />
+        <Source name="ACOG – Optimizing Postpartum Care" url="https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2018/05/optimizing-postpartum-care" />
+        <Source name="NCBI – Postpartum Care" url="https://www.ncbi.nlm.nih.gov/books/NBK565875/" />
+      </div>
+    </div>
+  );
+}
+
+function DangerSection() {
+  return (
+    <div>
+      <p className="text-stone-600 leading-relaxed mb-4">
+        Most issues are normal newborn stuff. But some things require immediate medical attention. Knowing these in advance means you won&apos;t panic about normal things AND you won&apos;t miss actual emergencies.
+      </p>
+
+      <h3 className="font-bold text-stone-800 mt-4 mb-3 text-lg">{"\uD83D\uDEA8"} Baby — Call the pediatrician or go to ER</h3>
+      <div className="bg-red-50 border border-red-200 rounded-xl p-4 my-4">
+        <ul className="space-y-2 text-sm text-red-900">
+          {[
+            ["Rectal temp \u2265 100.4°F (38°C)", "In a baby under 3 months, ANY fever is an emergency. Don't wait. Don't give Tylenol first. Go to the ER."],
+            ["Difficulty breathing", "Look for nostril flaring, rib retractions (skin pulling in between ribs), grunting, or blueish lips/skin."],
+            ["Won't eat / refuses multiple feeds", "Newborns should not go more than 4 hours without feeding. Lethargy + refusal = urgent."],
+            ["No wet diaper in 6+ hours", "Sign of dehydration. Call your pediatrician immediately."],
+            ["Jaundice worsening", "Some yellowing is normal. But if it spreads to the belly/legs, or baby is very sleepy and hard to wake, call immediately."],
+            ["Forceful/projectile vomiting", "Spitting up is normal. Vomiting that shoots out is not."],
+            ["Extreme lethargy", "Hard to wake, floppy, unresponsive — emergency."],
+            ["Cord bleeding that won't stop", "Some spotting is okay. Active bleeding or foul smell = infection."],
+          ].map(([title, desc], i) => (
+            <li key={i}><strong>{title}</strong> — {desc}</li>
+          ))}
+        </ul>
+      </div>
+
+      <h3 className="font-bold text-stone-800 mt-6 mb-3 text-lg">{"\uD83D\uDEA8"} Mother — Call her OB or go to ER</h3>
+      <div className="bg-red-50 border border-red-200 rounded-xl p-4 my-4">
+        <ul className="space-y-2 text-sm text-red-900">
+          {[
+            ["Fever \u2265 100.4°F (38°C)", "Could indicate uterine infection (endometritis), wound infection, or mastitis."],
+            ["Soaking more than 1 pad per hour", "Postpartum hemorrhage is a medical emergency. Blood clots larger than a golf ball also warrant a call."],
+            ["Severe headache that won't go away", "Could be a sign of postpartum preeclampsia, which can develop up to 6 weeks after delivery. Especially if combined with vision changes or swelling."],
+            ["Pain/swelling/redness in one leg", "Could indicate a blood clot (deep vein thrombosis). Postpartum women are at higher risk."],
+            ["Foul-smelling vaginal discharge", "Sign of infection."],
+            ["Difficulty breathing or chest pain", "Pulmonary embolism risk is elevated postpartum. This is an emergency."],
+            ["Thoughts of harming herself or the baby", "Call her OB immediately. Postpartum psychosis is rare but serious. 988 Suicide & Crisis Lifeline: call/text 988."],
+          ].map(([title, desc], i) => (
+            <li key={i}><strong>{title}</strong> — {desc}</li>
+          ))}
+        </ul>
+      </div>
+
+      <Callout type="danger" title="The fever rule">
+        For both mom and newborn, 100.4°F (38°C) is the magic number. Below that, monitor. At or above that, call a doctor immediately. For babies under 3 months, a fever is ALWAYS an emergency — they can deteriorate rapidly because their immune systems are immature.
+      </Callout>
+
+      <h3 className="font-bold text-stone-800 mt-6 mb-3 text-lg">Normal things that look scary</h3>
+      <DataTable
+        headers={["What You'll See", "Why It's Normal"]}
+        compact
+        rows={[
+          ["Weird-shaped head", "Molding from the birth canal. Rounds out in days."],
+          ["Baby acne / red blotches", "Hormone-related. Goes away on its own."],
+          ["Black tarry poop (meconium)", "First 1-2 days. Transitions to green then yellow."],
+          ["Startling / jerky movements", "Moro reflex. Totally normal neurological response."],
+          ["Hiccups", "Very common. Don't require intervention."],
+          ["Crossed eyes", "Eye muscles still developing. Normal until ~4 months."],
+          ["Sneezing", "Clearing nasal passages. Not a cold."],
+          ["Breast swelling (in baby)", "Maternal hormones. Goes away quickly."],
+        ]}
+      />
+    </div>
+  );
+}
+
+const contentMap: Record<string, React.ReactNode> = {
+  induction: <InductionSection />,
+  "hospital-bag": <HospitalBagSection />,
+  "labor-role": <LaborRoleSection />,
+  newborn: <NewbornSection />,
+  feeding: <FeedingSection />,
+  sleep: <SleepSection />,
+  mother: <MotherSection />,
+  danger: <DangerSection />,
+};
+
+export default function FirstWeekGuidePage() {
+  const [activeSection, setActiveSection] = useState("induction");
+  const active = sections.find((s) => s.id === activeSection)!;
+
+  return (
+    <div>
+      {/* Hero */}
+      <div className="bg-stone-900 text-white px-4 py-8 md:py-12">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-amber-400 text-xs font-bold tracking-widest uppercase mb-3" style={{ fontFamily: "system-ui, sans-serif" }}>
+            New Dad Field Guide
+          </div>
+          <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-2">
+            Everything You Need to Know
+          </h1>
+          <p className="text-stone-400 text-lg">
+            Induction {"\u2192"} Labor {"\u2192"} Newborn Care {"\u2192"} Postpartum Recovery
+          </p>
+          <p className="text-stone-500 text-xs mt-4" style={{ fontFamily: "system-ui, sans-serif" }}>
+            Sourced from AAP, CDC, ACOG, Mayo Clinic, Cleveland Clinic, and peer-reviewed literature
+          </p>
+        </div>
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 py-6">
+        {/* Section nav */}
+        <div className="flex flex-wrap gap-2 mb-8">
+          {sections.map((s) => (
+            <button
+              key={s.id}
+              onClick={() => setActiveSection(s.id)}
+              className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-all ${
+                activeSection === s.id
+                  ? "bg-stone-900 text-white shadow-lg"
+                  : "bg-white text-stone-600 hover:bg-stone-200 border border-stone-200"
+              }`}
+              style={{ fontFamily: "system-ui, sans-serif" }}
+            >
+              <span>{s.icon}</span>
+              <span className="font-medium">{s.title}</span>
+            </button>
+          ))}
+        </div>
+
+        {/* Content */}
+        <div className="bg-white rounded-xl shadow-sm border border-stone-200 p-6 md:p-8">
+          <div className="flex items-center gap-3 mb-1">
+            <span className="text-2xl">{active.icon}</span>
+            <div>
+              <h2 className="text-2xl font-bold text-stone-900">{active.title}</h2>
+              <p className="text-stone-400 text-sm" style={{ fontFamily: "system-ui, sans-serif" }}>{active.subtitle}</p>
+            </div>
+          </div>
+          <hr className="my-4 border-stone-200" />
+          <div style={{ fontFamily: "system-ui, sans-serif" }}>
+            {contentMap[activeSection]}
+          </div>
+        </div>
+
+        {/* Footer nav */}
+        <div className="flex justify-between mt-6 mb-12">
+          {(() => {
+            const idx = sections.findIndex((s) => s.id === activeSection);
+            const prev = idx > 0 ? sections[idx - 1] : null;
+            const next = idx < sections.length - 1 ? sections[idx + 1] : null;
+            return (
+              <>
+                {prev ? (
+                  <button
+                    onClick={() => setActiveSection(prev.id)}
+                    className="text-sm text-stone-500 hover:text-stone-800 flex items-center gap-1"
+                    style={{ fontFamily: "system-ui, sans-serif" }}
+                  >
+                    {"\u2190"} {prev.icon} {prev.title}
+                  </button>
+                ) : <div />}
+                {next ? (
+                  <button
+                    onClick={() => setActiveSection(next.id)}
+                    className="text-sm text-stone-500 hover:text-stone-800 flex items-center gap-1"
+                    style={{ fontFamily: "system-ui, sans-serif" }}
+                  >
+                    {next.title} {next.icon} {"\u2192"}
+                  </button>
+                ) : <div />}
+              </>
+            );
+          })()}
+        </div>
+
+        <GiscusComments />
+      </div>
+    </div>
+  );
+}
