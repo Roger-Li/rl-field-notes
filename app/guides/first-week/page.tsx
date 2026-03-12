@@ -14,6 +14,7 @@ const sections = [
   { id: "newborn", icon: "\uD83D\uDC76", title: "Newborn Care", subtitle: "First days survival" },
   { id: "feeding", icon: "\uD83C\uDF7C", title: "Feeding", subtitle: "Schedules & tracking" },
   { id: "sleep", icon: "\uD83D\uDE34", title: "Safe Sleep", subtitle: "AAP guidelines" },
+  { id: "discharge", icon: "\uD83D\uDCCB", title: "Before Discharge", subtitle: "Don't leave without this" },
   { id: "mother", icon: "\u2764\uFE0F", title: "Caring for Mom", subtitle: "Postpartum recovery" },
   { id: "danger", icon: "\uD83D\uDEA8", title: "Red Flags", subtitle: "When to call 911" },
 ];
@@ -232,7 +233,8 @@ function NewbornSection() {
           ["Skin-to-skin contact", "Baby goes directly on mom's chest. This regulates baby's temperature, heart rate, and breathing. AAP recommends at least 1 hour. Dad gets skin-to-skin too — do it as much as possible."],
           ["First breastfeed", "Usually attempted within the first hour. Don't panic if it doesn't go perfectly."],
           ["APGAR scores", "Nurses score baby at 1 and 5 minutes (appearance, pulse, grimace, activity, respiration). Scale of 0-10. 7+ is normal."],
-          ["Newborn procedures", "Vitamin K shot (prevents bleeding disorder), erythromycin eye ointment (prevents infection), hepatitis B vaccine, hearing screen, blood spot screen."],
+          ["Newborn procedures", "Vitamin K shot (prevents bleeding disorder), erythromycin eye ointment (prevents infection), hepatitis B vaccine (first dose)."],
+          ["Newborn screening", "Blood-spot screen (tests for 30+ metabolic/genetic conditions), hearing screen, and CCHD pulse-ox screen (measures blood oxygen to detect heart defects). All three should happen before discharge."],
           ["Weight & measurements", "Average is 6–9 lbs, 19–21 inches. Baby will lose up to 10% of birth weight in first days — this is NORMAL."],
         ]}
       />
@@ -251,6 +253,24 @@ function NewbornSection() {
         ]}
       />
 
+      <h3 className="font-bold text-stone-800 mt-6 mb-3 text-lg">Jaundice — what you need to know</h3>
+      <p className="text-sm text-stone-600 mb-3">
+        Most newborns develop some degree of jaundice (yellowing of the skin/eyes) as their liver matures. It typically peaks around <strong>days 3–5</strong>. The hospital should measure bilirubin levels before discharge, and your pediatrician will recheck at the first visit.
+      </p>
+      <DataTable
+        headers={["What to Watch", "Details"]}
+        compact
+        rows={[
+          ["Adequate output by day 4", "At least 4–6 wet diapers and 3–4 stools in 24 hours. Fewer may signal insufficient feeding, which worsens jaundice."],
+          ["Color progression", "Mild yellowing of the face is common. If it spreads to the chest, belly, or legs, or the whites of the eyes turn yellow, call your pediatrician."],
+          ["Sleepiness + poor feeding", "A jaundiced baby who is hard to wake or feeding poorly needs same-day evaluation."],
+          ["Follow-up plan", "Make sure you leave the hospital with a clear bilirubin result or recheck appointment (usually within 1–2 days of discharge)."],
+        ]}
+      />
+      <Callout type="warn" title="Do NOT use sunlight to treat jaundice">
+        An old wives&apos; tale says to put baby in sunlight. This is not a substitute for medical treatment and risks sunburn and temperature instability. If phototherapy is needed, your pediatrician will arrange it.
+      </Callout>
+
       <Callout type="tip" title="The 5 S's — your secret weapon for soothing">
         From Dr. Harvey Karp&apos;s method, widely endorsed by pediatricians: <strong>Swaddle</strong> (snug wrap), <strong>Side/Stomach</strong> position (for holding — NOT sleeping), <strong>Shush</strong> (loud white noise), <strong>Swing</strong> (gentle rhythmic motion), <strong>Suck</strong> (pacifier or finger). These mimic the womb and can stop crying fast.
       </Callout>
@@ -259,9 +279,30 @@ function NewbornSection() {
         AAP recommends baby be seen 3–5 days after birth and within 48–72 hours of hospital discharge. Book this appointment NOW if you haven&apos;t already.
       </Callout>
 
+      <h3 className="font-bold text-stone-800 mt-6 mb-3 text-lg">Visitors & infection control</h3>
+      <p className="text-sm text-stone-600 mb-3">
+        You are the <strong>bouncer</strong>. Newborns have immature immune systems, so every visitor is a potential exposure.
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 my-4">
+        {[
+          "No visits from anyone who is sick — period",
+          "Everyone washes hands before touching baby, bottles, or pump parts",
+          "Tdap and flu vaccines: ideally 2+ weeks before meeting baby (CDC)",
+          "Ask about RSV antibody (nirsevimab) — your pediatrician will advise if indicated this season",
+          "No smoking anywhere near the baby — smoke residue on clothes counts",
+          "Limit visitor count and duration — mom needs rest, not an audience",
+        ].map((item, i) => (
+          <div key={i} className="bg-stone-50 rounded-lg px-4 py-2.5 text-sm text-stone-700 flex items-start gap-2">
+            <span className="text-amber-500 font-bold mt-0.5">{"\u2022"}</span> {item}
+          </div>
+        ))}
+      </div>
+
       <div className="mt-3 flex flex-wrap gap-3">
         <Source name="AAP – Newborn Visit" url="https://www.aap.org/en/patient-care/newborn-and-infant-nutrition/newborn-and-infant-health-assessment-and-promotion/newborn-visit/" />
         <Source name="AAP – First Office Visit" url="https://www.aap.org/en/patient-care/newborn-and-infant-nutrition/newborn-and-infant-health-assessment-and-promotion/first-office-visit-3-5-days/" />
+        <Source name="CDC – Vaccines for Family & Caregivers" url="https://www.cdc.gov/vaccines-pregnancy/about/vaccines-family-caregivers.html" />
+        <Source name="HRSA – Newborn Screening Process" url="https://newbornscreening.hrsa.gov/newborn-screening-process" />
       </div>
     </div>
   );
@@ -305,6 +346,10 @@ function FeedingSection() {
           ["Vitamin D", "If breastfed: 400 IU liquid vitamin D drops daily, starting in first few days. Formula-fed: once baby drinks 32+ oz/day of formula, supplementation isn't needed."],
         ]}
       />
+
+      <Callout type="warn" title="Powdered formula is NOT sterile">
+        For babies <strong>under 2 months</strong>, premature, or immunocompromised, CDC recommends using water heated to at least 158°F (70°C) when preparing powdered formula to kill potential <em>Cronobacter</em> bacteria. Always discard any formula left in the bottle after a feed — never save and reheat it.
+      </Callout>
 
       <h3 className="font-bold text-stone-800 mt-6 mb-3 text-lg">Burping</h3>
       <p className="text-sm text-stone-600">
@@ -421,6 +466,26 @@ function MotherSection() {
         ]}
       />
 
+      <h3 className="font-bold text-stone-800 mt-6 mb-3 text-lg">If delivery becomes a C-section</h3>
+      <p className="text-sm text-stone-600 mb-3">
+        About 1 in 3 U.S. deliveries are cesarean. If this happens, recovery is slower and your role shifts significantly.
+      </p>
+      <DataTable
+        headers={["Detail", "What It Means for You"]}
+        compact
+        rows={[
+          ["Hospital stay: 2–3 days", "Longer than vaginal delivery. She'll need help getting in/out of bed, walking to the bathroom, and holding the baby for feeds."],
+          ["No lifting >baby weight for 6–8 weeks", "You become the default lifter, carrier, and driver. Car seats, strollers, laundry baskets — all you."],
+          ["Incision care", "Watch for redness, swelling, warmth, or oozing at the incision site. She should keep it clean and dry."],
+          ["Pain management", "She'll likely have prescription pain meds initially, then transition to ibuprofen/acetaminophen. Track the schedule."],
+        ]}
+      />
+
+      <h3 className="font-bold text-stone-800 mt-6 mb-3 text-lg">If she had hypertension or preeclampsia</h3>
+      <Callout type="warn" title="Blood pressure follow-up is critical">
+        ACOG recommends a blood pressure evaluation <strong>no later than 7–10 days postpartum</strong> for hypertensive disorders of pregnancy. Postpartum preeclampsia can develop up to 6 weeks after delivery — don&apos;t skip this appointment even if she feels fine.
+      </Callout>
+
       <h3 className="font-bold text-stone-800 mt-6 mb-3 text-lg">Your concrete daily tasks</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 my-4">
         {[
@@ -462,6 +527,68 @@ function MotherSection() {
         <Source name="Mayo Clinic – Postpartum Care" url="https://www.mayoclinic.org/healthy-lifestyle/labor-and-delivery/in-depth/postpartum-care/art-20047233" />
         <Source name="ACOG – Optimizing Postpartum Care" url="https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2018/05/optimizing-postpartum-care" />
         <Source name="NCBI – Postpartum Care" url="https://www.ncbi.nlm.nih.gov/books/NBK565875/" />
+      </div>
+    </div>
+  );
+}
+
+function DischargeSection() {
+  return (
+    <div>
+      <p className="text-stone-600 leading-relaxed mb-4">
+        The hospital discharge is where things fall through the cracks. Adrenaline is fading, you&apos;re sleep-deprived, and suddenly you&apos;re responsible for a tiny human at home. Print this list or screenshot it.
+      </p>
+
+      <h3 className="font-bold text-stone-800 mt-4 mb-3 text-lg">For baby</h3>
+      <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 my-4">
+        <ul className="space-y-2.5 text-sm text-stone-700">
+          {[
+            ["Newborn screening complete", "Blood-spot screen, hearing screen, and CCHD pulse-ox screen should all be done. If the blood-spot was done early (<24 hours), ask if a repeat is needed."],
+            ["Bilirubin / jaundice plan", "Get the bilirubin result or a written plan for when to recheck. Jaundice peaks at days 3–5 — you may already be home."],
+            ["Feeding plan confirmed", "Breast, formula, or combo — with clear guidance on frequency, amount, and who to call if latching isn't working or supply is a concern."],
+            ["Pediatrician visit booked", "Should be 2–3 days after discharge (or around 3–5 days of age). Don't leave without this appointment scheduled."],
+            ["Hepatitis B vaccine given", "Confirm the first dose was administered and you know the schedule for doses 2 and 3."],
+            ["RSV antibody discussed", "Ask whether nirsevimab (RSV immunization) is indicated for your baby this season."],
+            ["Car seat installed and checked", "Rear-facing in the back seat. Hospital staff may check before discharge. If not, verify yourself."],
+          ].map(([title, desc], i) => (
+            <li key={i} className="flex items-start gap-2">
+              <span className="text-amber-600 mt-0.5">{"\u25FB"}</span>
+              <span><strong>{title}</strong> — {desc}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <h3 className="font-bold text-stone-800 mt-6 mb-3 text-lg">For mom</h3>
+      <div className="bg-rose-50 border border-rose-200 rounded-xl p-4 my-4">
+        <ul className="space-y-2.5 text-sm text-stone-700">
+          {[
+            ["Prescriptions filled", "Pain meds, stool softeners, iron supplements — whatever was prescribed. Fill them before leaving or have someone pick them up so they're ready when you get home."],
+            ["Follow-up visit scheduled", "ACOG recommends contact within 3 weeks, comprehensive visit within 6–12 weeks. If she had hypertension/preeclampsia, BP check within 7–10 days."],
+            ["Warning signs reviewed", "Make sure YOU (not just her) know the danger signs: heavy bleeding, fever, severe headache, vision changes, chest pain, leg swelling, thoughts of self-harm."],
+            ["Feeding support contacts", "Lactation consultant number, hospital's breastfeeding hotline, or the pediatrician's feeding advice line."],
+          ].map(([title, desc], i) => (
+            <li key={i} className="flex items-start gap-2">
+              <span className="text-rose-500 mt-0.5">{"\u25FB"}</span>
+              <span><strong>{title}</strong> — {desc}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <h3 className="font-bold text-stone-800 mt-6 mb-3 text-lg">Know who to call</h3>
+      <Callout type="info" title="Save these numbers in your phone NOW">
+        Before you walk out, make sure you have: <strong>pediatrician</strong> (daytime + after-hours), <strong>OB/midwife</strong> (daytime + after-hours), <strong>lactation consultant</strong>, <strong>hospital nursery</strong> (many answer questions 24/7 in the first few days), and <strong>Poison Control: 1-800-222-1222</strong>.
+      </Callout>
+
+      <Callout type="tip" title="The 48-hour rule">
+        If anything feels off — baby&apos;s feeding, color, breathing, or mom&apos;s pain level, bleeding, mood — and you can&apos;t clearly say &quot;this is normal,&quot; call. In the first week, pediatricians and OBs expect calls. You are not bothering them. That&apos;s literally what they&apos;re there for.
+      </Callout>
+
+      <div className="mt-3 flex flex-wrap gap-3">
+        <Source name="HRSA – Newborn Screening Process" url="https://newbornscreening.hrsa.gov/newborn-screening-process" />
+        <Source name="ACOG – Optimizing Postpartum Care" url="https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2018/05/optimizing-postpartum-care" />
+        <Source name="CDC – Jaundice (Families)" url="https://archive.cdc.gov/www_cdc_gov/ncbddd/jaundice/families.html" />
       </div>
     </div>
   );
@@ -539,6 +666,7 @@ const contentMap: Record<string, React.ReactNode> = {
   newborn: <NewbornSection />,
   feeding: <FeedingSection />,
   sleep: <SleepSection />,
+  discharge: <DischargeSection />,
   mother: <MotherSection />,
   danger: <DangerSection />,
 };
