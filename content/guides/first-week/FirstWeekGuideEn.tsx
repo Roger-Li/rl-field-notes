@@ -785,7 +785,7 @@ export default function FirstWeekGuidePage() {
           })()}
         </div>
 
-        <GiscusComments />
+        <GiscusComments locale="en" term="/guides/first-week" />
       </div>
     </div>
   );

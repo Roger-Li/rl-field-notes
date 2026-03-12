@@ -1,4 +1,4 @@
-# CLAUDE.md — RL Field Notes
+# AGENTS.md — RL Field Notes
 
 ## Project overview
 A Next.js 16 statically generated bilingual site for new-dad caregiving knowledge. English routes live at the root, Simplified Chinese routes live under `/zh`. Comments are powered by Giscus (GitHub Discussions).

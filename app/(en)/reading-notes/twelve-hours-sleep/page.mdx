@@ -1,10 +1,13 @@
 import { Callout } from "@/components/Callout"
 import { GiscusComments } from "@/components/GiscusComments"
+import { createPageMetadata } from "@/lib/metadata"
 
-export const metadata = {
+export const metadata = createPageMetadata({
+  locale: "en",
+  pathname: "/reading-notes/twelve-hours-sleep",
   title: "Twelve Hours' Sleep by Twelve Weeks Old",
   description: "Comprehensive summary and action items from Suzy Giordano's step-by-step sleep training method.",
-}
+})
 
 # Twelve Hours' Sleep by Twelve Weeks Old
 
@@ -401,4 +404,4 @@ Giordano uses a great metaphor here: think of the new routine as Jell-O setting 
 
 *Summary compiled from publicly available reviews, summaries, and discussion of the book.*
 
-<GiscusComments />
+<GiscusComments locale="en" term="/reading-notes/twelve-hours-sleep" />
