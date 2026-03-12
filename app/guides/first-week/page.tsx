@@ -23,7 +23,7 @@ function InductionSection() {
   return (
     <div>
       <p className="text-stone-600 leading-relaxed mb-4">
-        An induction at 39–40 weeks is common and well-supported by evidence. The ARRIVE trial (published in the New England Journal of Medicine, 2018) found that elective induction at 39 weeks in low-risk first-time pregnancies actually <strong>reduced</strong> C-section rates compared to waiting. So breathe — this is a well-trodden path.
+        For low-risk first-time pregnancies, elective induction at <strong>39 weeks</strong> has evidence support. The ARRIVE trial (published in the New England Journal of Medicine, 2018) found that elective induction at 39 weeks in that specific group actually <strong>reduced</strong> C-section rates compared to waiting. That does <em>not</em> mean every 39-40 week induction is automatically recommended, but if this is the plan, you&apos;re still in very standard territory.
       </p>
 
       <h3 className="font-bold text-stone-800 mt-6 mb-3 text-lg">How induction typically works</h3>
@@ -47,7 +47,7 @@ function InductionSection() {
           [
             <Badge key="s3" color="blue">Step 3</Badge>,
             "Breaking Water (AROM)",
-            "Doctor uses a small hook to rupture the amniotic sac. Painless — just a warm gush of fluid",
+            "Doctor uses a small hook to rupture the amniotic sac. Usually quick; may feel pressure or a gush of fluid, and experiences vary",
             "When cervix is dilated enough",
           ],
           [
@@ -64,8 +64,8 @@ function InductionSection() {
       </Callout>
 
       <div className="mt-3 flex flex-wrap gap-3">
-        <Source name="UCLA Health – Induction" url="https://www.uclahealth.org/news/article/what-expect-with-labor-induction" />
-        <Source name="Nebraska Medicine – Induction" url="https://www.nebraskamed.com/health/conditions-and-services/womens-health/what-to-expect-during-labor-induction" />
+        <Source name="ACOG – Labor Induction" url="https://www.acog.org/womens-health/faqs/labor-induction" />
+        <Source name="ACOG – Induction at 39 Weeks" url="https://www.acog.org/womens-health/faqs/induction-of-labor-at-39-weeks" />
         <Source name="ARRIVE Trial (NEJM)" url="https://www.nejm.org/doi/full/10.1056/NEJMoa1800566" />
       </div>
     </div>
@@ -116,7 +116,7 @@ function HospitalBagSection() {
             title: "For Baby",
             color: "bg-amber-50 border-amber-200",
             items: [
-              "Infant car seat (installed and inspected!)",
+              "Infant rear-facing car seat",
               "Going-home outfit (newborn + 0-3mo size)",
               "Receiving blanket",
               "Hat and socks/mittens",
@@ -139,8 +139,12 @@ function HospitalBagSection() {
       </div>
 
       <Callout type="tip" title="Pro tip: Install the car seat NOW">
-        Many hospitals won&apos;t discharge the baby without seeing a properly installed car seat. Rear-facing, in the back seat, at a 45° angle. Your local fire station will often inspect it for free.
+        You&apos;ll need an appropriate rear-facing car seat for discharge, and some hospitals may ask you to show safe setup before you leave. Install it before labor, read both the car-seat manual and your vehicle manual, and use an NHTSA-certified inspection station if you want a second set of eyes.
       </Callout>
+
+      <div className="mt-3">
+        <Source name="NHTSA – Car Seat Finder & Inspection Help" url="https://www.nhtsa.gov/therightseat" />
+      </div>
     </div>
   );
 }
@@ -233,9 +237,9 @@ function NewbornSection() {
           ["Skin-to-skin contact", "Baby goes directly on mom's chest. This regulates baby's temperature, heart rate, and breathing. AAP recommends at least 1 hour. Dad gets skin-to-skin too — do it as much as possible."],
           ["First breastfeed", "Usually attempted within the first hour. Don't panic if it doesn't go perfectly."],
           ["APGAR scores", "Nurses score baby at 1 and 5 minutes (appearance, pulse, grimace, activity, respiration). Scale of 0-10. 7+ is normal."],
-          ["Newborn procedures", "Vitamin K shot (prevents bleeding disorder), erythromycin eye ointment (prevents infection), hepatitis B vaccine (first dose)."],
-          ["Newborn screening", "Blood-spot screen (tests for 30+ metabolic/genetic conditions), hearing screen, and CCHD pulse-ox screen (measures blood oxygen to detect heart defects). All three should happen before discharge."],
-          ["Weight & measurements", "Average is 6–9 lbs, 19–21 inches. Baby will lose up to 10% of birth weight in first days — this is NORMAL."],
+          ["Newborn procedures", "Vitamin K shot (prevents bleeding disorder), erythromycin eye ointment, and a hepatitis B plan before discharge."],
+          ["Newborn screening", "Blood-spot newborn screening for the conditions on your state's panel, hearing screen, and CCHD pulse-ox screen (measures blood oxygen to detect heart defects). All three should happen before discharge."],
+          ["Weight & measurements", "Average is 6–9 lbs, 19–21 inches. Some weight loss is expected in the first days, but if the loss is getting into the upper single digits or baby keeps losing after day 5, expect a closer feeding check."],
         ]}
       />
 
@@ -261,7 +265,7 @@ function NewbornSection() {
         headers={["What to Watch", "Details"]}
         compact
         rows={[
-          ["Adequate output by day 4", "At least 4–6 wet diapers and 3–4 stools in 24 hours. Fewer may signal insufficient feeding, which worsens jaundice."],
+          ["Adequate output by day 5", "By about day 5, look for at least 6 wet diapers and at least 3 stools in 24 hours. Fewer can mean baby is not taking enough in, which worsens jaundice."],
           ["Color progression", "Mild yellowing of the face is common. If it spreads to the chest, belly, or legs, or the whites of the eyes turn yellow, call your pediatrician."],
           ["Sleepiness + poor feeding", "A jaundiced baby who is hard to wake or feeding poorly needs same-day evaluation."],
           ["Follow-up plan", "Make sure you leave the hospital with a clear bilirubin result or recheck appointment (usually within 1–2 days of discharge)."],
@@ -279,6 +283,10 @@ function NewbornSection() {
         AAP recommends baby be seen 3–5 days after birth and within 48–72 hours of hospital discharge. Book this appointment NOW if you haven&apos;t already.
       </Callout>
 
+      <Callout type="warn" title="RSV protection is a before-discharge question">
+        CDC now frames this pretty simply: babies should usually be protected by <strong>one</strong> of two options - a maternal RSV vaccine during pregnancy, or an infant RSV antibody. Most babies do not need both. If mom did not get the maternal vaccine, her status is unknown, or baby was born within 14 days of maternal vaccination, ask before discharge whether your baby should get a long-acting RSV antibody this season. Babies born during RSV season in most of the U.S. who need it usually get it within 1 week after birth, ideally during the birth hospitalization.
+      </Callout>
+
       <h3 className="font-bold text-stone-800 mt-6 mb-3 text-lg">Visitors & infection control</h3>
       <p className="text-sm text-stone-600 mb-3">
         You are the <strong>bouncer</strong>. Newborns have immature immune systems, so every visitor is a potential exposure.
@@ -288,7 +296,7 @@ function NewbornSection() {
           "No visits from anyone who is sick — period",
           "Everyone washes hands before touching baby, bottles, or pump parts",
           "Tdap and flu vaccines: ideally 2+ weeks before meeting baby (CDC)",
-          "Ask about RSV antibody (nirsevimab) — your pediatrician will advise if indicated this season",
+          "Anyone with cold symptoms stays away - RSV, flu, and COVID all count",
           "No smoking anywhere near the baby — smoke residue on clothes counts",
           "Limit visitor count and duration — mom needs rest, not an audience",
         ].map((item, i) => (
@@ -299,10 +307,11 @@ function NewbornSection() {
       </div>
 
       <div className="mt-3 flex flex-wrap gap-3">
-        <Source name="AAP – Newborn Visit" url="https://www.aap.org/en/patient-care/newborn-and-infant-nutrition/newborn-and-infant-health-assessment-and-promotion/newborn-visit/" />
         <Source name="AAP – First Office Visit" url="https://www.aap.org/en/patient-care/newborn-and-infant-nutrition/newborn-and-infant-health-assessment-and-promotion/first-office-visit-3-5-days/" />
+        <Source name="CDC – Newborn Breastfeeding Basics" url="https://www.cdc.gov/infant-toddler-nutrition/breastfeeding/newborn-basics.html" />
+        <Source name="CDC – Immunizations to Protect Infants (RSV)" url="https://www.cdc.gov/rsv/vaccines/protect-infants.html" />
         <Source name="CDC – Vaccines for Family & Caregivers" url="https://www.cdc.gov/vaccines-pregnancy/about/vaccines-family-caregivers.html" />
-        <Source name="HRSA – Newborn Screening Process" url="https://newbornscreening.hrsa.gov/newborn-screening-process" />
+        <Source name="HRSA – Newborn Screening in Your State" url="https://newbornscreening.hrsa.gov/your-state" />
       </div>
     </div>
   );
@@ -321,14 +330,15 @@ function FeedingSection() {
       </p>
 
       <DataTable
-        headers={["Day", "Baby's Stomach Size", "Feed Amount", "Expected Diapers (wet/dirty)"]}
+        headers={["Day", "Baby's Stomach Size", "Feed Amount", "Expected Diapers (minimum wet/dirty)"]}
         compact
         rows={[
           ["Day 1", "Cherry (~5-7 mL)", "1-2 tsp per feed", "1 wet / 1 dirty"],
-          ["Day 2", "Walnut (~15 mL)", "~0.5 oz per feed", "2 wet / 2 dirty"],
-          ["Day 3", "Walnut–Apricot (~25 mL)", "~0.5-1 oz per feed", "3 wet / 3 dirty (transitioning stool)"],
-          ["Day 5+", "Egg (~50 mL)", "1-2 oz per feed", "6+ wet / 3-4 dirty (yellow, seedy)"],
-          ["Week 2+", "Peach", "2-3 oz per feed", "6+ wet / 3+ dirty"],
+          ["Day 2", "Walnut (~15 mL)", "~0.5 oz per feed", "2 wet / 3 dirty"],
+          ["Day 3", "Walnut-Apricot (~25 mL)", "~0.5-1 oz per feed", "5 wet / 3 dirty"],
+          ["Day 4", "Egg (~45-60 mL)", "~1-2 oz per feed", "6 wet / 3 dirty"],
+          ["Day 5-7", "Egg (~45-60 mL)", "1-2 oz per feed", "6+ wet / 3+ dirty (yellow, seedy)"],
+          ["Week 2+", "Peach", "2-3 oz per feed", "6+ wet / stools vary more"],
         ]}
       />
 
@@ -348,7 +358,7 @@ function FeedingSection() {
       />
 
       <Callout type="warn" title="Powdered formula is NOT sterile">
-        For babies <strong>under 2 months</strong>, premature, or immunocompromised, CDC recommends using water heated to at least 158°F (70°C) when preparing powdered formula to kill potential <em>Cronobacter</em> bacteria. Always discard any formula left in the bottle after a feed — never save and reheat it.
+        For babies <strong>under 2 months</strong>, premature, or immunocompromised, CDC says extra precautions matter: powdered formula is not sterile. When feasible, ready-to-feed liquid formula is the safer option. If you use powdered formula, mix it with water hot enough to kill potential <em>Cronobacter</em> bacteria (about 158°F / 70°C), then cool before feeding. Always discard any formula left in the bottle after a feed — never save and reheat it.
       </Callout>
 
       <h3 className="font-bold text-stone-800 mt-6 mb-3 text-lg">Burping</h3>
@@ -358,6 +368,8 @@ function FeedingSection() {
 
       <div className="mt-4 flex flex-wrap gap-3">
         <Source name="AAP – Newborn Nutrition" url="https://www.aap.org/en/patient-care/newborn-and-infant-nutrition/" />
+        <Source name="CDC – Newborn Breastfeeding Basics" url="https://www.cdc.gov/infant-toddler-nutrition/breastfeeding/newborn-basics.html" />
+        <Source name="CDC – Formula Preparation and Storage" url="https://www.cdc.gov/infant-toddler-nutrition/formula-feeding/preparation-and-storage.html" />
       </div>
     </div>
   );
@@ -367,7 +379,7 @@ function SleepSection() {
   return (
     <div>
       <p className="text-stone-600 leading-relaxed mb-4">
-        This is life-or-death important. About 3,500 infants die from sleep-related causes annually in the US. The good news: most of these deaths are preventable by following simple rules.
+        This is life-or-death important. In 2022, about 3,700 U.S. babies died suddenly and unexpectedly. Safe-sleep rules matter because sleep environment is one of the biggest preventable risk factors you can control.
       </p>
 
       <div className="bg-stone-900 text-white rounded-xl p-6 my-4">
@@ -395,6 +407,8 @@ function SleepSection() {
         headers={["Rule", "Why"]}
         rows={[
           ["Room-share (don't bed-share)", "Baby sleeps in YOUR room but in their own crib/bassinet. Reduces SIDS risk by up to 50%. Ideally for 6 months, at minimum."],
+          ["Move baby after dozing off elsewhere", "Car seats, strollers, swings, infant carriers, and slings are not safe for routine sleep. If baby falls asleep there, move them to a firm, flat sleep surface as soon as possible."],
+          ["No loungers, nests, or nursing pillows for sleep", "Skip Boppy-style nursing pillows, DockATot-style loungers, nests, pods, sleep positioners, and inclined sleepers. If it is not a safety-approved sleep space, it is not for sleep."],
           ["No weighted swaddles or sleep products", "No evidence they help. They may increase risk."],
           ["Use a wearable blanket (sleep sack)", "Keeps baby warm without loose fabric. Safer than blankets."],
           ["Stop swaddling when baby shows rolling signs", "Usually around 3–4 months. A swaddled baby who rolls to their stomach can suffocate."],
@@ -414,9 +428,10 @@ function SleepSection() {
       </p>
 
       <div className="mt-4 flex flex-wrap gap-3">
-        <Source name="CDC – Safe Sleep" url="https://www.cdc.gov/sudden-infant-death/sleep-safely/index.html" />
+        <Source name="CDC – Helping Babies Sleep Safely" url="https://www.cdc.gov/reproductive-health/features/babies-sleep.html" />
+        <Source name="CDC – About SUID and SIDS" url="https://www.cdc.gov/sudden-infant-death/about/index.html" />
         <Source name="AAP – Safe Sleep Policy" url="https://publications.aap.org/pediatrics/article/150/1/e2022057990/188304/Sleep-Related-Infant-Deaths-Updated-2022" />
-        <Source name="HealthyChildren.org – Safe Sleep" url="https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/a-parents-guide-to-safe-sleep.aspx" />
+        <Source name="HealthyChildren.org – Unsafe Sleep Products" url="https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/Inclined-Sleepers-and-Other-Baby-Registry-Items-to-Avoid.aspx" />
       </div>
     </div>
   );
@@ -441,7 +456,7 @@ function MotherSection() {
           [
             "Bleeding (lochia)",
             "Heavy vaginal bleeding for 2–4 weeks, tapering off. Similar to a very heavy period. This is the uterus shedding its lining.",
-            "Stock up on heavy-duty maternity pads (NOT tampons). Don't be alarmed by clots — they're normal unless larger than a golf ball.",
+            "Stock up on heavy-duty maternity pads (NOT tampons). Don't be alarmed by clots — they can happen, but clots larger than an egg need urgent attention.",
           ],
           [
             "Uterine cramping",
@@ -524,9 +539,9 @@ function MotherSection() {
       </p>
 
       <div className="mt-3 flex flex-wrap gap-3">
-        <Source name="Mayo Clinic – Postpartum Care" url="https://www.mayoclinic.org/healthy-lifestyle/labor-and-delivery/in-depth/postpartum-care/art-20047233" />
         <Source name="ACOG – Optimizing Postpartum Care" url="https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2018/05/optimizing-postpartum-care" />
-        <Source name="NCBI – Postpartum Care" url="https://www.ncbi.nlm.nih.gov/books/NBK565875/" />
+        <Source name="ACOG – Postpartum Depression" url="https://www.acog.org/womens-health/faqs/postpartum-depression" />
+        <Source name="CDC – Urgent Maternal Warning Signs" url="https://www.cdc.gov/hearher/maternal-warning-signs/index.html" />
       </div>
     </div>
   );
@@ -543,13 +558,13 @@ function DischargeSection() {
       <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 my-4">
         <ul className="space-y-2.5 text-sm text-stone-700">
           {[
-            ["Newborn screening complete", "Blood-spot screen, hearing screen, and CCHD pulse-ox screen should all be done. If the blood-spot was done early (<24 hours), ask if a repeat is needed."],
+            ["Newborn screening complete", "Blood-spot screening, hearing screen, and CCHD pulse-ox screen should all be done. Because blood-spot screening is state-based, ask whether your state requires a repeat screen if the first one was early or if your baby is in a two-screen state."],
             ["Bilirubin / jaundice plan", "Get the bilirubin result or a written plan for when to recheck. Jaundice peaks at days 3–5 — you may already be home."],
             ["Feeding plan confirmed", "Breast, formula, or combo — with clear guidance on frequency, amount, and who to call if latching isn't working or supply is a concern."],
             ["Pediatrician visit booked", "Should be 2–3 days after discharge (or around 3–5 days of age). Don't leave without this appointment scheduled."],
-            ["Hepatitis B vaccine given", "Confirm the first dose was administered and you know the schedule for doses 2 and 3."],
-            ["RSV antibody discussed", "Ask whether nirsevimab (RSV immunization) is indicated for your baby this season."],
-            ["Car seat installed and checked", "Rear-facing in the back seat. Hospital staff may check before discharge. If not, verify yourself."],
+            ["Hepatitis B plan confirmed", "If mom is HBsAg-positive or status is unknown, the birth dose is time-sensitive and should be given within 12 hours. If mom is HBsAg-negative, CDC now uses individualized decision-making; AAP still recommends giving the first dose within 24 hours."],
+            ["RSV protection plan confirmed", "Most babies should be protected either by maternal RSV vaccine during pregnancy or by an infant RSV antibody. If mom did not get the maternal vaccine, her status is unknown, or baby was born within 14 days of maternal vaccination, ask whether baby should get the antibody now. If needed during RSV season in most of the U.S., it is usually given within 1 week after birth."],
+            ["Car seat ready for discharge", "Rear-facing in the back seat, installed according to the seat and vehicle manuals. Hospital staff may review setup, and an NHTSA inspection station can help if you want it checked."],
           ].map(([title, desc], i) => (
             <li key={i} className="flex items-start gap-2">
               <span className="text-amber-600 mt-0.5">{"\u25FB"}</span>
@@ -565,7 +580,7 @@ function DischargeSection() {
           {[
             ["Prescriptions filled", "Pain meds, stool softeners, iron supplements — whatever was prescribed. Fill them before leaving or have someone pick them up so they're ready when you get home."],
             ["Follow-up visit scheduled", "ACOG recommends contact within 3 weeks, comprehensive visit within 6–12 weeks. If she had hypertension/preeclampsia, BP check within 7–10 days."],
-            ["Warning signs reviewed", "Make sure YOU (not just her) know the danger signs: heavy bleeding, fever, severe headache, vision changes, chest pain, leg swelling, thoughts of self-harm."],
+            ["Warning signs reviewed", "Make sure YOU (not just her) know the big ones: heavy bleeding soaking at least 1 pad per hour, clots bigger than an egg, bad-smelling discharge, chest pain, trouble breathing, severe headache, vision changes, one-sided leg swelling, seizure, or thoughts of self-harm or harming the baby."],
             ["Feeding support contacts", "Lactation consultant number, hospital's breastfeeding hotline, or the pediatrician's feeding advice line."],
           ].map(([title, desc], i) => (
             <li key={i} className="flex items-start gap-2">
@@ -586,9 +601,12 @@ function DischargeSection() {
       </Callout>
 
       <div className="mt-3 flex flex-wrap gap-3">
-        <Source name="HRSA – Newborn Screening Process" url="https://newbornscreening.hrsa.gov/newborn-screening-process" />
-        <Source name="ACOG – Optimizing Postpartum Care" url="https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2018/05/optimizing-postpartum-care" />
-        <Source name="CDC – Jaundice (Families)" url="https://archive.cdc.gov/www_cdc_gov/ncbddd/jaundice/families.html" />
+        <Source name="HRSA – Newborn Screening in Your State" url="https://newbornscreening.hrsa.gov/your-state" />
+        <Source name="CDC – Hepatitis B Immunization Fact Sheet" url="https://www.cdc.gov/media/releases/2025/fact-sheet-hepatitis-b-immunization.html" />
+        <Source name="HealthyChildren.org – AAP on Hep B Birth Dose" url="https://www.healthychildren.org/English/news/Pages/AAP-Recommends-that-Infants-Receive-First-Hepatitis-B-Dose-within-24-Hours-of-Birth.aspx" />
+        <Source name="CDC – Immunizations to Protect Infants (RSV)" url="https://www.cdc.gov/rsv/vaccines/protect-infants.html" />
+        <Source name="CDC – Urgent Maternal Warning Signs" url="https://www.cdc.gov/hearher/maternal-warning-signs/index.html" />
+        <Source name="NHTSA – Car Seat Finder & Inspection Help" url="https://www.nhtsa.gov/therightseat" />
       </div>
     </div>
   );
@@ -608,7 +626,7 @@ function DangerSection() {
             ["Rectal temp \u2265 100.4°F (38°C)", "In a baby under 3 months, ANY fever is an emergency. Don't wait. Don't give Tylenol first. Go to the ER."],
             ["Difficulty breathing", "Look for nostril flaring, rib retractions (skin pulling in between ribs), grunting, or blueish lips/skin."],
             ["Won't eat / refuses multiple feeds", "Newborns should not go more than 4 hours without feeding. Lethargy + refusal = urgent."],
-            ["No wet diaper in 6+ hours", "Sign of dehydration. Call your pediatrician immediately."],
+            ["Too few wet diapers for baby's age", "Think in 24-hour totals: about 1 on day 1, 2 on day 2, 5 on day 3, then 6 a day by day 4-5. Once feeds are established, a sudden drop in urine output is urgent."],
             ["Jaundice worsening", "Some yellowing is normal. But if it spreads to the belly/legs, or baby is very sleepy and hard to wake, call immediately."],
             ["Forceful/projectile vomiting", "Spitting up is normal. Vomiting that shoots out is not."],
             ["Extreme lethargy", "Hard to wake, floppy, unresponsive — emergency."],
@@ -623,13 +641,13 @@ function DangerSection() {
       <div className="bg-red-50 border border-red-200 rounded-xl p-4 my-4">
         <ul className="space-y-2 text-sm text-red-900">
           {[
-            ["Fever \u2265 100.4°F (38°C)", "Could indicate uterine infection (endometritis), wound infection, or mastitis."],
-            ["Soaking more than 1 pad per hour", "Postpartum hemorrhage is a medical emergency. Blood clots larger than a golf ball also warrant a call."],
-            ["Severe headache that won't go away", "Could be a sign of postpartum preeclampsia, which can develop up to 6 weeks after delivery. Especially if combined with vision changes or swelling."],
-            ["Pain/swelling/redness in one leg", "Could indicate a blood clot (deep vein thrombosis). Postpartum women are at higher risk."],
-            ["Foul-smelling vaginal discharge", "Sign of infection."],
-            ["Difficulty breathing or chest pain", "Pulmonary embolism risk is elevated postpartum. This is an emergency."],
-            ["Thoughts of harming herself or the baby", "Call her OB immediately. Postpartum psychosis is rare but serious. 988 Suicide & Crisis Lifeline: call/text 988."],
+            ["Heavy bleeding or egg-sized clots", "Soaking through 1 or more pads in an hour, passing clots bigger than an egg, or passing tissue is urgent."],
+            ["Bad-smelling discharge or fever \u2265 100.4°F (38°C)", "Can signal uterine infection, wound infection, or mastitis."],
+            ["Severe headache or vision changes", "Could be postpartum preeclampsia, which can happen up to 6 weeks after delivery. Especially urgent with swelling, high blood pressure, or shortness of breath."],
+            ["Chest pain or trouble breathing", "Pulmonary embolism and other serious causes need emergency care now."],
+            ["One-sided leg swelling, pain, or redness", "Could indicate a blood clot (deep vein thrombosis). Postpartum women are at higher risk."],
+            ["Seizure, fainting, or sudden confusion", "Call 911. These are medical emergencies."],
+            ["Thoughts of harming herself or the baby", "Get emergency help now. Postpartum psychosis is rare but serious. 988 Suicide & Crisis Lifeline: call or text 988."],
           ].map(([title, desc], i) => (
             <li key={i}><strong>{title}</strong> — {desc}</li>
           ))}
@@ -655,6 +673,12 @@ function DangerSection() {
           ["Breast swelling (in baby)", "Maternal hormones. Goes away quickly."],
         ]}
       />
+
+      <div className="mt-4 flex flex-wrap gap-3">
+        <Source name="CDC – Newborn Breastfeeding Basics" url="https://www.cdc.gov/infant-toddler-nutrition/breastfeeding/newborn-basics.html" />
+        <Source name="CDC – Urgent Maternal Warning Signs" url="https://www.cdc.gov/hearher/maternal-warning-signs/index.html" />
+        <Source name="HealthyChildren.org – Getting Enough Milk" url="https://www.healthychildren.org/English/ages-stages/baby/breastfeeding/Pages/How-to-Tell-if-Baby-is-Getting-Enough-Milk.aspx" />
+      </div>
     </div>
   );
 }
@@ -690,7 +714,7 @@ export default function FirstWeekGuidePage() {
             Induction {"\u2192"} Labor {"\u2192"} Newborn Care {"\u2192"} Postpartum Recovery
           </p>
           <p className="text-stone-500 text-xs mt-4" style={{ fontFamily: "system-ui, sans-serif" }}>
-            Sourced from AAP, CDC, ACOG, Mayo Clinic, Cleveland Clinic, and peer-reviewed literature
+            Sourced from AAP, CDC, ACOG, HRSA, NHTSA, and peer-reviewed literature
           </p>
         </div>
       </div>
