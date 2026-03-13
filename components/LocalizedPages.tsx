@@ -45,14 +45,19 @@ export function GuidesIndexPage({ locale }: { locale: Locale }) {
 
 export function ReadingNotesIndexPage({ locale }: { locale: Locale }) {
   const copy = siteCopy[locale].readingNotesIndex;
-  const card = getLocalizedContentCard(locale, "reading-notes/twelve-hours-sleep");
+  const readingNoteKeys: import("@/lib/content").ContentEntryKey[] = [
+    "reading-notes/twelve-hours-sleep",
+    "reading-notes/happiest-baby-on-the-block",
+  ];
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
       <h1 className="text-3xl font-bold text-stone-900 mb-2">{copy.heading}</h1>
       <p className="text-stone-500 mb-8">{copy.intro}</p>
-      <div className="grid gap-6">
-        <ContentCard {...card} />
+      <div className="grid gap-6 sm:grid-cols-2">
+        {readingNoteKeys.map((key) => (
+          <ContentCard key={key} {...getLocalizedContentCard(locale, key)} />
+        ))}
       </div>
     </div>
   );
