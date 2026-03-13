@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { createLayoutMetadata } from "@/lib/metadata";
@@ -18,6 +19,8 @@ export default function RootLayout({
         <SiteHeader locale="zh" />
         <main className="flex-1">{children}</main>
         <SiteFooter locale="zh" />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
