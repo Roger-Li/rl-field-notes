@@ -13,6 +13,7 @@ type LocalizedContentEntry = {
 };
 
 type ContentEntry = {
+  date: string;
   giscusTerm: string;
   href: string;
   icon: string;
@@ -21,6 +22,7 @@ type ContentEntry = {
 
 export const contentEntries: Record<ContentEntryKey, ContentEntry> = {
   "guides/first-week": {
+    date: "2026-03-12",
     href: "/guides/first-week",
     icon: "👶",
     giscusTerm: "/guides/first-week",
@@ -40,6 +42,7 @@ export const contentEntries: Record<ContentEntryKey, ContentEntry> = {
     },
   },
   "reading-notes/happiest-baby-on-the-block": {
+    date: "2026-03-13",
     href: "/reading-notes/happiest-baby-on-the-block",
     icon: "📚",
     giscusTerm: "/reading-notes/happiest-baby-on-the-block",
@@ -59,6 +62,7 @@ export const contentEntries: Record<ContentEntryKey, ContentEntry> = {
     },
   },
   "reading-notes/twelve-hours-sleep": {
+    date: "2026-03-12",
     href: "/reading-notes/twelve-hours-sleep",
     icon: "📚",
     giscusTerm: "/reading-notes/twelve-hours-sleep",
@@ -97,4 +101,13 @@ export function getLocalizedContentCard(locale: Locale, key: ContentEntryKey) {
     icon: entry.icon,
     ...entry.locales[locale],
   };
+}
+
+export function getAllContentCardsSorted(locale: Locale) {
+  return (Object.keys(contentEntries) as ContentEntryKey[])
+    .sort(
+      (a, b) =>
+        contentEntries[b].date.localeCompare(contentEntries[a].date),
+    )
+    .map((key) => ({ key, ...getLocalizedContentCard(locale, key) }));
 }

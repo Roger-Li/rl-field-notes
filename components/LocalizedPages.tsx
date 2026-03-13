@@ -1,5 +1,8 @@
 import { ContentCard } from "@/components/ContentCard";
-import { getLocalizedContentCard } from "@/lib/content";
+import {
+  getAllContentCardsSorted,
+  getLocalizedContentCard,
+} from "@/lib/content";
 import type { Locale } from "@/lib/i18n";
 import { siteCopy } from "@/lib/site-copy";
 
@@ -18,11 +21,9 @@ export function HomePage({ locale }: { locale: Locale }) {
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2">
-        {copy.featured.map((entryKey) => {
-          const card = getLocalizedContentCard(locale, entryKey);
-
-          return <ContentCard key={entryKey} {...card} />;
-        })}
+        {getAllContentCardsSorted(locale).map(({ key, ...card }) => (
+          <ContentCard key={key} {...card} />
+        ))}
       </div>
     </div>
   );

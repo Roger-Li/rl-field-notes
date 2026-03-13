@@ -1,4 +1,3 @@
-import type { ContentEntryKey } from "@/lib/content";
 import type { Locale } from "@/lib/i18n";
 
 type SiteCopy = {
@@ -22,7 +21,6 @@ type SiteCopy = {
     switchToShort: Record<Locale, string>;
   };
   home: {
-    featured: ContentEntryKey[];
     heroDescription: string;
     heroTitle: string;
     metadataDescription: string;
@@ -77,7 +75,6 @@ export const siteCopy: Record<Locale, SiteCopy> = {
         "Learning through experience, one episode at a time. A collection of guides and reading notes for navigating the first year of fatherhood.",
       metadataDescription:
         "A new dad's knowledge hub with practical guides and reading notes for the first year of parenting.",
-      featured: ["guides/first-week", "reading-notes/twelve-hours-sleep"],
     },
     guidesIndex: {
       metadataTitle: "Guides",
@@ -133,7 +130,6 @@ export const siteCopy: Record<Locale, SiteCopy> = {
         "通过真实经历不断学习。这里收录了写给新手爸爸的实用指南与读书笔记，帮助你应对育儿第一年。",
       metadataDescription:
         "写给新手爸爸的双语育儿知识站，包含实用指南和读书笔记。",
-      featured: ["guides/first-week", "reading-notes/twelve-hours-sleep"],
     },
     guidesIndex: {
       metadataTitle: "指南",

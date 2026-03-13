@@ -19,7 +19,7 @@ A Next.js 16 statically generated bilingual site for new-dad caregiving knowledg
 1. Create the English route under `app/(en)/...`; for interactive pages, keep the client component under `content/...` and use a thin server route wrapper in `app/(en)/...`
 2. Create the matching Simplified Chinese route under `app/zh/...` using the same slug
 3. Add `createPageMetadata(...)` metadata for each locale and add any new public pathname to `publicPagePaths` in `lib/content.ts`
-4. Add or update localized card metadata in `lib/content.ts` and surface it from the home/index pages as needed
+4. Add or update localized card metadata in `lib/content.ts` with a `date` field (YYYY-MM-DD) — the homepage automatically displays all entries sorted by most recent date
 5. Every content page should include `<GiscusComments locale="..." term="/english-canonical-path" />` at the bottom so both locales share one discussion thread
 6. Do not fall back to English article bodies on Chinese routes; untranslated content should stay unpublished
 
