@@ -15,6 +15,9 @@ export function createLayoutMetadata(locale: Locale): Metadata {
       template: siteCopy[locale].site.titleTemplate,
     },
     description: siteCopy[locale].site.defaultDescription,
+    verification: {
+      google: "1qgqdeLNU9ZFMFLA0hE6wtkgOuVAiYfzLHnuEB4zS2E",
+    },
   };
 }
 
