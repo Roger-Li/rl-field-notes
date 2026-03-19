@@ -3,6 +3,7 @@ import { withLocalePath } from "@/lib/i18n";
 
 export type ContentEntryKey =
   | "guides/first-week"
+  | "guides/formula-feeding"
   | "reading-notes/happiest-baby-on-the-block"
   | "reading-notes/twelve-hours-sleep";
 
@@ -38,6 +39,26 @@ export const contentEntries: Record<ContentEntryKey, ContentEntry> = {
         title: "新手爸爸实战指南：第一周",
         description:
           "从催产、分娩到回家后的头几天与安全睡眠，梳理新手爸爸最需要知道的关键事项。",
+      },
+    },
+  },
+  "guides/formula-feeding": {
+    date: "2026-03-18",
+    href: "/guides/formula-feeding",
+    icon: "🍼",
+    giscusTerm: "/guides/formula-feeding",
+    locales: {
+      en: {
+        tag: "Guide",
+        title: "How Much Formula Does My Baby Need?",
+        description:
+          "Weight-based calculator, age-based feeding chart, and practical guidelines for formula-fed infants.",
+      },
+      zh: {
+        tag: "指南",
+        title: "宝宝每天需要喝多少配方奶？",
+        description:
+          "基于体重的配方奶计算器、按月龄喂养参考表和实用指南。",
       },
     },
   },
@@ -87,6 +108,7 @@ export const publicPagePaths = [
   "/",
   "/guides",
   "/guides/first-week",
+  "/guides/formula-feeding",
   "/reading-notes",
   "/reading-notes/happiest-baby-on-the-block",
   "/reading-notes/twelve-hours-sleep",
