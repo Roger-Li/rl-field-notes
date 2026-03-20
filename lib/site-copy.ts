@@ -3,9 +3,19 @@ import type { Locale } from "@/lib/i18n";
 type SiteCopy = {
   about: {
     contributingHeading: string;
+    featuresHeading: string;
     heading: string;
     metadataDescription: string;
     metadataTitle: string;
+    timelineHeading: string;
+  };
+  audioPlayer: {
+    listen: string;
+    minutes: string;
+    pause: string;
+    play: string;
+    resume: string;
+    speed: string;
   };
   commentsHeading: string;
   footerTagline: string;
@@ -45,6 +55,14 @@ type SiteCopy = {
 
 export const siteCopy: Record<Locale, SiteCopy> = {
   en: {
+    audioPlayer: {
+      listen: "Listen to this article",
+      minutes: "min",
+      pause: "Pause",
+      play: "Play",
+      resume: "Resume",
+      speed: "Speed",
+    },
     site: {
       brandName: "RL Field Notes",
       defaultDescription:
@@ -96,10 +114,20 @@ export const siteCopy: Record<Locale, SiteCopy> = {
       metadataDescription:
         "About RL Field Notes — a new dad's knowledge hub for caregiving.",
       heading: "About RL Field Notes",
+      featuresHeading: "Features",
+      timelineHeading: "Timeline",
       contributingHeading: "Contributing",
     },
   },
   zh: {
+    audioPlayer: {
+      listen: "\u6536\u542c\u672c\u6587",
+      minutes: "\u5206\u949f",
+      pause: "\u6682\u505c",
+      play: "\u64ad\u653e",
+      resume: "\u7ee7\u7eed\u64ad\u653e",
+      speed: "\u901f\u5ea6",
+    },
     site: {
       brandName: "RL Field Notes",
       defaultDescription:
@@ -149,6 +177,8 @@ export const siteCopy: Record<Locale, SiteCopy> = {
       metadataTitle: "关于",
       metadataDescription: "关于 RL Field Notes：一个写给新手爸爸的育儿知识站。",
       heading: "关于 RL Field Notes",
+      featuresHeading: "功能特色",
+      timelineHeading: "更新记录",
       contributingHeading: "参与贡献",
     },
   },

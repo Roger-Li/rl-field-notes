@@ -1,0 +1,97 @@
+How Much Formula Does My Baby Need?
+
+A weight-based formula, age-based chart, and interactive calculator. For healthy, full-term, formula-fed infants. Sourced from AAP, CDC, and Seattle Children's Hospital.
+
+
+The Rule of Thumb
+
+The AAP offers a useful average guideline: a healthy, full-term, formula-fed baby should take in about 2.5 ounces of formula per pound of body weight per day. This converts neatly: per pound, that is 75 milliliters, or 2.5 ounces per pound per day. Per kilogram, that is 163 milliliters, or about 5.5 ounces per kilogram per day. The daily ceiling is 960 milliliters, or 32 ounces, which serves as an upper guideline.
+
+This is elegant because it automatically scales with growth. A 3.5 kilogram newborn needs about 571 milliliters per day; a 5 kilogram two-month-old needs about 815 milliliters per day. The formula self-adjusts.
+
+Warning: The first few days are different. In the first 1 to 2 days of life, babies often take much smaller volumes, sometimes only about 0.5 ounces (15 milliliters) per feed. The weight-based rule is best treated as an average target that kicks in as feeding ramps up, not a day-1 prescription. Start by offering 1 to 2 ounces (30 to 60 milliliters) every 2 to 3 hours, and let baby guide you.
+
+
+Calculate Your Baby's Needs
+
+To estimate your baby's daily formula needs, multiply their weight in kilograms by 163 milliliters per kilogram per day, or multiply their weight in pounds by 2.5 ounces per pound per day. The result gives you the total daily intake in milliliters. Divide that by 6 to 8 to get the approximate amount per feed. If the calculated daily total exceeds 960 milliliters, this is worth discussing with your pediatrician, though it does not automatically mean you should start solids.
+
+
+How Feeding Changes Over Time
+
+A handy pattern: you roughly add about 1 ounce (about 30 milliliters) per feed per month until baby hits 6 to 8 ounces per feed around 6 months. The total daily volume plateaus around 900 to 960 milliliters because feeds get bigger but less frequent.
+
+In the first 1 to 2 days of life, babies typically take 15 to 30 milliliters per feed, which is about 0.5 to 1 ounce, with 8 to 12 feeds per day. Tiny amounts are normal at this stage because the stomach is marble-sized.
+
+By the first week, each feed increases to about 30 to 60 milliliters, or 1 to 2 ounces, still with 8 to 12 feeds per day. The baby is ramping up as the stomach grows.
+
+From 2 to 4 weeks of age, feeds grow to 60 to 120 milliliters, or 2 to 4 ounces, and the frequency drops slightly to 6 to 8 feeds per day. Feeds are getting bigger and slightly less frequent.
+
+Around 2 months, each feed is about 120 to 150 milliliters, or 4 to 5 ounces, with 6 to 8 feeds per day. The baby is settling into a rhythm.
+
+Around 4 months, feeds reach 150 to 180 milliliters, or 5 to 6 ounces, with 5 to 6 feeds per day. Bigger bottles, fewer feeds.
+
+By about 6 months, each feed is 180 to 240 milliliters, or 6 to 8 ounces, with 4 to 5 feeds per day. The daily total levels off and plateaus around 900 to 960 milliliters.
+
+
+Weight-Based Quick Reference
+
+Based on the 163 milliliters per kilogram per day rule of thumb, or about 2.5 ounces per pound per day, the following are reference values at different weights.
+
+A baby weighing 2.5 kilograms, or about 5.5 pounds, needs roughly 408 milliliters (14 ounces) per day, which works out to about 51 to 68 milliliters (1.7 to 2.3 ounces) per feed. This is typical for premature or small newborns.
+
+A baby weighing 3.0 kilograms, or about 6.6 pounds, needs roughly 489 milliliters (17 ounces) per day, which works out to about 61 to 82 milliliters (2.1 to 2.8 ounces) per feed. This is typical for newborns.
+
+A baby weighing 3.5 kilograms, or about 7.7 pounds, needs roughly 571 milliliters (19 ounces) per day, which works out to about 71 to 95 milliliters (2.4 to 3.2 ounces) per feed. This is typical for newborns.
+
+A baby weighing 4.0 kilograms, or about 8.8 pounds, needs roughly 652 milliliters (22 ounces) per day, which works out to about 82 to 109 milliliters (2.8 to 3.7 ounces) per feed. This is typical for babies around 2 to 4 weeks old.
+
+A baby weighing 5.0 kilograms, or about 11 pounds, needs roughly 815 milliliters (28 ounces) per day, which works out to about 102 to 136 milliliters (3.5 to 4.6 ounces) per feed. This is typical for babies around 2 months old.
+
+A baby weighing 6.0 kilograms, or about 13.2 pounds, needs roughly 960 milliliters (32 ounces) per day, which works out to about 120 to 160 milliliters (4 to 5.4 ounces) per feed. This is typical for babies around 3 to 4 months old.
+
+A baby weighing 7.0 kilograms, or about 15.4 pounds, needs roughly 960 milliliters (32 ounces) per day, which works out to about 160 to 192 milliliters (5.4 to 6.5 ounces) per feed. This is typical for babies around 4 to 5 months old. Note that the daily total has plateaued.
+
+A baby weighing 8.0 kilograms, or about 17.6 pounds, needs roughly 960 milliliters (32 ounces) per day, which works out to about 160 to 240 milliliters (5.4 to 8 ounces) per feed. This is typical for babies around 6 months old. Again, the daily total has plateaued.
+
+Daily totals plateau around 960 milliliters (32 ounces). Above this, talk to your pediatrician rather than increasing formula on your own.
+
+
+Why Weight Matters More Than Age
+
+The age-based chart is handy but imprecise -- a 90th-percentile baby at 2 weeks weighs very differently from a 10th-percentile baby at 2 weeks. The weight-based rule (163 milliliters per kilogram per day) accounts for this automatically. That said, the AAP presents it as a useful average, not a rigid mandate -- babies regulate their own intake day to day.
+
+Note: Feed on cues, not just numbers. Hunger cues matter more than any calculator. Watch for rooting (turning head side to side), lip smacking, and fist sucking. These are early signals. Crying is actually a late hunger cue -- by that point baby is already frustrated.
+
+
+The 32 oz (960 mL) Ceiling
+
+A common upper guideline is about 32 ounces (960 milliliters) per day on average. If your baby consistently wants much more or much less than expected, talk to your pediatrician rather than changing feeding strategy on your own.
+
+Warning: High intake does not mean it is time for solids. Do not start solids simply because formula volume is high. Current AAP and CDC guidance is that solids are introduced around 6 months, and introducing them before 4 months is not recommended. If your baby consistently exceeds 32 ounces per day, the next step is a conversation with your pediatrician, not a trip to the baby food aisle.
+
+
+How to Know Baby Is Getting Enough
+
+The most reassuring signs that intake is adequate are concrete and measurable.
+
+Steady weight gain. Baby should regain birth weight by about 10 to 14 days, then gain about 1 ounce per day in the early months.
+
+Enough wet diapers. After the first 4 to 5 days, look for at least 5 to 6 wet diapers per 24 hours.
+
+Satisfied after feeds. Baby seems content and relaxed after eating, not rooting or fussing immediately.
+
+Alert when awake. Baby has periods of active alertness between feeds and is not excessively sleepy or lethargic.
+
+
+One-Screen Cheat Sheet
+
+1. Daily formula is approximately baby's weight in kilograms times 163 milliliters, or weight in pounds times 75 milliliters. This is an average, not a mandate.
+
+2. The first 1 to 2 days are an exception. Start with 0.5 to 2 ounces per feed; volumes rise quickly over days.
+
+3. Add about 1 ounce per feed per month until 6 to 8 ounces per feed around 6 months. Daily total plateaus near 960 milliliters.
+
+4. Cap at 32 ounces (960 milliliters) per day. If consistently above, talk to pediatrician. Do not start solids before 4 months.
+
+5. Watch for cues, not just numbers. Rooting, lip smacking, fist sucking mean hungry. Content after feed, 5 to 6 wet diapers per day, steady weight gain mean enough.

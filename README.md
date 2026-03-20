@@ -26,6 +26,7 @@ The name is a nod to **Reinforcement Learning**: parenting is trial, error, and 
 - [MDX](https://mdxjs.com/) for content pages
 - [Tailwind CSS 4](https://tailwindcss.com/) + `@tailwindcss/typography`
 - [Giscus](https://giscus.app/) for GitHub-Discussions-backed comments
+- [Qwen3-TTS](https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice) via [mlx-audio](https://github.com/lucasnewman/mlx-audio) for local audio narration generation
 - Deployed on [Vercel](https://vercel.com/)
 
 ## Project structure
@@ -63,6 +64,23 @@ npm run lint       # ESLint
 ```
 
 Set `NEXT_PUBLIC_SITE_URL` in production so canonical URLs and sitemap entries point at the correct domain.
+
+## Audio narration
+
+Every article has a read-aloud player powered by pre-generated MP3 files. To regenerate audio after editing transcripts:
+
+```bash
+source ~/ml-env/bin/activate            # Python virtualenv with mlx-audio
+uv pip install -r scripts/requirements.txt  # first time only
+brew install ffmpeg                         # first time only
+
+npm run generate-audio                                      # all articles, both locales
+npm run generate-audio -- --only first-week                 # single article, both locales
+npm run generate-audio -- --only first-week --locale en     # single article, one locale
+npm run generate-audio -- --voice Ryan --force              # override voice, force regen
+```
+
+Default voices: **Aiden** (English), **Vivian** (Chinese). See `scripts/tts_generate.py` for all available voices.
 
 ## Contributing
 

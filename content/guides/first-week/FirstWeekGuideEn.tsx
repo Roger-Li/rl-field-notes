@@ -5,6 +5,7 @@ import { Badge } from "@/components/Badge";
 import { DataTable } from "@/components/Table";
 import { Callout } from "@/components/Callout";
 import { Source } from "@/components/Source";
+import { AudioPlayer } from "@/components/AudioPlayer";
 import { GiscusComments } from "@/components/GiscusComments";
 
 const sections = [
@@ -717,6 +718,10 @@ export default function FirstWeekGuidePage() {
             Sourced from AAP, CDC, ACOG, HRSA, NHTSA, and peer-reviewed literature
           </p>
         </div>
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 pt-4">
+        <AudioPlayer locale="en" contentKey="guides/first-week" />
       </div>
 
       <div className="max-w-4xl mx-auto px-4 py-6">

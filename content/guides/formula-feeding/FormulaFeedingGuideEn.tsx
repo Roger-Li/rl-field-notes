@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { AudioPlayer } from "@/components/AudioPlayer";
 import { DataTable } from "@/components/Table";
 import { Callout } from "@/components/Callout";
 import { Source } from "@/components/Source";
@@ -339,6 +340,10 @@ export default function FormulaFeedingGuidePage() {
             CDC, and Seattle Children&apos;s Hospital
           </p>
         </div>
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 pt-4">
+        <AudioPlayer locale="en" contentKey="guides/formula-feeding" />
       </div>
 
       <div

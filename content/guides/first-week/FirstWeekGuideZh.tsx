@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 
+import { AudioPlayer } from "@/components/AudioPlayer";
 import { Badge } from "@/components/Badge";
 import { Callout } from "@/components/Callout";
 import { GiscusComments } from "@/components/GiscusComments";
@@ -690,6 +691,10 @@ export default function FirstWeekGuidePage() {
             主要参考 AAP、CDC、ACOG、HRSA、NHTSA 以及同行评审文献
           </p>
         </div>
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 pt-4">
+        <AudioPlayer locale="zh" contentKey="guides/first-week" />
       </div>
 
       <div className="max-w-4xl mx-auto px-4 py-6">

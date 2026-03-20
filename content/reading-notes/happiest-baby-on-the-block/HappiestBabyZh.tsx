@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { AudioPlayer } from "@/components/AudioPlayer";
 import { Callout } from "@/components/Callout";
 import { GiscusComments } from "@/components/GiscusComments";
 
@@ -124,6 +125,10 @@ export default function HappiestBabySummaryZh() {
             <StatBox num="0–4 月" label="关键窗口期" color={colors.teal} />
           </div>
         </div>
+      </div>
+
+      <div style={{ maxWidth: 900, margin: "0 auto", padding: "16px 24px 0" }}>
+        <AudioPlayer locale="zh" contentKey="reading-notes/happiest-baby-on-the-block" />
       </div>
 
       {/* SUPPORT THE AUTHOR */}

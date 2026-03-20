@@ -45,6 +45,21 @@ A Next.js 16 statically generated bilingual site for new-dad caregiving knowledg
 - `npm run build` — production build (all pages are statically generated)
 - `npm run lint` — ESLint
 
+## TTS audio generation
+- Python virtualenv: `source ~/ml-env/bin/activate`
+- Install deps: `uv pip install -r scripts/requirements.txt` (also requires `ffmpeg` via Homebrew)
+- Model: `Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice` via mlx-audio (~5.3 GB per process)
+- Default voices: Aiden (EN), Vivian (ZH) — overridable with `--voice`
+- The orchestrator (`scripts/generate-audio.mjs`) detects `$VIRTUAL_ENV` and uses its Python binary
+- Runs up to 4 Python TTS processes in parallel
+- Transcript files live alongside content at `content/<key>/transcript.<locale>.txt`
+- Generated MP3s and `manifest.json` go to `public/audio/` (gitignored)
+- Commands:
+  - `source ~/ml-env/bin/activate && npm run generate-audio` — all articles, both locales
+  - `npm run generate-audio -- --only first-week` — single article, both locales
+  - `npm run generate-audio -- --only first-week --locale en` — single article, one locale
+  - `npm run generate-audio -- --voice Ryan --force` — override voice, force regen
+
 ## Style conventions
 - Tailwind CSS 4 utility classes; color palette is `stone-*` with `amber-*` accents
 - Typography plugin (`prose prose-stone`) used for long-form content

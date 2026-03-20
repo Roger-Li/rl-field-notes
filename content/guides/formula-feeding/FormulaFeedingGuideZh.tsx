@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { AudioPlayer } from "@/components/AudioPlayer";
 import { DataTable } from "@/components/Table";
 import { Callout } from "@/components/Callout";
 import { Source } from "@/components/Source";
@@ -325,6 +326,10 @@ export default function FormulaFeedingGuidePage() {
             适用于健康足月配方奶喂养婴儿 &bull; 资料来源：AAP（美国儿科学会）、CDC（美国疾控中心）、西雅图儿童医院
           </p>
         </div>
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 pt-4">
+        <AudioPlayer locale="zh" contentKey="guides/formula-feeding" />
       </div>
 
       <div

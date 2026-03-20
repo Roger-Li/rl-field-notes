@@ -69,6 +69,33 @@ export function ReadingNotesIndexPage({ locale }: { locale: Locale }) {
   );
 }
 
+const timeline: {
+  date: string;
+  en: string;
+  zh: string;
+}[] = [
+  {
+    date: "2026-03-19",
+    en: "Added read-aloud audio narration for all English articles",
+    zh: "为所有英文文章添加了语音朗读功能",
+  },
+  {
+    date: "2026-03-18",
+    en: "Published \"How Much Formula Does My Baby Need?\" guide with interactive weight calculator",
+    zh: "发布「宝宝每天需要喝多少配方奶？」指南，包含交互式体重计算器",
+  },
+  {
+    date: "2026-03-13",
+    en: "Published \"The Happiest Baby on the Block\" reading notes",
+    zh: "发布「最快乐的宝宝」读书笔记",
+  },
+  {
+    date: "2026-03-12",
+    en: "Launched site with \"New Dad Field Guide\" and \"Twelve Hours' Sleep\" reading notes",
+    zh: "网站上线，发布「新手爸爸实战指南」与「12 周睡整夜」读书笔记",
+  },
+];
+
 export function AboutPageContent({ locale }: { locale: Locale }) {
   const copy = siteCopy[locale].about;
 
@@ -114,6 +141,43 @@ export function AboutPageContent({ locale }: { locale: Locale }) {
             </p>
           </>
         )}
+
+        <h2 className="text-xl font-bold text-stone-800 mt-8 mb-3">
+          {copy.featuresHeading}
+        </h2>
+        <ul>
+          {locale === "en" ? (
+            <>
+              <li>Bilingual content in English and Simplified Chinese</li>
+              <li>Read-aloud audio narration for hands-free listening (English)</li>
+              <li>Interactive calculators and reference charts</li>
+              <li>Giscus-powered comments on every article</li>
+            </>
+          ) : (
+            <>
+              <li>中英双语内容</li>
+              <li>英文文章支持语音朗读，方便解放双手收听</li>
+              <li>交互式计算器与参考图表</li>
+              <li>每篇文章底部支持 Giscus 评论</li>
+            </>
+          )}
+        </ul>
+
+        <h2 className="text-xl font-bold text-stone-800 mt-8 mb-3">
+          {copy.timelineHeading}
+        </h2>
+        <div className="space-y-3 not-prose">
+          {timeline.map((entry) => (
+            <div key={entry.date} className="flex gap-3 text-sm">
+              <time className="text-stone-400 tabular-nums shrink-0 pt-0.5">
+                {entry.date}
+              </time>
+              <span className="text-stone-600">
+                {locale === "en" ? entry.en : entry.zh}
+              </span>
+            </div>
+          ))}
+        </div>
 
         <h2 className="text-xl font-bold text-stone-800 mt-8 mb-3">
           {copy.contributingHeading}
