@@ -6,23 +6,29 @@ The site is a bilingual (EN/ZH) statically-generated Next.js 16 site with 4 arti
 
 ---
 
-## TTS Model: Qwen3-TTS CustomVoice + MLX
+## TTS Models
 
-**Model: `Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice`** — named speaker voices for consistent narration across articles.
+Two models are used, one per language:
 
-| Criteria | Qwen3-TTS CustomVoice | Qwen3-TTS Base | Others |
-|----------|----------------------|----------------|--------|
-| Purpose | Dedicated TTS with named voices | Dedicated TTS (no stable speaker) | Various |
-| EN + ZH | Excellent (10+ languages) | Same | Varies |
-| MLX support | Yes (`mlx-audio` lib) | Yes | Limited |
-| Memory | ~5.3 GB per process on MLX | ~5.3 GB | Varies |
-| Voice consistency | Named speakers (Aiden, Vivian, etc.) | Random per segment | Varies |
+### English: Qwen3-TTS CustomVoice (local)
 
-**Default voices:** Aiden (English — sunny, clear midrange), Vivian (Chinese — bright, slightly edgy). Overridable via `--voice` flag.
+**Model: `Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice`** via mlx-audio — runs locally on Apple Silicon.
 
-**Available speakers:** Aiden, Ryan (EN), Vivian, Serena, Dylan, Uncle_Fu (ZH), Eric (Sichuan), Ono_Anna (JA), Sohee (KO).
+- ~5.3 GB per process on MLX
+- Voice: **Aiden** (sunny, clear midrange) — overridable via `--voice`
+- Available speakers: Aiden, Ryan (EN), Vivian, Serena, Dylan, Uncle_Fu (ZH), Eric (Sichuan), Ono_Anna (JA), Sohee (KO)
+- Why CustomVoice over Base: The Base model uses zero speaker embeddings, resulting in inconsistent voices across paragraphs
 
-**Why CustomVoice over Base:** The Base model uses zero speaker embeddings, resulting in inconsistent voices across paragraphs. CustomVoice ensures the same voice throughout an article.
+### Chinese: CosyVoice2 via SiliconFlow API
+
+**Model: `FunAudioLLM/CosyVoice2-0.5B`** via SiliconFlow API — cloud inference.
+
+- Voice: **anna** (Chinese female)
+- Available voices: alex, anna, bella, benjamin, charles, claire, david, diana
+- Pricing: $7.15 / 1M UTF-8 bytes (~$0.006 per article)
+- API key in `scripts/.env` (see `scripts/.env.example`)
+
+**Why CosyVoice2 over Qwen3-TTS for Chinese:** After a side-by-side comparison of 5 TTS models (Qwen3-TTS, OpenAI gpt-4o-mini-tts, Fish Audio S2-Pro, MiniMax Speech-02-HD, CosyVoice2), CosyVoice2 produced the most natural-sounding Mandarin with better prosody and tone handling. See `scripts/tts_compare.py` for the comparison framework.
 
 ---
 
@@ -31,16 +37,16 @@ The site is a bilingual (EN/ZH) statically-generated Next.js 16 site with 4 arti
 Since the site is fully static (deployed on Vercel with no server runtime), audio must be **pre-generated locally** and committed to the repo.
 
 ```
-┌──────────────────┐     ┌──────────────────┐     ┌─────────────────┐
-│ transcript.*.txt │ ──▶ │ scripts/         │ ──▶ │ public/audio/   │
-│ (manual text)    │     │ generate-audio   │     │ *.mp3 + manifest│
-└──────────────────┘     │ (Qwen3-TTS+MLX) │     └─────────────────┘
-                         └──────────────────┘              │
-                                                           ▼
-                                                  ┌─────────────────┐
-                                                  │ Vercel CDN      │
-                                                  │ static serving   │
-                                                  └─────────────────┘
+┌──────────────────┐     ┌──────────────────────────────┐     ┌─────────────────┐
+│ transcript.*.txt │ ──▶ │ scripts/generate-audio.mjs   │ ──▶ │ public/audio/   │
+│ (manual text)    │     │  ├─ EN → tts_generate.py     │     │ *.mp3 + manifest│
+└──────────────────┘     │  │     (Qwen3-TTS local/MLX) │     └─────────────────┘
+                         │  └─ ZH → tts_generate_api.py │              │
+                         │        (CosyVoice2 API)      │              ▼
+                         └──────────────────────────────┘     ┌─────────────────┐
+                                                              │ Vercel CDN      │
+                                                              │ static serving   │
+                                                              └─────────────────┘
 ```
 
 ### Why plain-text transcripts (not automated extraction)
@@ -148,7 +154,7 @@ Each transcript is plain text with natural narration phrasing. Includes headings
 
 ### Step 5: Audio Generation Pipeline
 
-**`scripts/tts_generate.py`:**
+**`scripts/tts_generate.py`** (English — local Qwen3-TTS):
 - Accepts `--input <transcript.txt> --output <output.mp3> --lang <en|zh> [--voice <name>]`
 - Uses `mlx-audio` with Qwen3-TTS-1.7B-CustomVoice
 - Merges short paragraphs into ~800-char chunks (headings attach to body for natural prosody)
@@ -156,14 +162,24 @@ Each transcript is plain text with natural narration phrasing. Includes headings
 - Inserts 0.4s silence between merged chunks (section boundaries)
 - Concatenates and exports as MP3 (128kbps, 24kHz) via ffmpeg
 
+**`scripts/tts_generate_api.py`** (Chinese — CosyVoice2 API):
+- Same CLI interface as `tts_generate.py` for drop-in use by the orchestrator
+- Sends full transcript to SiliconFlow API in a single request (up to 128K chars)
+- Normalizes output to 24kHz mono 128kbps MP3 via ffmpeg to match local pipeline
+
 **`scripts/generate-audio.mjs`:**
-- Orchestrates parallel TTS generation (up to 4 processes, ~5.3 GB each)
+- Orchestrates parallel TTS generation (up to 4 processes)
+- Routes `zh` locale to `tts_generate_api.py`, `en` to `tts_generate.py`
 - For each key + locale: checks transcript exists, checks if audio is stale (mtime comparison)
 - Spawns Python subprocess per file, batched for parallelism
 - Writes `public/audio/manifest.json` with duration + size per file
 - CLI flags: `--only <substring>` to filter articles, `--voice <name>` to override, `--force` to regenerate
 
-**`scripts/requirements.txt`:** `mlx-audio`
+**`scripts/tts_compare.py`:** Side-by-side TTS model comparison (Qwen3, OpenAI, Fish Audio S2-Pro, MiniMax, CosyVoice2)
+
+**`scripts/requirements.txt`:** `mlx-audio`, `python-dotenv`
+
+**`scripts/.env.example`:** Template for API keys (SiliconFlow, OpenAI, Fish Audio, MiniMax, MiMo)
 
 **`package.json`:** `"generate-audio": "node scripts/generate-audio.mjs"`
 
@@ -188,22 +204,26 @@ npm run generate-audio -- --voice Ryan --force              # override voice, fo
 
 ## Files Summary
 
-**New files (14):**
+**New files (17):**
 - `components/AudioPlayer.tsx` — Player component
 - `scripts/generate-audio.mjs` — Node.js orchestrator
-- `scripts/tts_generate.py` — Python TTS wrapper
-- `scripts/requirements.txt` — Python deps
+- `scripts/tts_generate.py` — Python TTS wrapper (Qwen3-TTS, English)
+- `scripts/tts_generate_api.py` — Python TTS wrapper (CosyVoice2 API, Chinese)
+- `scripts/tts_compare.py` — TTS model comparison script
+- `scripts/requirements.txt` — Python deps (`mlx-audio`, `python-dotenv`)
+- `scripts/.env.example` — API key template
 - `content/*/transcript.en.txt` (4 files) — English transcripts
 - `content/*/transcript.zh.txt` (4 files) — Chinese transcripts
 - `public/audio/manifest.json` — Generated metadata
 
-**Modified files (11):**
+**Modified files (12):**
 - `lib/site-copy.ts` — Add `audioPlayer` labels
 - `lib/content.ts` — Optional: add `hasAudio` field
 - `mdx-components.tsx` — Register `AudioPlayer`
 - 6 content TSX files — Insert `<AudioPlayer>`
 - 2 MDX files — Insert `<AudioPlayer>`
 - `package.json` — Add `generate-audio` script
+- `.gitignore` — Add `public/audio/comparison/`, `__pycache__`
 
 ---
 

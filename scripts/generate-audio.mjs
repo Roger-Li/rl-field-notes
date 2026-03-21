@@ -89,16 +89,13 @@ function getAudioDuration(mp3Path) {
 /** Spawn a Python TTS process and return a promise that resolves with exit code. */
 function spawnTTS(transcriptPath, audioPath, locale, label, voice) {
   return new Promise((resolve) => {
-    console.log(`  GEN   ${label}`);
-    const args = [
-      `${__dirname}/tts_generate.py`,
-      "--input",
-      transcriptPath,
-      "--output",
-      audioPath,
-      "--lang",
-      locale,
-    ];
+    // Use CosyVoice2 via SiliconFlow API for Chinese, local Qwen3-TTS for English
+    const script =
+      locale === "zh"
+        ? `${__dirname}/tts_generate_api.py`
+        : `${__dirname}/tts_generate.py`;
+    console.log(`  GEN   ${label} (${locale === "zh" ? "CosyVoice2 API" : "Qwen3-TTS local"})`);
+    const args = [script, "--input", transcriptPath, "--output", audioPath, "--lang", locale];
     if (voice) {
       args.push("--voice", voice);
     }

@@ -75,6 +75,11 @@ const timeline: {
   zh: string;
 }[] = [
   {
+    date: "2026-03-21",
+    en: "Added Chinese audio narration powered by CosyVoice2",
+    zh: "使用 CosyVoice2 为所有中文文章添加了语音朗读",
+  },
+  {
     date: "2026-03-19",
     en: "Added read-aloud audio narration for all English articles",
     zh: "为所有英文文章添加了语音朗读功能",
@@ -149,14 +154,14 @@ export function AboutPageContent({ locale }: { locale: Locale }) {
           {locale === "en" ? (
             <>
               <li>Bilingual content in English and Simplified Chinese</li>
-              <li>Read-aloud audio narration for hands-free listening (English)</li>
+              <li>Read-aloud audio narration for hands-free listening</li>
               <li>Interactive calculators and reference charts</li>
               <li>Giscus-powered comments on every article</li>
             </>
           ) : (
             <>
               <li>中英双语内容</li>
-              <li>英文文章支持语音朗读，方便解放双手收听</li>
+              <li>中英文文章均支持语音朗读，方便解放双手收听</li>
               <li>交互式计算器与参考图表</li>
               <li>每篇文章底部支持 Giscus 评论</li>
             </>

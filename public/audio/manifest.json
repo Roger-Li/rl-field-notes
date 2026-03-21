@@ -14,5 +14,21 @@
   "reading-notes--twelve-hours-sleep--en.mp3": {
     "duration": 1251,
     "size": 20010285
+  },
+  "guides--first-week--zh.mp3": {
+    "duration": 1480,
+    "size": 23686059
+  },
+  "guides--formula-feeding--zh.mp3": {
+    "duration": 572,
+    "size": 9147819
+  },
+  "reading-notes--happiest-baby-on-the-block--zh.mp3": {
+    "duration": 2393,
+    "size": 38289579
+  },
+  "reading-notes--twelve-hours-sleep--zh.mp3": {
+    "duration": 618,
+    "size": 9889707
   }
 }

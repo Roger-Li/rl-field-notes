@@ -1,1 +1,2 @@
 mlx-audio
+python-dotenv
