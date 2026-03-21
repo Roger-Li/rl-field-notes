@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { publicPagePaths } from "@/lib/content";
+import type { PublicPagePath } from "@/lib/content";
 import { getLang, type Locale, withLocalePath } from "@/lib/i18n";
 import { siteCopy } from "@/lib/site-copy";
 
@@ -24,7 +24,7 @@ export function createLayoutMetadata(locale: Locale): Metadata {
 type CreatePageMetadataOptions = {
   description: string;
   locale: Locale;
-  pathname: (typeof publicPagePaths)[number];
+  pathname: PublicPagePath;
   title?: string;
 };
 

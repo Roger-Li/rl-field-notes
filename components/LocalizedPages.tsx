@@ -1,6 +1,7 @@
 import { ContentCard } from "@/components/ContentCard";
 import {
   getAllContentCardsSorted,
+  getContentKeysByCategory,
   getLocalizedContentCard,
 } from "@/lib/content";
 import type { Locale } from "@/lib/i18n";
@@ -31,10 +32,7 @@ export function HomePage({ locale }: { locale: Locale }) {
 
 export function GuidesIndexPage({ locale }: { locale: Locale }) {
   const copy = siteCopy[locale].guidesIndex;
-  const guideKeys: import("@/lib/content").ContentEntryKey[] = [
-    "guides/formula-feeding",
-    "guides/first-week",
-  ];
+  const guideKeys = getContentKeysByCategory("guides/");
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
@@ -51,11 +49,7 @@ export function GuidesIndexPage({ locale }: { locale: Locale }) {
 
 export function HerNotesIndexPage({ locale }: { locale: Locale }) {
   const copy = siteCopy[locale].herNotesIndex;
-  const herNotesKeys: import("@/lib/content").ContentEntryKey[] = [
-    "her-notes/delivery-3",
-    "her-notes/delivery-2",
-    "her-notes/delivery",
-  ];
+  const herNotesKeys = getContentKeysByCategory("her-notes/");
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
@@ -74,10 +68,7 @@ export function HerNotesIndexPage({ locale }: { locale: Locale }) {
 
 export function ReadingNotesIndexPage({ locale }: { locale: Locale }) {
   const copy = siteCopy[locale].readingNotesIndex;
-  const readingNoteKeys: import("@/lib/content").ContentEntryKey[] = [
-    "reading-notes/twelve-hours-sleep",
-    "reading-notes/happiest-baby-on-the-block",
-  ];
+  const readingNoteKeys = getContentKeysByCategory("reading-notes/");
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">

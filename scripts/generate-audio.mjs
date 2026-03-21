@@ -19,7 +19,7 @@
  */
 
 import { spawn, spawnSync } from "node:child_process";
-import { existsSync, statSync, writeFileSync } from "node:fs";
+import { existsSync, readdirSync, statSync, writeFileSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
@@ -27,15 +27,29 @@ import { parseArgs } from "node:util";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 
-const CONTENT_KEYS = [
-  "guides/first-week",
-  "guides/formula-feeding",
-  "her-notes/delivery",
-  "her-notes/delivery-2",
-  "her-notes/delivery-3",
-  "reading-notes/happiest-baby-on-the-block",
-  "reading-notes/twelve-hours-sleep",
-];
+/** Auto-discover content keys by scanning content/ for dirs that contain transcript files. */
+function discoverContentKeys() {
+  const contentDir = resolve(ROOT, "content");
+  const keys = [];
+  for (const category of readdirSync(contentDir, { withFileTypes: true })) {
+    if (!category.isDirectory()) continue;
+    const catDir = resolve(contentDir, category.name);
+    for (const slug of readdirSync(catDir, { withFileTypes: true })) {
+      if (!slug.isDirectory()) continue;
+      // Only include dirs that have at least one transcript file
+      const slugDir = resolve(catDir, slug.name);
+      const hasTranscript = readdirSync(slugDir).some((f) =>
+        f.startsWith("transcript.") && f.endsWith(".txt"),
+      );
+      if (hasTranscript) {
+        keys.push(`${category.name}/${slug.name}`);
+      }
+    }
+  }
+  return keys.sort();
+}
+
+const CONTENT_KEYS = discoverContentKeys();
 
 const LOCALES = ["en", "zh"];
 

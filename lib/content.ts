@@ -1,15 +1,6 @@
 import type { Locale } from "@/lib/i18n";
 import { withLocalePath } from "@/lib/i18n";
 
-export type ContentEntryKey =
-  | "guides/first-week"
-  | "guides/formula-feeding"
-  | "her-notes/delivery"
-  | "her-notes/delivery-2"
-  | "her-notes/delivery-3"
-  | "reading-notes/happiest-baby-on-the-block"
-  | "reading-notes/twelve-hours-sleep";
-
 type LocalizedContentEntry = {
   description: string;
   tag: string;
@@ -25,7 +16,7 @@ type ContentEntry = {
   tagColor?: string;
 };
 
-export const contentEntries: Record<ContentEntryKey, ContentEntry> = {
+const _contentEntries = {
   "guides/first-week": {
     date: "2026-03-12",
     href: "/guides/first-week",
@@ -169,22 +160,42 @@ export const contentEntries: Record<ContentEntryKey, ContentEntry> = {
       },
     },
   },
-};
+} satisfies Record<string, ContentEntry>;
 
-export const publicPagePaths = [
+/** Derived from the keys of `_contentEntries` — no manual union to maintain. */
+export type ContentEntryKey = keyof typeof _contentEntries;
+export const contentEntries: Record<ContentEntryKey, ContentEntry> =
+  _contentEntries;
+
+/** Auto-derived from contentEntries + static index paths. */
+const staticPaths = [
   "/",
   "/guides",
-  "/guides/first-week",
-  "/guides/formula-feeding",
   "/her-notes",
-  "/her-notes/delivery",
-  "/her-notes/delivery-2",
-  "/her-notes/delivery-3",
   "/reading-notes",
-  "/reading-notes/happiest-baby-on-the-block",
-  "/reading-notes/twelve-hours-sleep",
   "/about",
 ] as const;
+type StaticPath = (typeof staticPaths)[number];
+type ContentPath = `/${ContentEntryKey}`;
+export type PublicPagePath = StaticPath | ContentPath;
+
+export const publicPagePaths: PublicPagePath[] = [
+  ...staticPaths,
+  ...(Object.keys(contentEntries) as ContentEntryKey[]).map(
+    (key): ContentPath => `/${key}`,
+  ),
+];
+
+/** Return content keys matching a category prefix, sorted by date descending. */
+export function getContentKeysByCategory(
+  prefix: string,
+): ContentEntryKey[] {
+  return (Object.keys(contentEntries) as ContentEntryKey[])
+    .filter((key) => key.startsWith(prefix))
+    .sort((a, b) =>
+      contentEntries[b].date.localeCompare(contentEntries[a].date),
+    );
+}
 
 export function getLocalizedContentCard(locale: Locale, key: ContentEntryKey) {
   const entry = contentEntries[key];
