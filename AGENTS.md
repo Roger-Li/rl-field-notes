@@ -16,12 +16,16 @@ A Next.js 16 statically generated bilingual site for new-parent caregiving knowl
 - `lib/content.ts` — content card metadata and public route list
 
 ## How to add a new content page
+Use the `/new-article` slash command to scaffold all boilerplate files automatically.
+
+Manual steps (what the skill does for you):
 1. Create the English route under `app/(en)/...`; for interactive pages, keep the client component under `content/...` and use a thin server route wrapper in `app/(en)/...`
 2. Create the matching Simplified Chinese route under `app/zh/...` using the same slug
-3. Add `createPageMetadata(...)` metadata for each locale and add any new public pathname to `publicPagePaths` in `lib/content.ts`
-4. Add or update localized card metadata in `lib/content.ts` and surface it from the home/index pages as needed
+3. Add `createPageMetadata(...)` metadata for each locale — `publicPagePaths` and `ContentEntryKey` are auto-derived from `_contentEntries` in `lib/content.ts`
+4. Add or update localized card metadata in `lib/content.ts` — home and category index pages auto-populate from entries sorted by date
 5. Every content page should include `<GiscusComments locale="..." term="/english-canonical-path" />` at the bottom so both locales share one discussion thread
 6. Do not fall back to English article bodies on Chinese routes; untranslated content should stay unpublished
+7. Run `npm run validate-content` to verify all required files are in place
 
 ## Translation workflow
 - English is the source of truth
