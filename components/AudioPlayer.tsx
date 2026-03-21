@@ -40,8 +40,11 @@ export function AudioPlayer({
   const [speed, setSpeed] = useState(1);
   const [showSticky, setShowSticky] = useState(false);
   const [savedPosition, setSavedPosition] = useState(0);
+  const [copied, setCopied] = useState(false);
+  const copiedTimeoutRef = useRef<ReturnType<typeof setTimeout>>(null);
 
   const copy = siteCopy[locale].audioPlayer;
+  const shareCopy = siteCopy[locale].share;
 
   // Check manifest for availability, duration, and restore saved position
   useEffect(() => {
@@ -301,6 +304,36 @@ export function AudioPlayer({
           )}
         </div>
       )}
+
+      {/* Share / copy link button */}
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          navigator.clipboard.writeText(window.location.href).then(() => {
+            setCopied(true);
+            if (copiedTimeoutRef.current) clearTimeout(copiedTimeoutRef.current);
+            copiedTimeoutRef.current = setTimeout(() => setCopied(false), 2000);
+          });
+        }}
+        className="flex items-center gap-1 mt-2 ml-auto text-xs text-stone-400 hover:text-stone-600 transition-colors cursor-pointer"
+      >
+        {copied ? (
+          <>
+            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            {shareCopy.copied}
+          </>
+        ) : (
+          <>
+            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10.172 13.828a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.102 1.101" />
+            </svg>
+            {shareCopy.copyLink}
+          </>
+        )}
+      </button>
 
       {/* Sticky bottom bar — visible when inline player scrolls out of view */}
       {showSticky && (state === "playing" || state === "paused") && (

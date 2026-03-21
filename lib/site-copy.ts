@@ -46,6 +46,10 @@ type SiteCopy = {
     metadataDescription: string;
     metadataTitle: string;
   };
+  share: {
+    copied: string;
+    copyLink: string;
+  };
   site: {
     brandName: string;
     defaultDescription: string;
@@ -62,6 +66,10 @@ export const siteCopy: Record<Locale, SiteCopy> = {
       play: "Play",
       resume: "Resume",
       speed: "Speed",
+    },
+    share: {
+      copied: "Copied!",
+      copyLink: "Copy link",
     },
     site: {
       brandName: "RL Field Notes",
@@ -127,6 +135,10 @@ export const siteCopy: Record<Locale, SiteCopy> = {
       play: "\u64ad\u653e",
       resume: "\u7ee7\u7eed\u64ad\u653e",
       speed: "\u901f\u5ea6",
+    },
+    share: {
+      copied: "已复制！",
+      copyLink: "复制链接",
     },
     site: {
       brandName: "RL Field Notes",
