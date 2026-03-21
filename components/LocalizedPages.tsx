@@ -49,6 +49,27 @@ export function GuidesIndexPage({ locale }: { locale: Locale }) {
   );
 }
 
+export function HerNotesIndexPage({ locale }: { locale: Locale }) {
+  const copy = siteCopy[locale].herNotesIndex;
+  const herNotesKeys: import("@/lib/content").ContentEntryKey[] = [
+    "her-notes/delivery",
+  ];
+
+  return (
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+      <h1 className="text-3xl font-bold text-stone-900 mb-2">
+        <span className="text-violet-700">{copy.heading}</span>
+      </h1>
+      <p className="text-stone-500 mb-8">{copy.intro}</p>
+      <div className="grid gap-6 sm:grid-cols-2">
+        {herNotesKeys.map((key) => (
+          <ContentCard key={key} {...getLocalizedContentCard(locale, key)} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function ReadingNotesIndexPage({ locale }: { locale: Locale }) {
   const copy = siteCopy[locale].readingNotesIndex;
   const readingNoteKeys: import("@/lib/content").ContentEntryKey[] = [
@@ -74,6 +95,11 @@ const timeline: {
   en: string;
   zh: string;
 }[] = [
+  {
+    date: "2026-03-21",
+    en: "Launched \"Her Notes\" section with the first delivery journal entry",
+    zh: "上线「她的笔记」栏目，发布第一篇催产日记",
+  },
   {
     date: "2026-03-21",
     en: "Added Chinese audio narration powered by CosyVoice2",

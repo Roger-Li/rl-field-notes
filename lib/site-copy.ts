@@ -25,6 +25,12 @@ type SiteCopy = {
     metadataDescription: string;
     metadataTitle: string;
   };
+  herNotesIndex: {
+    heading: string;
+    intro: string;
+    metadataDescription: string;
+    metadataTitle: string;
+  };
   header: {
     mobileMenuLabel: string;
     switchToLabel: Record<Locale, string>;
@@ -38,6 +44,7 @@ type SiteCopy = {
   nav: {
     about: string;
     guides: string;
+    herNotes: string;
     readingNotes: string;
   };
   readingNotesIndex: {
@@ -79,6 +86,7 @@ export const siteCopy: Record<Locale, SiteCopy> = {
     },
     nav: {
       guides: "Guides",
+      herNotes: "Her Notes",
       readingNotes: "Reading Notes",
       about: "About",
     },
@@ -108,6 +116,13 @@ export const siteCopy: Record<Locale, SiteCopy> = {
         "Practical guides for new dads — from labor and delivery to daily newborn care.",
       heading: "Guides",
       intro: "Practical, evidence-based guides for navigating fatherhood.",
+    },
+    herNotesIndex: {
+      metadataTitle: "Her Notes",
+      metadataDescription:
+        "Personal narratives from the mother's perspective — delivery, recovery, and early motherhood.",
+      heading: "Her Notes",
+      intro: "Personal stories from the other half of our parenting journey.",
     },
     readingNotesIndex: {
       metadataTitle: "Reading Notes",
@@ -148,6 +163,7 @@ export const siteCopy: Record<Locale, SiteCopy> = {
     },
     nav: {
       guides: "指南",
+      herNotes: "她的笔记",
       readingNotes: "读书笔记",
       about: "关于",
     },
@@ -177,6 +193,13 @@ export const siteCopy: Record<Locale, SiteCopy> = {
         "写给新手爸爸的实用指南，从分娩准备到新生儿日常照护。",
       heading: "指南",
       intro: "围绕父职第一年的关键场景，整理出可执行、可查证的实用指南。",
+    },
+    herNotesIndex: {
+      metadataTitle: "她的笔记",
+      metadataDescription:
+        "来自妈妈视角的亲历记录——分娩、恢复与初为人母的日子。",
+      heading: "她的笔记",
+      intro: "育儿旅程另一半的真实故事。",
     },
     readingNotesIndex: {
       metadataTitle: "读书笔记",

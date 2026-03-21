@@ -20,6 +20,11 @@ export function SiteHeader({ locale }: { locale: Locale }) {
       href: withLocalePath(locale, "/reading-notes"),
       label: copy.nav.readingNotes,
     },
+    {
+      href: withLocalePath(locale, "/her-notes"),
+      label: copy.nav.herNotes,
+      activeColor: "text-violet-700",
+    },
     { href: withLocalePath(locale, "/about"), label: copy.nav.about },
   ];
 
@@ -40,7 +45,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
               href={link.href}
               className={`text-sm font-medium transition-colors ${
                 normalizedPath.startsWith(stripLocalePrefix(link.href))
-                  ? "text-amber-700"
+                  ? (link.activeColor ?? "text-amber-700")
                   : "text-stone-500 hover:text-stone-900"
               }`}
             >
@@ -95,7 +100,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
               onClick={() => setMenuOpen(false)}
               className={`block py-2 text-sm font-medium ${
                 normalizedPath.startsWith(stripLocalePrefix(link.href))
-                  ? "text-amber-700"
+                  ? (link.activeColor ?? "text-amber-700")
                   : "text-stone-600"
               }`}
             >

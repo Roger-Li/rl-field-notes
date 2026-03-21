@@ -1,7 +1,7 @@
 # CLAUDE.md — RL Field Notes
 
 ## Project overview
-A Next.js 16 statically generated bilingual site for new-dad caregiving knowledge. English routes live at the root, Simplified Chinese routes live under `/zh`. Comments are powered by Giscus (GitHub Discussions).
+A Next.js 16 statically generated bilingual site for new-parent caregiving knowledge. English routes live at the root, Simplified Chinese routes live under `/zh`. Comments are powered by Giscus (GitHub Discussions). The site has three content sections: Guides (evidence-based how-tos), Reading Notes (book summaries), and Her Notes (personal narratives from the mother's perspective, using a violet/lilac accent and a distinct female TTS voice).
 
 ## Key directories
 - `app/` — pages and routes (App Router)
@@ -48,10 +48,11 @@ A Next.js 16 statically generated bilingual site for new-dad caregiving knowledg
 ## TTS audio generation
 - Python virtualenv: `source ~/ml-env/bin/activate`
 - Install deps: `uv pip install -r scripts/requirements.txt` (also requires `ffmpeg` via Homebrew)
-- **English:** Qwen3-TTS (`Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice`) via mlx-audio, local (~5.3 GB per process), voice: Aiden
+- **English (default):** Qwen3-TTS (`Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice`) via mlx-audio, local (~5.3 GB per process), voice: Aiden
 - **Chinese:** CosyVoice2 (`FunAudioLLM/CosyVoice2-0.5B`) via SiliconFlow API, voice: anna
-- The orchestrator (`scripts/generate-audio.mjs`) routes `zh` to `tts_generate_api.py` (CosyVoice2) and `en` to `tts_generate.py` (Qwen3-TTS)
-- API keys for Chinese TTS live in `scripts/.env` (gitignored); see `scripts/.env.example` for template
+- **Her Notes English:** OpenAI `gpt-4o-mini-tts`, voice: nova (natural female English voice) via `tts_generate_openai.py`
+- The orchestrator (`scripts/generate-audio.mjs`) routes by locale + content key: `her-notes/*` EN → OpenAI nova, all ZH → CosyVoice2, other EN → Qwen3-TTS
+- API keys live in `scripts/.env` (gitignored); see `scripts/.env.example` for template
 - Runs up to 4 processes in parallel
 - Transcript files live alongside content at `content/<key>/transcript.<locale>.txt`
 - Generated MP3s and `manifest.json` go to `public/audio/` (gitignored)
@@ -64,7 +65,7 @@ A Next.js 16 statically generated bilingual site for new-dad caregiving knowledg
 - TTS model comparison script: `python scripts/tts_compare.py` (see `scripts/.env.example` for API keys)
 
 ## Style conventions
-- Tailwind CSS 4 utility classes; color palette is `stone-*` with `amber-*` accents
+- Tailwind CSS 4 utility classes; color palette is `stone-*` with `amber-*` accents (Guides/Reading Notes) and `violet-*` accents (Her Notes)
 - Typography plugin (`prose prose-stone`) used for long-form content
 - Keep pages mobile-friendly (`max-w-4xl mx-auto px-4 sm:px-6`)
 

@@ -6,12 +6,14 @@ export function ContentCard({
   title,
   description,
   tag,
+  tagColor,
 }: {
   href: string;
   icon: string;
   title: string;
   description: string;
   tag: string;
+  tagColor?: string;
 }) {
   return (
     <Link
@@ -21,7 +23,7 @@ export function ContentCard({
       <div className="flex items-start gap-4">
         <span className="text-3xl">{icon}</span>
         <div>
-          <span className="text-xs font-semibold uppercase tracking-wide text-amber-700">
+          <span className={`text-xs font-semibold uppercase tracking-wide ${tagColor ?? "text-amber-700"}`}>
             {tag}
           </span>
           <h3 className="mt-1 text-lg font-semibold text-stone-900">{title}</h3>

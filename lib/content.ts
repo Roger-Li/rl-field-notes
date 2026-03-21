@@ -4,6 +4,7 @@ import { withLocalePath } from "@/lib/i18n";
 export type ContentEntryKey =
   | "guides/first-week"
   | "guides/formula-feeding"
+  | "her-notes/delivery"
   | "reading-notes/happiest-baby-on-the-block"
   | "reading-notes/twelve-hours-sleep";
 
@@ -19,6 +20,7 @@ type ContentEntry = {
   href: string;
   icon: string;
   locales: Record<Locale, LocalizedContentEntry>;
+  tagColor?: string;
 };
 
 export const contentEntries: Record<ContentEntryKey, ContentEntry> = {
@@ -59,6 +61,27 @@ export const contentEntries: Record<ContentEntryKey, ContentEntry> = {
         title: "宝宝每天需要喝多少配方奶？",
         description:
           "基于体重的配方奶计算器、按月龄喂养参考表和实用指南。",
+      },
+    },
+  },
+  "her-notes/delivery": {
+    date: "2026-03-21",
+    href: "/her-notes/delivery",
+    icon: "💜",
+    giscusTerm: "/her-notes/delivery",
+    tagColor: "text-violet-700",
+    locales: {
+      en: {
+        tag: "Her Notes",
+        title: "Induction Diary (Part 1)",
+        description:
+          "A mother's firsthand account of the final weeks of pregnancy and the road to an elective induction at 39 weeks.",
+      },
+      zh: {
+        tag: "她的笔记",
+        title: "催产日记（一）",
+        description:
+          "一位新手妈妈的亲历记录：从产检到等待入院，漫长孕晚期的真实感受。",
       },
     },
   },
@@ -109,6 +132,8 @@ export const publicPagePaths = [
   "/guides",
   "/guides/first-week",
   "/guides/formula-feeding",
+  "/her-notes",
+  "/her-notes/delivery",
   "/reading-notes",
   "/reading-notes/happiest-baby-on-the-block",
   "/reading-notes/twelve-hours-sleep",
@@ -121,6 +146,7 @@ export function getLocalizedContentCard(locale: Locale, key: ContentEntryKey) {
   return {
     href: withLocalePath(locale, entry.href),
     icon: entry.icon,
+    ...(entry.tagColor ? { tagColor: entry.tagColor } : {}),
     ...entry.locales[locale],
   };
 }

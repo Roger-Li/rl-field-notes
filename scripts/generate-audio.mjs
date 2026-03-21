@@ -30,6 +30,7 @@ const ROOT = resolve(__dirname, "..");
 const CONTENT_KEYS = [
   "guides/first-week",
   "guides/formula-feeding",
+  "her-notes/delivery",
   "reading-notes/happiest-baby-on-the-block",
   "reading-notes/twelve-hours-sleep",
 ];
@@ -86,18 +87,34 @@ function getAudioDuration(mp3Path) {
   }
 }
 
+// Content keys that use a female voice (OpenAI nova for EN, CosyVoice2 anna for ZH).
+const FEMALE_VOICE_KEYS = ["her-notes/"];
+
+function pickTTSConfig(locale, contentKey) {
+  const isFemale = FEMALE_VOICE_KEYS.some((prefix) => contentKey.startsWith(prefix));
+
+  if (isFemale && locale === "en") {
+    // OpenAI gpt-4o-mini-tts with "nova" — natural female English voice
+    return { script: `${__dirname}/tts_generate_openai.py`, voice: "nova", engine: "OpenAI nova" };
+  }
+  if (locale === "zh") {
+    // CosyVoice2 via SiliconFlow — female Chinese voice for her-notes, default for others
+    const voice = isFemale ? "anna" : undefined;
+    return { script: `${__dirname}/tts_generate_api.py`, voice, engine: "CosyVoice2 API" };
+  }
+  // Default: local Qwen3-TTS (male English)
+  return { script: `${__dirname}/tts_generate.py`, voice: undefined, engine: "Qwen3-TTS local" };
+}
+
 /** Spawn a Python TTS process and return a promise that resolves with exit code. */
-function spawnTTS(transcriptPath, audioPath, locale, label, voice) {
+function spawnTTS(transcriptPath, audioPath, locale, label, voice, contentKey) {
   return new Promise((resolve) => {
-    // Use CosyVoice2 via SiliconFlow API for Chinese, local Qwen3-TTS for English
-    const script =
-      locale === "zh"
-        ? `${__dirname}/tts_generate_api.py`
-        : `${__dirname}/tts_generate.py`;
-    console.log(`  GEN   ${label} (${locale === "zh" ? "CosyVoice2 API" : "Qwen3-TTS local"})`);
-    const args = [script, "--input", transcriptPath, "--output", audioPath, "--lang", locale];
-    if (voice) {
-      args.push("--voice", voice);
+    const config = pickTTSConfig(locale, contentKey);
+    const effectiveVoice = voice || config.voice;
+    console.log(`  GEN   ${label} (${config.engine}${effectiveVoice ? `, voice=${effectiveVoice}` : ""})`);
+    const args = [config.script, "--input", transcriptPath, "--output", audioPath, "--lang", locale];
+    if (effectiveVoice) {
+      args.push("--voice", effectiveVoice);
     }
     const child = spawn(PYTHON_BIN, args, { stdio: "inherit" });
     child.on("close", (code) => resolve(code ?? 1));
@@ -187,6 +204,7 @@ async function main() {
           j.locale,
           j.audioFileName,
           voiceOverride,
+          j.key,
         ),
       ),
     );

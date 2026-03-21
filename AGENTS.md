@@ -1,7 +1,7 @@
 # AGENTS.md — RL Field Notes
 
 ## Project overview
-A Next.js 16 statically generated bilingual site for new-dad caregiving knowledge. English routes live at the root, Simplified Chinese routes live under `/zh`. Comments are powered by Giscus (GitHub Discussions).
+A Next.js 16 statically generated bilingual site for new-parent caregiving knowledge. English routes live at the root, Simplified Chinese routes live under `/zh`. Comments are powered by Giscus (GitHub Discussions). The site has three content sections: Guides (evidence-based how-tos), Reading Notes (book summaries), and Her Notes (personal narratives from the mother's perspective, using a violet/lilac accent and a distinct female TTS voice).
 
 ## Key directories
 - `app/` — pages and routes (App Router)
@@ -48,9 +48,11 @@ A Next.js 16 statically generated bilingual site for new-dad caregiving knowledg
 ## TTS audio generation
 - Python virtualenv: `source ~/ml-env/bin/activate`
 - Install deps: `uv pip install -r scripts/requirements.txt` (also requires `ffmpeg` via Homebrew)
-- Model: `Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice` via mlx-audio
-- Default voices: Aiden (EN), Vivian (ZH) — overridable with `--voice`
-- Runs up to 4 parallel TTS processes; transcript files at `content/<key>/transcript.<locale>.txt`
+- **English (default):** Qwen3-TTS (`Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice`) via mlx-audio, voice: Aiden
+- **Chinese:** CosyVoice2 (`FunAudioLLM/CosyVoice2-0.5B`) via SiliconFlow API, voice: anna
+- **Her Notes English:** OpenAI `gpt-4o-mini-tts`, voice: nova (female) via `tts_generate_openai.py`
+- Orchestrator routes by locale + content key; runs up to 4 parallel processes
+- Transcript files at `content/<key>/transcript.<locale>.txt`
 - Commands:
   - `source ~/ml-env/bin/activate && npm run generate-audio` — all articles, both locales
   - `npm run generate-audio -- --only first-week` — single article, both locales
@@ -58,7 +60,7 @@ A Next.js 16 statically generated bilingual site for new-dad caregiving knowledg
   - `npm run generate-audio -- --voice Ryan --force` — override voice, force regen
 
 ## Style conventions
-- Tailwind CSS 4 utility classes; color palette is `stone-*` with `amber-*` accents
+- Tailwind CSS 4 utility classes; color palette is `stone-*` with `amber-*` accents (Guides/Reading Notes) and `violet-*` accents (Her Notes)
 - Typography plugin (`prose prose-stone`) used for long-form content
 - Keep pages mobile-friendly (`max-w-4xl mx-auto px-4 sm:px-6`)
 
