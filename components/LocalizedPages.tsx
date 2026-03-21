@@ -52,6 +52,8 @@ export function GuidesIndexPage({ locale }: { locale: Locale }) {
 export function HerNotesIndexPage({ locale }: { locale: Locale }) {
   const copy = siteCopy[locale].herNotesIndex;
   const herNotesKeys: import("@/lib/content").ContentEntryKey[] = [
+    "her-notes/delivery-3",
+    "her-notes/delivery-2",
     "her-notes/delivery",
   ];
 
@@ -95,6 +97,11 @@ const timeline: {
   en: string;
   zh: string;
 }[] = [
+  {
+    date: "2026-03-21",
+    en: "Published Induction Diary Parts 2 & 3 — first stage timeline and delivery/postpartum account",
+    zh: "发布催产日记（二）（三）——第一产程时间轴与分娩及产后记录",
+  },
   {
     date: "2026-03-21",
     en: "Launched \"Her Notes\" section with the first delivery journal entry",

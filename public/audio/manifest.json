@@ -38,5 +38,21 @@
   "her-notes--delivery--zh.mp3": {
     "duration": 161,
     "size": 2570667
+  },
+  "her-notes--delivery-3--en.mp3": {
+    "duration": 348,
+    "size": 5574957
+  },
+  "her-notes--delivery-3--zh.mp3": {
+    "duration": 391,
+    "size": 6255147
+  },
+  "her-notes--delivery-2--en.mp3": {
+    "duration": 169,
+    "size": 2706093
+  },
+  "her-notes--delivery-2--zh.mp3": {
+    "duration": 183,
+    "size": 2925099
   }
 }

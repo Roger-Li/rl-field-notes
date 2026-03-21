@@ -5,6 +5,8 @@ export type ContentEntryKey =
   | "guides/first-week"
   | "guides/formula-feeding"
   | "her-notes/delivery"
+  | "her-notes/delivery-2"
+  | "her-notes/delivery-3"
   | "reading-notes/happiest-baby-on-the-block"
   | "reading-notes/twelve-hours-sleep";
 
@@ -85,6 +87,48 @@ export const contentEntries: Record<ContentEntryKey, ContentEntry> = {
       },
     },
   },
+  "her-notes/delivery-2": {
+    date: "2026-03-21",
+    href: "/her-notes/delivery-2",
+    icon: "💜",
+    giscusTerm: "/her-notes/delivery-2",
+    tagColor: "text-violet-700",
+    locales: {
+      en: {
+        tag: "Her Notes",
+        title: "Induction Diary (Part 2)",
+        description:
+          "From hospital admission to full dilation — a timeline of the first stage of labor.",
+      },
+      zh: {
+        tag: "她的笔记",
+        title: "催产日记（二）",
+        description:
+          "从入院到宫口全开：催产第一产程的完整时间轴记录。",
+      },
+    },
+  },
+  "her-notes/delivery-3": {
+    date: "2026-03-21",
+    href: "/her-notes/delivery-3",
+    icon: "💜",
+    giscusTerm: "/her-notes/delivery-3",
+    tagColor: "text-violet-700",
+    locales: {
+      en: {
+        tag: "Her Notes",
+        title: "Induction Diary (Part 3)",
+        description:
+          "The second and third stages of labor, and the postpartum rollercoaster — from pushing to vacuum delivery to a fainting scare.",
+      },
+      zh: {
+        tag: "她的笔记",
+        title: "催产日记（三）",
+        description:
+          "二三产程以及产后的惊心动魄：从推挤到真空吸引，从昏厥到康复。",
+      },
+    },
+  },
   "reading-notes/happiest-baby-on-the-block": {
     date: "2026-03-13",
     href: "/reading-notes/happiest-baby-on-the-block",
@@ -134,6 +178,8 @@ export const publicPagePaths = [
   "/guides/formula-feeding",
   "/her-notes",
   "/her-notes/delivery",
+  "/her-notes/delivery-2",
+  "/her-notes/delivery-3",
   "/reading-notes",
   "/reading-notes/happiest-baby-on-the-block",
   "/reading-notes/twelve-hours-sleep",

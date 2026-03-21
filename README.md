@@ -19,6 +19,7 @@ The name is a nod to **Reinforcement Learning**: parenting is trial, error, and 
 |---------|-------------|
 | **Guides** | Original write-ups on topics like the first week home |
 | **Reading Notes** | Summaries of parenting books with actionable takeaways |
+| **Her Notes** | Personal narratives from the mother's perspective — delivery, recovery, and early motherhood |
 
 ## Tech stack
 

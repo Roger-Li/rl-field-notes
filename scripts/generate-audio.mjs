@@ -31,6 +31,8 @@ const CONTENT_KEYS = [
   "guides/first-week",
   "guides/formula-feeding",
   "her-notes/delivery",
+  "her-notes/delivery-2",
+  "her-notes/delivery-3",
   "reading-notes/happiest-baby-on-the-block",
   "reading-notes/twelve-hours-sleep",
 ];
