@@ -1,5 +1,5 @@
 ---
-description: Scaffold all boilerplate files for a new bilingual article (routes, content stubs, transcripts, metadata registration)
+description: Scaffold all boilerplate files for a new bilingual article (routes, content stubs, transcripts, metadata registration, About timeline maintenance)
 ---
 
 # New Article Scaffold
@@ -145,6 +145,14 @@ Add a new entry to the `_contentEntries` object (before the closing `} satisfies
   },
 ```
 
+### 7. Update the About page timeline in `components/LocalizedPages.tsx`
+
+Append a new top entry to the curated `timeline` array for the release date of this article.
+
+- Use the same date as the `lib/content.ts` entry
+- Add both English and Chinese release-note copy
+- Keep the timeline reverse-chronological (newest first)
+
 ## After scaffolding
 
 1. Run `npm run validate-content` to verify all files are in place
@@ -153,6 +161,7 @@ Add a new entry to the `_contentEntries` object (before the closing `} satisfies
    - Write transcripts in the .txt files
    - Run `npm run generate-audio -- --only {slug}` for TTS
    - Run `npm run build` to verify the build passes
+3. If you changed the content publishing workflow or `/new-article` instructions while doing this work, update both `CLAUDE.md` and `AGENTS.md` in the same edit so the mirrored guidance stays in sync
 
 ## Important rules
 
@@ -161,3 +170,5 @@ Add a new entry to the `_contentEntries` object (before the closing `} satisfies
 - Respect existing code style (semicolons, trailing commas, 2-space indent)
 - The `pathname` in `createPageMetadata` must NOT have a locale prefix (no `/zh/`)
 - Both EN and ZH routes must use the same `pathname` and `giscusTerm`
+- The About page timeline in `components/LocalizedPages.tsx` is a hand-written editorial changelog, not an auto-derived feed — update it explicitly for each newly published article
+- `CLAUDE.md` and `AGENTS.md` are mirrored workflow references; when one needs a workflow update, update the other in the same change

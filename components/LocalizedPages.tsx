@@ -89,6 +89,11 @@ const timeline: {
   zh: string;
 }[] = [
   {
+    date: "2026-03-25",
+    en: 'Published "Milk Suppression & Bottle Feeding" guide with postpartum milk suppression and bottle-feeding optimization guidance',
+    zh: "发布「回奶与瓶喂优化指南」，涵盖产后回奶管理与瓶喂优化建议",
+  },
+  {
     date: "2026-03-21",
     en: "Published Induction Diary Parts 2 & 3 — first stage timeline and delivery/postpartum account",
     zh: "发布催产日记（二）（三）——第一产程时间轴与分娩及产后记录",
@@ -197,7 +202,7 @@ export function AboutPageContent({ locale }: { locale: Locale }) {
         </h2>
         <div className="space-y-3 not-prose">
           {timeline.map((entry) => (
-            <div key={entry.date} className="flex gap-3 text-sm">
+            <div key={`${entry.date}-${entry.en}`} className="flex gap-3 text-sm">
               <time className="text-stone-400 tabular-nums shrink-0 pt-0.5">
                 {entry.date}
               </time>
