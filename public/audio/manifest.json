@@ -54,5 +54,13 @@
   "her-notes--delivery-2--zh.mp3": {
     "duration": 183,
     "size": 2925099
+  },
+  "guides--milk-suppression-bottle-feeding--en.mp3": {
+    "duration": 851,
+    "size": 13624365
+  },
+  "guides--milk-suppression-bottle-feeding--zh.mp3": {
+    "duration": 815,
+    "size": 13042347
   }
 }

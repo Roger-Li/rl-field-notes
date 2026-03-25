@@ -57,6 +57,26 @@ const _contentEntries = {
       },
     },
   },
+  "guides/milk-suppression-bottle-feeding": {
+    date: "2026-03-25",
+    href: "/guides/milk-suppression-bottle-feeding",
+    icon: "🤱",
+    giscusTerm: "/guides/milk-suppression-bottle-feeding",
+    locales: {
+      en: {
+        tag: "Guide",
+        title: "Milk Suppression & Bottle Feeding",
+        description:
+          "Evidence-checked guidance for managing postpartum milk production and optimizing bottle feeding — from a Day 12 lactation consultation.",
+      },
+      zh: {
+        tag: "指南",
+        title: "回奶与瓶喂优化指南",
+        description:
+          "产后回奶管理与瓶喂优化的循证指南——来自产后第12天的泌乳咨询。",
+      },
+    },
+  },
   "her-notes/delivery": {
     date: "2026-03-21",
     href: "/her-notes/delivery",
