@@ -1,0 +1,239 @@
+Childhood Immunization Guide, United States, 2026.
+
+Last updated March 28, 2026.
+
+This guide compares the 2026 American Academy of Pediatrics schedule with the HHS-announced CDC policy changes and the currently posted CDC schedule pages for children and adolescents.
+
+Why this guide exists.
+
+On January 5, 2026, HHS published a fact sheet describing a narrower CDC childhood schedule, with several vaccines moved into high-risk or shared clinical decision-making categories.
+
+As of March 28, 2026, the official CDC child and adolescent notes page I cross-checked is still dated December 8, 2025 and still shows routine language for several of those same items, including hepatitis A, hepatitis B, rotavirus, influenza, MenACWY, HPV dosing, and infant RSV protection.
+
+The American Academy of Pediatrics published its own 2026 schedule and continues to recommend the broader routine pediatric schedule.
+
+That means parents should treat the AAP schedule as the practical timeline, and treat the CDC side of this guide as the announced 2026 policy direction, not as a perfectly settled single CDC page.
+
+How to read the labels in this guide.
+
+Both recommend means the AAP and the current official sources still broadly align on the item.
+
+CDC and HHS conditional means the AAP keeps a universal recommendation, while HHS announced a narrower CDC policy and some currently posted CDC pages still read more broadly.
+
+Protocol differs means HHS announced a protocol change, but the currently posted CDC schedule pages may not yet fully reflect it.
+
+Standard AAP-style schedule overview.
+
+Birth: hepatitis B dose one, one shot.
+
+One month: hepatitis B dose two, one shot.
+
+Two months: rotavirus, pneumococcal conjugate vaccine, and DTaP-IPV-Hib combination vaccine. That is typically two shots plus one oral dose.
+
+Four months: the same pattern again, two shots plus one oral dose.
+
+Six months: hepatitis B dose three, rotavirus, and DTaP-IPV-Hib. Again, two shots plus one oral dose.
+
+Six months and older: annual influenza vaccination. The first influenza season usually requires two doses spaced at least four weeks apart.
+
+Twelve to fifteen months: MMR, varicella, hepatitis A dose one, pneumococcal booster, and Hib booster. Depending on which combination products were used earlier, this visit is usually four to five shots.
+
+Fifteen to eighteen months: DTaP dose four. If Pentacel is used for the Hib-containing visit, it can cover DTaP dose four at the same time.
+
+Eighteen to twenty-three months: hepatitis A dose two.
+
+Four to six years: MMRV combination vaccine plus the DTaP-IPV booster, usually two shots.
+
+Eleven to twelve years: HPV, Tdap, and MenACWY, usually three shots.
+
+Sixteen years: MenACWY booster, one shot.
+
+First RSV season: one infant monoclonal antibody injection if indicated.
+
+COVID-19 also begins at six months, but it does not appear as its own row in the compact AAP overview table. The exact number of doses depends on the product and the child’s age when the series begins.
+
+Infant section.
+
+One. HBV, hepatitis B vaccine.
+
+This vaccine protects against hepatitis B virus, which can cause chronic liver infection, cirrhosis, and liver cancer. If infection happens in infancy, chronic infection is far more likely than it is in adulthood. That is why the birth dose has always mattered so much.
+
+Routine schedule: birth, one month, and six months.
+
+AAP position: universally recommended, with strong emphasis on the birth dose.
+
+CDC and HHS position: HHS announced shared decision-making for low-risk infants, but the currently posted CDC notes page still lists a routine birth-dose series for infants of hepatitis B surface antigen negative mothers.
+
+Two. Rotavirus vaccine.
+
+Rotavirus is a major cause of severe infant diarrhea and vomiting. Before the vaccine era it led to tens of thousands of hospitalizations each year in the United States.
+
+Rotavirus vaccine is given by mouth, not by shot.
+
+RotaTeq is a three-dose series at two, four, and six months. Rotarix is a two-dose series at two and four months.
+
+There is a strict timing rule: the first dose must be started before fifteen weeks of age, and the series must be completed by eight months. If the window is missed, the series is generally not started late.
+
+AAP position: universally recommended.
+
+CDC and HHS position: the HHS fact sheet lists rotavirus under shared clinical decision-making, but the current CDC notes page still lists the routine Rotarix and RotaTeq series.
+
+Three. Pneumococcal conjugate vaccine, PCV15 or PCV20.
+
+This protects against pneumococcal disease, including pneumonia, bloodstream infection, meningitis, and some ear infections.
+
+Routine schedule: two, four, six, and twelve to fifteen months.
+
+Current products are PCV15 and PCV20. In current U.S. practice these have replaced the older PCV13. Children who started with PCV13 can complete the series with PCV15 or PCV20 without restarting.
+
+AAP and current official schedule-page position: both still universally recommend this routine infant series.
+
+Four. DTaP-IPV-Hib combination vaccines.
+
+These combine protection against diphtheria, tetanus, pertussis, polio, and Hib into fewer injections.
+
+Pentacel is a five-in-one vaccine used at two, four, six, and fifteen to eighteen months.
+
+Vaxelis is a six-in-one vaccine used at two, four, and six months only, and it is not used for the Hib booster dose.
+
+If the primary series used Vaxelis, the child still needs a separate Hib booster and a separate DTaP dose four later on.
+
+AAP and current official schedule-page position: all of these components remain universally recommended.
+
+Five. RSV prevention with monoclonal antibodies.
+
+This is not a traditional vaccine. It is passive immunity that protects an infant through roughly one RSV season.
+
+The current CDC notes page names Beyfortus, also called nirsevimab. Enflonsia, also called clesrovimab, is now an additional FDA-approved infant option.
+
+If the pregnant parent received maternal RSV vaccination, the newborn often does not also need an infant monoclonal antibody. Important exceptions include unknown maternal status, birth within fourteen days of maternal vaccination, or medical judgment that the infant remains at elevated risk.
+
+AAP position: infants younger than eight months entering their first RSV season should generally receive protection if maternal vaccination is not already covering them.
+
+CDC and HHS position: HHS groups RSV under certain high-risk categories, while the current CDC notes page still lays out routine infant nirsevimab eligibility tied to maternal vaccination timing.
+
+Six. Influenza vaccine.
+
+Influenza vaccination starts at six months and is repeated every year.
+
+The first season usually requires two doses. Later seasons usually require one dose each year.
+
+AAP position: universally recommended every year from six months onward.
+
+CDC and HHS position: the HHS fact sheet lists influenza under shared clinical decision-making, but the current CDC notes page still presents annual routine vaccination.
+
+Seven. COVID-19 vaccine.
+
+COVID vaccination starts at six months. The exact product, number of doses, and spacing depend on the child’s age when vaccination begins and on the updated product being used that season.
+
+A practical question for parents is which product their pediatric office is actually stocking this season.
+
+AAP position: recommended starting at six months.
+
+CDC and HHS position: the October 2025 HHS and CDC announcement moved COVID-19 into shared clinical decision-making.
+
+Toddler and pre-kindergarten section.
+
+Eight. MMR, measles, mumps, and rubella vaccine.
+
+Routine schedule: twelve to fifteen months and four to six years.
+
+The first dose waits until around twelve months because maternal antibodies that protect infants early in life can also interfere with vaccine response.
+
+AAP and current official schedule-page position: both still universally recommend the standard two-dose schedule.
+
+Nine. Hepatitis A vaccine.
+
+Routine schedule: the first dose is given from twelve to twenty-three months, and the second dose follows six to eighteen months later.
+
+This vaccine prevents hepatitis A, which does not usually become chronic but can still cause prolonged fever, jaundice, nausea, and fatigue, and which used to drive repeated outbreaks.
+
+A A P position: universally recommended as a routine toddler vaccine.
+
+CDC and HHS position: the HHS fact sheet moves hepatitis A into high-risk and shared decision-making buckets, while the current CDC notes page still lists a routine two-dose toddler series.
+
+Ten. Varicella vaccine.
+
+Routine schedule: twelve to fifteen months and four to six years.
+
+Varicella causes chickenpox, but the virus can also remain dormant in nerve tissue and reactivate later as shingles. Preventing the first infection changes that later-life risk picture.
+
+AAP and current official schedule-page position: both still universally recommend the routine two-dose series.
+
+Eleven. ProQuad, the MMRV combination vaccine.
+
+This combines the second doses of MMR and varicella into one injection.
+
+For the first dose at twelve to fifteen months, current CDC clinician guidance favors separate MMR and varicella vaccines for children twelve through forty-seven months unless parents specifically prefer MMRV after counseling, because the combined product carries a higher febrile seizure risk in that age range.
+
+By the second dose at four to six years, that seizure-risk difference is no longer the main issue, so the combo product remains a routine way to reduce injections.
+
+AAP and current CDC guidance position: MMRV remains a routine second-dose option, but it is not the default first-dose product for children twelve through forty-seven months.
+
+Twelve. Quadracel, the DTaP-IPV booster.
+
+This is the pre-kindergarten booster for diphtheria, tetanus, pertussis, and polio.
+
+Hib drops out here because the risk of Hib disease falls sharply after age five.
+
+AAP and current official schedule-page position: both still universally recommend the routine pre-K booster.
+
+Adolescent section.
+
+Thirteen. HPV vaccine, Gardasil 9.
+
+This protects against HPV-related cancers and genital warts. It matters most before likely exposure, which is why the routine schedule starts around eleven to twelve years.
+
+Gardasil 9 is the only HPV vaccine currently distributed in the United States.
+
+This is the clearest place where the announced policy change and the currently posted CDC text are still visibly out of sync.
+
+AAP position: universally recommended. If the series starts before age fifteen, the established schedule remains two doses. If it starts at age fifteen or older, or if the child is immunocompromised, the series remains three doses.
+
+CDC and HHS position: the January 2026 HHS fact sheet says the routine protocol drops to one dose, but the current CDC notes page still lists two or three doses depending on age at initiation.
+
+Fourteen. Tdap.
+
+This is the adolescent booster for tetanus, diphtheria, and pertussis after childhood DTaP immunity begins to wane.
+
+AAP and current official schedule-page position: both still universally recommend the booster at eleven to twelve years.
+
+Fifteen. MenACWY.
+
+This protects against meningococcal disease caused by serogroups A, C, W, and Y, including bacterial meningitis and bloodstream infection that can progress very quickly in teens and young adults.
+
+Routine AAP schedule: one dose at eleven to twelve years and a booster at sixteen years.
+
+Current products include Menveo and MenQuadfi. The older Menactra product has been discontinued.
+
+AAP position: universally recommended as the routine two-dose adolescent series.
+
+CDC and HHS position: the HHS fact sheet moves MenACWY into high-risk and shared decision-making buckets, while the current CDC notes page still lists the routine eleven-to-twelve-year dose plus the sixteen-year booster.
+
+AAP versus CDC and HHS 2026 policy at a glance.
+
+Diseases that both still universally recommend: diphtheria, tetanus, pertussis, polio, Hib, pneumococcal disease, measles, mumps, rubella, varicella, and HPV.
+
+Diseases HHS moved into conditional or high-risk buckets: hepatitis B for low-risk infants, hepatitis A, rotavirus, influenza, COVID-19, RSV, and meningococcal disease.
+
+Product changes worth knowing.
+
+PCV13 has been replaced in routine practice by PCV15 or PCV20.
+
+Menactra has been replaced by Menveo or MenQuadfi.
+
+RSV monoclonal antibodies remain part of infant planning, and the official product list is still catching up with newer approvals.
+
+Gardasil 9 is the only HPV vaccine still distributed in the United States.
+
+Insurance and coverage.
+
+The January 5, 2026 HHS fact sheet says vaccines recommended by CDC as of December 31, 2025 remain covered without cost-sharing through ACA plans, Medicaid, CHIP, and Vaccines for Children.
+
+The AAP immunization FAQ also says shared clinical decision-making still provides a payment pathway and that the Vaccines for Children program would continue distributing those vaccines.
+
+The most useful question to ask your pediatrician is this: Which childhood schedule are you using in practice right now?
+
+That question usually clarifies whether your clinician is following the AAP schedule, the HHS-announced CDC policy shift, or the still-posted CDC notes language for hepatitis B, rotavirus, influenza, RSV, hepatitis A, MenACWY, and HPV.
+
+This guide is informational and does not replace medical advice from your child’s clinician.

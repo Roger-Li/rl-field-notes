@@ -62,5 +62,13 @@
   "guides--milk-suppression-bottle-feeding--zh.mp3": {
     "duration": 815,
     "size": 13042347
+  },
+  "guides--immunization-schedule--en.mp3": {
+    "duration": 1067,
+    "size": 17067693
+  },
+  "guides--immunization-schedule--zh.mp3": {
+    "duration": 1025,
+    "size": 16396971
   }
 }

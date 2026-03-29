@@ -77,6 +77,26 @@ const _contentEntries = {
       },
     },
   },
+  "guides/immunization-schedule": {
+    date: "2026-03-28",
+    href: "/guides/immunization-schedule",
+    icon: "💉",
+    giscusTerm: "/guides/immunization-schedule",
+    locales: {
+      en: {
+        tag: "Guide",
+        title: "Childhood Immunization Guide (US, 2026)",
+        description:
+          "Complete vaccine-by-vaccine guide with AAP vs CDC schedule comparison, from birth to 16 years.",
+      },
+      zh: {
+        tag: "指南",
+        title: "儿童疫苗接种指南（美国，2026）",
+        description:
+          "从出生到16岁的完整疫苗逐项指南，含AAP与CDC接种时间表对比。",
+      },
+    },
+  },
   "her-notes/delivery": {
     date: "2026-03-21",
     href: "/her-notes/delivery",

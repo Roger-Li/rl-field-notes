@@ -159,7 +159,7 @@ Append a new top entry to the curated `timeline` array for the release date of t
 2. Remind the user to:
    - Write the article content in the En/Zh component files
    - Write transcripts in the .txt files
-   - Run `npm run generate-audio -- --only {slug}` for TTS
+   - Run `source ~/ml-env/bin/activate && npm run generate-audio -- --only {slug}` once transcripts are ready so the AudioPlayer narration and copy-link button become available
    - Run `npm run build` to verify the build passes
 3. If you changed the content publishing workflow or `/new-article` instructions while doing this work, update both `CLAUDE.md` and `AGENTS.md` in the same edit so the mirrored guidance stays in sync
 
@@ -171,4 +171,5 @@ Append a new top entry to the curated `timeline` array for the release date of t
 - The `pathname` in `createPageMetadata` must NOT have a locale prefix (no `/zh/`)
 - Both EN and ZH routes must use the same `pathname` and `giscusTerm`
 - The About page timeline in `components/LocalizedPages.tsx` is a hand-written editorial changelog, not an auto-derived feed — update it explicitly for each newly published article
+- The shared `AudioPlayer` already includes the article copy-link/share control, so an article is not publish-ready until transcripts exist and audio has been generated
 - `CLAUDE.md` and `AGENTS.md` are mirrored workflow references; when one needs a workflow update, update the other in the same change

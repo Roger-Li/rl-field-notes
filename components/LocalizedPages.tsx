@@ -89,6 +89,11 @@ const timeline: {
   zh: string;
 }[] = [
   {
+    date: "2026-03-28",
+    en: 'Published "Childhood Immunization Guide (US, 2026)" with an interactive AAP vs CDC comparison timeline',
+    zh: "发布「儿童疫苗接种指南（美国，2026）」，包含可交互的 AAP 与 CDC 时间表对比",
+  },
+  {
     date: "2026-03-25",
     en: 'Published "Milk Suppression & Bottle Feeding" guide with postpartum milk suppression and bottle-feeding optimization guidance',
     zh: "发布「回奶与瓶喂优化指南」，涵盖产后回奶管理与瓶喂优化建议",

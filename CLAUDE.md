@@ -24,10 +24,12 @@ Manual steps (what the skill does for you):
 3. Add `createPageMetadata(...)` metadata for each locale — `publicPagePaths` and `ContentEntryKey` are auto-derived from `_contentEntries` in `lib/content.ts`
 4. Add or update localized card metadata in `lib/content.ts` with a `date` field (YYYY-MM-DD) — the homepage and category index pages automatically display all entries sorted by most recent date
 5. Every content page should include `<GiscusComments locale="..." term="/english-canonical-path" />` at the bottom so both locales share one discussion thread
-6. Add a matching bilingual release entry to the hand-written timeline in `components/LocalizedPages.tsx`, using the same publish date and keeping newest items first
-7. Do not fall back to English article bodies on Chinese routes; untranslated content should stay unpublished
-8. If the content publishing workflow changes, update both `CLAUDE.md` and `AGENTS.md` in the same edit so the mirrored guidance stays in sync
-9. Run `npm run validate-content` to verify all required files are in place
+6. Keep `<AudioPlayer contentKey="..." locale="..." />` near the top of each localized article; the player includes the article’s copy-link/share control once audio exists
+7. After the transcripts are finalized, run `source ~/ml-env/bin/activate && npm run generate-audio -- --only <slug>` so the article ships with narration and the copy-link button is live
+8. Add a matching bilingual release entry to the hand-written timeline in `components/LocalizedPages.tsx`, using the same publish date and keeping newest items first
+9. Do not fall back to English article bodies on Chinese routes; untranslated content should stay unpublished
+10. If the content publishing workflow changes, update both `CLAUDE.md` and `AGENTS.md` in the same edit so the mirrored guidance stays in sync
+11. Run `npm run validate-content` to verify all required files are in place
 
 ## Translation workflow
 - English is the source of truth
