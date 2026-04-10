@@ -1,1 +1,129 @@
-TODO: Add English transcript for TTS audio generation
+Classic Infant Psychology Experiments You Can Try at Home
+
+Hands-on adaptations of four landmark developmental studies, designed for curious parents of 4 to 6 month olds.
+
+
+Introduction
+
+This guide covers four classic experiments from developmental psychology, each adapted for home use with a young infant. The studies behind them have been replicated hundreds of times in labs around the world, and they reveal something genuinely remarkable: babies as young as 3 to 6 months are already predicting social behavior, detecting cause and effect, and encoding memories of novel actions.
+
+These are not diagnostic tools. No experiment here can tell you anything about your baby's developmental trajectory. What they can do is give you a front-row seat to cognition as it unfolds — the moment your baby starts predicting where you'll appear, or the moment they realize their kick makes a toy move.
+
+This guide is more visual than most of our articles. You'll see diagrams, timelines, and step-by-step protocol cards on screen. The audio walks you through the key ideas, the research background, and the most important procedural details. For exact room layouts and comparison figures, check the diagrams on screen.
+
+
+Getting Started
+
+Developmental researchers measure four basic behaviors in young infants, and each experiment in this guide maps to one.
+
+Looking is where babies direct their gaze. It tells us what captures their attention and how long they sustain it. Anticipating is when babies predict what comes next — smiling before the punchline, tensing before the surprise. Kicking measures cause and effect learning. When babies figure out that their movements produce an outcome, their kicking becomes deliberate. Copying is imitation — the ability to observe an action and reproduce it.
+
+Every experiment in this guide is a playful home adaptation. The original studies were conducted in laboratories under controlled conditions with statistical analysis across many babies. A single home session is an observation, not a conclusion.
+
+Warning: Before you run any experiment, read and commit to the hard stop rules. Baby cries or fusses — stop immediately, comfort first. Baby turns away or arches back repeatedly — they're done. Baby just woke up, just ate, or is overtired — not a good time. Any setup feels physically unsafe — trust your instinct. You feel uncomfortable — that's reason enough to stop. These are non-negotiable.
+
+For universal setup: you want a calm, alert baby in the middle of a wake window. A quiet room with minimal distractions. One lead parent running the experiment, plus an observer if possible. Keep sessions to 5 to 10 minutes max, including breaks. Use a neutral background behind you — no TV, no bright patterns. Optionally, set up a phone camera from a side angle for later review.
+
+
+Experiment 1 — Peekaboo as a Social-Prediction Protocol
+
+In 1976, Jerome Bruner and Vivienne Sherwood published a study that changed how researchers thought about peekaboo. They filmed mothers playing the game with their babies and discovered that what looks like simple play actually has a rigid, predictable structure — a disappearance, a suspenseful pause, and a reappearance. Bruner argued that this repetitive format is what lets babies begin anticipating what comes next, making peekaboo one of the earliest scaffolds for understanding turn-taking and social prediction.
+
+Later work by Montague and Walker-Andrews in 2001 showed that by around 5 to 6 months, infants don't just react to peekaboo — they start driving the game themselves, pulling cloths away and anticipating the reveal. They're building an internal script of how the interaction works.
+
+This version of peekaboo turns casual play into a structured protocol so you can see anticipation in action. Here's how it works.
+
+You'll need a light, opaque cloth — a muslin swaddle works well — a bouncer or supported seat, and a timer or mental count. See the room layout diagram on screen for the setup, but the key arrangement is simple: sit face-to-face with your baby, about 60 centimeters apart.
+
+The baseline protocol uses 3 to 4 trials with identical timing, words, and tone. Consistency is everything. You're building a rule structure the baby can learn.
+
+Step one, position: sit face-to-face, baby in a bouncer or supported seat at your eye level. Step two, ready cue: make eye contact and say "Ready?" with a bright, consistent voice. Same word, same tone, every time. Step three, hide: raise the cloth with both hands to cover your face from center. Say "Where did I go?" — same words, same tone. Step four, pause: hold for exactly 2 seconds. Stay still behind the cloth. No peeking, no noise, no movement. This is where anticipation builds. Step five, reveal: drop the cloth straight down and say "Peek-a-boo!" Big smile. Wait for your baby's response before you move on. Step six, reset: 5 seconds of gentle talk — "There you are!" — or just a warm smile and eye contact. This is the social reset. Step seven, repeat with identical timing for 3 to 4 trials total.
+
+After the baseline, pick one test variation per session. Only vary one thing at a time.
+
+Variation one is the delayed reveal. Same script as baseline, but hold the cloth for 4 to 5 seconds instead of 2. Watch: does baby smile or wiggle during the extra pause, before you reveal? That anticipatory response — reacting to something that hasn't happened yet — is the finding.
+
+Variation two is the wrong-side reveal. Same hide and pause as baseline, but instead of dropping the cloth from center, peek out from the left or right side. Watch: does baby's gaze go to center first, where they expect you, before finding you at the side? That misdirected look reveals they had a prediction.
+
+Variation three is the empty-center reveal. During the 2-second pause, quietly shift your face to one side behind the cloth. Drop it — center is empty. Pause one second, then peek from the side. Watch for surprise at the empty center: wider eyes, a brief stilling, or a confused expression.
+
+Tip: Only vary one thing per session. Don't peek or make noise behind the cloth. Don't loom forward during the reveal. And three good trials beat six bored ones — stop before baby loses interest.
+
+What to watch for across all peekaboo trials: anticipatory smiling before the reveal, body tensing or wiggling as the pause progresses, gaze shifting to the expected reveal location, a stronger reaction when the routine is violated — bigger smile, longer stare, surprise expression — and re-engagement attempts like vocalizing or reaching toward the cloth.
+
+
+Experiment 2 — The Still-Face Paradigm
+
+This next experiment is entirely optional. If the idea of briefly not responding to your baby makes you uncomfortable, skip it and move ahead to the kick-to-move experiment. The other three experiments in this guide are just as interesting and involve no intentional disruption of social interaction.
+
+Still here? Good. This is worth understanding.
+
+In 1978, Ed Tronick and his colleagues published one of the most striking demonstrations in developmental psychology. A parent plays normally with their baby, then suddenly freezes into a blank, unresponsive expression. Within seconds, babies as young as 3 to 4 months become visibly distressed. They smile bigger, vocalize louder, reach toward the parent's face — all bids to re-engage the social partner who just went silent. When that doesn't work, you may see confusion, gaze aversion, or self-soothing. The still-face effect has been replicated so many times that Adamson and Frick wrote an entire history of the paradigm in 2003, reviewing decades of studies across dozens of labs.
+
+What the still-face shows is that by 4 to 5 months, babies have already built sophisticated models of social interaction. They expect contingent responsiveness — that when they smile, you smile back. The still-face disrupts that expectation, and the reaction tells you just how early these social-cognitive structures develop.
+
+Here's the protocol. Three phases, each with clear rules. The reunion phase is not optional.
+
+Phase one is play, for 60 seconds. Normal warm face-to-face interaction. Talk, smile, respond naturally. Mirror their expressions, answer their coos. You're establishing yourself as a contingently responsive social partner. The still-face only matters because this phase came first.
+
+Phase two is the still-face, for a maximum of 30 seconds. Stop talking, smiling, and touching. Look at your baby with a relaxed, neutral face. Neutral means: relaxed muscles, not a clenched jaw. Direct but soft eye contact. No smile, no speech, no touch, no head nodding. Don't lean forward. Don't frown. Just quiet.
+
+Warning: Abort immediately if baby cries — not fussing, actual crying. Abort if baby's face crumples or turns red. Abort if you feel uncomfortable. Abort if you hit 30 seconds.
+
+Phase three is reunion, immediately. As soon as the still-face ends, return to warm interaction right away. Big smile, warm voice, pick baby up if they need it. Pour it on. In the research protocol, the reunion phase always happens. It's the repair. At home, same rule — you don't end on the still-face.
+
+During reunion, you may notice a brief carry-over effect — a moment of wariness before baby returns to normal engagement. Some babies take a few seconds to "trust" that you're back. This is completely typical and resolves quickly.
+
+Note: The still-face paradigm doesn't measure attachment strength, temperament, or anything about your relationship quality. It measures one specific thing: whether the baby has learned that social partners are supposed to be responsive.
+
+
+Experiment 3 — Kick-to-Move Contingency Learning
+
+In 1969, Carolyn Rovee and David Rovee tried something simple. They tied a ribbon from a baby's ankle to a colorful mobile hanging overhead. Babies as young as 2 to 3 months figured out within minutes that kicking made the mobile move — and kicked more enthusiastically once they made the connection. Carolyn Rovee-Collier later expanded this into decades of groundbreaking research, showing that infants can remember these cause-and-effect relationships for days or even weeks — far longer than anyone had previously believed possible.
+
+This home version uses a play gym and soft ribbon instead of a crib mobile. It's one of the most visually rewarding experiments in the guide because the behavioral change — more kicking, more deliberate kicking — happens right in front of you.
+
+Warning: Safety rules for this experiment are critical. Full supervision — parent within arm's reach at all times. Use a soft fabric ribbon or loop only — nothing that wraps tightly. Never leave the connection attached after the trial. Never use during sleep or unsupervised play. Disconnect immediately if baby shows distress. Use a floor-level play gym only, no crib-mounted mobiles. Remove the ribbon entirely when done, every time.
+
+You'll need a play gym with overhead toys, a soft fabric ribbon about 50 centimeters long, a timer, and an observer with a notepad or phone camera. See the setup diagram on screen for the arrangement.
+
+The protocol has three phases. The contrast between phases is where the observation lives.
+
+Phase one is baseline, for 2 minutes. Place baby under the play gym on their back, one foot near the hanging toy. The ribbon is not connected. Simply count natural kicks. This is your baseline — how much does baby kick when there's no contingency? Don't draw attention to the toy or their foot.
+
+Phase two is the contingent phase, for 3 to 5 minutes. Loosely loop the soft ribbon from baby's ankle to the hanging toy. Now kicking makes the toy move and jingle. Stay within arm's reach the entire time. Don't draw attention to the connection. Don't say "look, you're making it move!" The point is to see whether baby discovers the contingency on their own. Watch for the moment of recognition — it's often visible as a shift from random kicking to more deliberate, purposeful leg movements. If baby shows no interest after 3 minutes, end the trial.
+
+Phase three is disconnect, for 2 minutes. Remove the ribbon. If baby noticed the contingency, you may see a burst of kicking — trying to restart the connection — followed by looking at the toy expectantly, and eventually a decrease when it doesn't work. This burst of kicking after disconnection is strong evidence that baby had learned the relationship between their action and the toy's movement.
+
+What you're observing here is contingency detection — baby noticing that their action causes an effect. From a single home session, you cannot draw conclusions about memory or learning capacity. What you can observe is the in-the-moment discovery: the shift from random movement to purposeful action. That's remarkable enough without overclaiming.
+
+
+Experiment 4 — The Imitation Suite
+
+Imitation is one of the most debated topics in developmental psychology. The old claim by Meltzoff and Moore in 1977 that newborns can imitate facial expressions made headlines, but larger replication attempts have cast serious doubt on it. What looked like neonatal imitation may have been a general arousal response. The more solid evidence comes later. By 4 to 6 months, studies by Barr, Collie, Hayne, and others have shown that babies can genuinely observe an action and reproduce it — even after a delay.
+
+This section gives you three variants, ordered from easiest to hardest. The on-screen table compares them side by side. Start with Variant A and work up if your baby is in the right age window.
+
+Variant A is immediate object imitation — the easiest version, best for 4 to 5 months. Choose a simple object like a rattle, cup, or soft block. Perform an unusual action with it — bang a rattle in a 3-tap pattern, push a button with the back of your hand, turn a cup upside-down and tap the bottom. Demonstrate slowly, 3 times, with exaggerated movements. Make sure baby is watching. Then immediately offer the object. Wait silently — no "your turn!", no pointing, no re-demonstrating. Observe for 30 seconds. Success means baby performs any part of the demonstrated action. A partial reproduction counts — one tap instead of three, touching the same part of the object.
+
+Variant B is short-delay deferred imitation — harder, best for 5 to 6 months. Same demonstration as Variant A. But after showing the action 3 times, put the object away, out of sight. Do a different activity for 10 minutes. Then bring the object back with no reminder, no re-demonstration. Offer and wait silently. Success here means baby performs any part of the action after the delay. This requires the baby to have retained a representation of the action — a much harder cognitive task than immediate imitation.
+
+Variant C is puppet-style imitation — the most impressive version, also best for 5 to 6 months. This is based on the Barr and Hayne puppet paradigm. Use a hand puppet or mitten with a jingle bell attached inside. Put on the puppet, shake to make it jingle — 3 clear, exaggerated demonstrations. Remove the puppet, set it aside. After 10 or more minutes of different activity, offer the puppet to baby. Watch: does baby try to make it jingle? Success means any movement that produces the sound — even accidental-looking at first. The baby doesn't need to put the puppet on correctly.
+
+Tip: Be theatrical — slow, exaggerated demonstrations work better than natural-speed ones. Don't over-cue. Three demos is the sweet spot. Partial success is success. And temperament matters enormously — cautious babies may watch attentively but not act. That doesn't mean they didn't encode the action. Try different wake windows across different days.
+
+
+Record and Reflect
+
+The difference between a home experiment and just playing with your baby is how you observe and record. A few principles for keeping your notes honest.
+
+Write down what you saw, not what you think it means. "Baby kicked more" is an observation. "Baby understood cause and effect" is an interpretation. One trial does not equal a conclusion — any single observation could be coincidence, mood, timing, or temperament. Same baby, different answers: the same infant can look brilliant at 10am and completely uninterested at 4pm. This is normal, not diagnostic. And observations become most informative when repeated across different days, different times, and different moods. A pattern across sessions is more meaningful than any single trial.
+
+There's a copyable observation template on screen with fields for experiment name, date, baby's age, mood, setup notes, what baby did, surprising observations, and additional notes. You can copy it to your clipboard after each session.
+
+
+Closing
+
+Four experiments, eight landmark studies, one curious baby. Remember: these are explorations, not evaluations. No single session tells you anything definitive, but each one gives you a glimpse of cognition as it unfolds — prediction, social expectation, cause-and-effect learning, and memory formation, all happening in the first six months of life.
+
+Full citations for all eight studies referenced in this guide are listed at the bottom of the article.

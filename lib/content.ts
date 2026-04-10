@@ -163,7 +163,7 @@ const _contentEntries = {
   "guides/infant-experiments": {
     date: "2026-04-09",
     href: "/guides/infant-experiments",
-    icon: "🧪",
+    icon: "🙈",
     giscusTerm: "/guides/infant-experiments",
     locales: {
       en: {

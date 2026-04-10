@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { AudioPlayer } from "@/components/AudioPlayer";
 import { GiscusComments } from "@/components/GiscusComments";
 
 const colors = {
@@ -149,6 +150,11 @@ Notes: `;
         </div>
       </div>
 
+      {/* AUDIO */}
+      <div style={{ maxWidth: 900, margin: "0 auto", padding: "16px 24px 0" }}>
+        <AudioPlayer locale="en" contentKey="guides/infant-experiments" />
+      </div>
+
       {/* NAV */}
       <div style={{ background: colors.card, borderBottom: `1px solid ${colors.border}`, position: "sticky", top: 0, zIndex: 100, boxShadow: "0 2px 8px rgba(0,0,0,0.04)" }}>
         <div style={{ maxWidth: 900, margin: "0 auto", display: "flex", alignItems: "center", padding: "0 12px" }}>
@@ -157,22 +163,6 @@ Notes: `;
               <button key={t.id} onClick={() => setActiveTab(t.id)} style={{ background: "none", border: "none", padding: "14px 18px", fontFamily: "'Source Sans 3', sans-serif", fontSize: 14, fontWeight: activeTab === t.id ? 700 : 400, color: activeTab === t.id ? colors.accent : colors.textLight, borderBottom: activeTab === t.id ? `3px solid ${colors.accent}` : "3px solid transparent", cursor: "pointer", whiteSpace: "nowrap", transition: "all 0.15s" }}>{t.label}</button>
             ))}
           </div>
-          <button
-            onClick={() => {
-              navigator.clipboard.writeText(window.location.href).then(() => {
-                setCopied(true);
-                setTimeout(() => setCopied(false), 2000);
-              });
-            }}
-            style={{ background: "none", border: "none", display: "flex", alignItems: "center", gap: 4, padding: "8px 12px", fontSize: 12, color: copied ? colors.accent : colors.textLight, cursor: "pointer", whiteSpace: "nowrap", transition: "color 0.15s", flexShrink: 0 }}
-          >
-            {copied ? (
-              <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-            ) : (
-              <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101" /><path strokeLinecap="round" strokeLinejoin="round" d="M10.172 13.828a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.102 1.101" /></svg>
-            )}
-            {copied ? "Copied!" : "Copy link"}
-          </button>
         </div>
       </div>
 

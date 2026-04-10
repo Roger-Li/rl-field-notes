@@ -70,5 +70,13 @@
   "guides--immunization-schedule--zh.mp3": {
     "duration": 1025,
     "size": 16396971
+  },
+  "guides--infant-experiments--en.mp3": {
+    "duration": 1219,
+    "size": 19500717
+  },
+  "guides--infant-experiments--zh.mp3": {
+    "duration": 1010,
+    "size": 16160427
   }
 }
