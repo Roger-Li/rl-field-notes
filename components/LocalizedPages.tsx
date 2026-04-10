@@ -89,6 +89,11 @@ const timeline: {
   zh: string;
 }[] = [
   {
+    date: "2026-04-09",
+    en: 'Published "Classic Infant Psychology Experiments You Can Try at Home" — peekaboo protocols, still-face, contingency learning, and imitation suite for 4–6 month olds',
+    zh: "发布「在家也能做的经典婴儿心理学实验」——躲猫猫、静止脸、踢腿联动与模仿套组，适合4–6个月宝宝",
+  },
+  {
     date: "2026-03-28",
     en: 'Published "Childhood Immunization Guide (US, 2026)" with an interactive AAP vs CDC comparison timeline',
     zh: "发布「儿童疫苗接种指南（美国，2026）」，包含可交互的 AAP 与 CDC 时间表对比",

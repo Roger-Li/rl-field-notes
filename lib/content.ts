@@ -160,6 +160,26 @@ const _contentEntries = {
       },
     },
   },
+  "guides/infant-experiments": {
+    date: "2026-04-09",
+    href: "/guides/infant-experiments",
+    icon: "🧪",
+    giscusTerm: "/guides/infant-experiments",
+    locales: {
+      en: {
+        tag: "Guide",
+        title: "Classic Infant Psychology Experiments You Can Try at Home",
+        description:
+          "Hands-on adaptations of classic developmental psychology experiments — peekaboo, still-face, contingency learning, and imitation — for parents of 4–6 month olds.",
+      },
+      zh: {
+        tag: "指南",
+        title: "在家也能做的经典婴儿心理学实验",
+        description:
+          "经典婴儿心理学实验的居家改编——躲猫猫、静止脸、踢腿联动与模仿——附详细步骤与安全指引，适合4–6个月宝宝。",
+      },
+    },
+  },
   "reading-notes/happiest-baby-on-the-block": {
     date: "2026-03-13",
     href: "/reading-notes/happiest-baby-on-the-block",
