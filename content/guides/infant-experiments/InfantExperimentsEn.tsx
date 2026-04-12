@@ -155,6 +155,22 @@ Notes: `;
         <AudioPlayer locale="en" contentKey="guides/infant-experiments" />
       </div>
 
+      {/* VIDEO */}
+      <div style={{ maxWidth: 900, margin: "0 auto", padding: "16px 24px 0" }}>
+        <div style={{ position: "relative", paddingBottom: "56.25%", borderRadius: 12, overflow: "hidden", boxShadow: "0 2px 12px rgba(26,60,50,0.08)" }}>
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/yuoCwqRN5DU"
+            title="4 Classic Baby Experiments That Reveal How Infants Think"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: "none" }}
+          />
+        </div>
+        <div style={{ textAlign: "right", marginTop: 8 }}>
+          <a href="https://www.bilibili.com/video/BV1ScDUBCEkR" target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, color: colors.textLight, textDecoration: "none" }}>Also on <span style={{ fontWeight: 600, color: colors.accent }}>Bilibili</span> →</a>
+        </div>
+      </div>
+
       {/* NAV */}
       <div style={{ background: colors.card, borderBottom: `1px solid ${colors.border}`, position: "sticky", top: 0, zIndex: 100, boxShadow: "0 2px 8px rgba(0,0,0,0.04)" }}>
         <div style={{ maxWidth: 900, margin: "0 auto", display: "flex", alignItems: "center", padding: "0 12px" }}>

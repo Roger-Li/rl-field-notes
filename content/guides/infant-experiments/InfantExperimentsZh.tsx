@@ -159,6 +159,21 @@ export default function InfantExperimentsZh() {
         <AudioPlayer locale="zh" contentKey="guides/infant-experiments" />
       </div>
 
+      {/* VIDEO */}
+      <div style={{ maxWidth: 900, margin: "0 auto", padding: "16px 24px 0" }}>
+        <div style={{ position: "relative", paddingBottom: "56.25%", borderRadius: 12, overflow: "hidden", boxShadow: "0 2px 12px rgba(26,60,50,0.08)" }}>
+          <iframe
+            src="https://player.bilibili.com/player.html?bvid=BV1ScDUBCEkR&autoplay=0"
+            title="在家也能做的经典婴儿心理学实验"
+            allowFullScreen
+            style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: "none" }}
+          />
+        </div>
+        <div style={{ textAlign: "right", marginTop: 8 }}>
+          <a href="https://www.youtube.com/watch?v=yuoCwqRN5DU" target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, color: colors.textLight, textDecoration: "none" }}>观看 <span style={{ fontWeight: 600, color: colors.accent }}>YouTube</span> 版本 →</a>
+        </div>
+      </div>
+
       {/* ═══════════════════════ NAV ═══════════════════════ */}
       <div style={{ background: colors.card, borderBottom: `1px solid ${colors.border}`, position: "sticky", top: 0, zIndex: 100, boxShadow: "0 2px 8px rgba(0,0,0,0.04)" }}>
         <div style={{ maxWidth: 900, margin: "0 auto", display: "flex", alignItems: "center", padding: "0 12px" }}>
