@@ -1,0 +1,4 @@
+# Code-generated overlay composites (~3MB each)
+# Regenerate: npm run video:infant-experiments:overlays
+*.png
+!.gitignore

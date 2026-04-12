@@ -1,0 +1,110 @@
+[Script Info]
+Title: Infant Experiments - Bilingual Subtitles
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: ZH,PingFang SC,52,&H00FFFFFF,&H000000FF,&H00000000,&H96000000,-1,0,0,0,100,100,0,0,1,2.5,1,2,40,40,65,1
+Style: EN,Helvetica Neue,38,&H00CCCCCC,&H000000FF,&H00000000,&H96000000,0,0,0,0,100,100,0,0,1,2,1,2,40,40,20,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:10.00,ZH,,0,0,0,,如果你玩过躲猫猫，感觉宝宝好像提前知道你要出现——\N这种直觉是有真实的发展心理学研究支撑的。
+Dialogue: 1,0:00:00.00,0:00:10.00,EN,,0,0,0,,If you've ever played peekaboo and felt like your baby somehow\Nknew what was coming, that intuition is backed by real developmental psychology.
+
+Dialogue: 0,0:00:10.00,0:00:17.00,ZH,,0,0,0,,在学会说话之前，婴儿就已经在预测社交模式、\N探测因果关系，并且储存对新动作的简单记忆。
+Dialogue: 1,0:00:10.00,0:00:17.00,EN,,0,0,0,,Long before babies can talk, they're already predicting social patterns,\Ndetecting cause and effect, and storing simple memories of new actions.
+
+Dialogue: 0,0:00:17.00,0:00:41.00,ZH,,0,0,0,,在这个视频中，我会带你了解四个经典的婴儿心理学实验，\N以及如何做到不把趣味观察变成过度解读。
+Dialogue: 1,0:00:17.00,0:00:41.00,EN,,0,0,0,,In this video, I'll walk through four classic infant experiments you can adapt at home,\Nand how to do them without turning a playful observation into an overblown conclusion.
+
+Dialogue: 0,0:00:41.00,0:00:44.00,ZH,,0,0,0,,首先，最重要的前提：这些不是诊断测试。
+Dialogue: 1,0:00:41.00,0:00:44.00,EN,,0,0,0,,First, the big caveat: these are not diagnostic tests.
+
+Dialogue: 0,0:00:44.00,0:00:54.00,ZH,,0,0,0,,一次家庭观察无法告诉你宝宝是超前还是落后。\N把它们当作精心观察的游戏就好。
+Dialogue: 1,0:00:44.00,0:00:54.00,EN,,0,0,0,,A single home session cannot tell you whether your baby is advanced,\Ndelayed, or anything in between. Think of these as carefully observed games.
+
+Dialogue: 0,0:00:54.00,0:01:26.00,ZH,,0,0,0,,四个实验遵循同样的基本规则：选择清醒安静的宝宝，\N保持房间安静，宝宝烦躁就立即停止，保持时间简短。
+Dialogue: 1,0:00:54.00,0:01:26.00,EN,,0,0,0,,For all four, use the same ground rules: choose a calm, alert baby,\Nkeep the room quiet, stop if your baby fusses, and keep the session short.
+
+Dialogue: 0,0:01:26.00,0:01:31.00,ZH,,0,0,0,,实验一是躲猫猫——但作为一套真正的实验方案来做。
+Dialogue: 1,0:01:26.00,0:01:31.00,EN,,0,0,0,,Experiment one is peekaboo, but done as a real protocol.
+
+Dialogue: 0,0:01:31.00,0:01:53.00,ZH,,0,0,0,,1970年代，Bruner 提出躲猫猫有严格的结构：\N消失、悬念和揭晓。重复结构给了婴儿可以预测的东西。
+Dialogue: 1,0:01:31.00,0:01:53.00,EN,,0,0,0,,In the 1970s, Bruner argued that peekaboo works because it has a rigid structure:\Ndisappearance, suspense, and reveal. That gives babies something to predict.
+
+Dialogue: 0,0:01:53.00,0:02:13.00,ZH,,0,0,0,,在家里，每次做三四轮完全一致的：对视、准备提示、\N遮住脸、暂停两秒、同样的表情揭开。
+Dialogue: 1,0:01:53.00,0:02:13.00,EN,,0,0,0,,At home, keep the script identical for three or four trials: eye contact,\Nthe same ready cue, cover, pause two seconds, then reveal.
+
+Dialogue: 0,0:02:13.00,0:02:23.00,ZH,,0,0,0,,基线稳定后，只改变一个变量。\N延迟揭开，从另一侧出现，或者让正中短暂空着。
+Dialogue: 1,0:02:13.00,0:02:23.00,EN,,0,0,0,,Once that baseline is stable, change one thing.\NDelay the reveal. Reveal from the wrong side.
+
+Dialogue: 0,0:02:23.00,0:02:33.00,ZH,,0,0,0,,你要观察的是预期反应：揭开前的微笑、\N暂停时的身体紧张，或目光看向预期你出现的位置。
+Dialogue: 1,0:02:23.00,0:02:33.00,EN,,0,0,0,,What you're watching for is anticipation: a smile before the reveal,\Nbody tension during the pause, or eyes going where they expected you.
+
+Dialogue: 0,0:02:33.00,0:02:48.00,ZH,,0,0,0,,关键不是宝宝"理解"了游戏，而是这个简单的社交互动\N已经在给他们一个可以学习和预测的结构。
+Dialogue: 1,0:02:33.00,0:02:48.00,EN,,0,0,0,,The point is not that your baby understands the game. It's that even this\Nsimple social routine is giving them a structure they can learn and predict.
+
+Dialogue: 0,0:02:48.00,0:02:54.00,ZH,,0,0,0,,实验二是静止脸范式——可选的，因为它最敏感。
+Dialogue: 1,0:02:48.00,0:02:54.00,EN,,0,0,0,,Experiment two is the still-face paradigm,\Nand this one is optional because it's the most sensitive.
+
+Dialogue: 0,0:02:54.00,0:03:00.00,ZH,,0,0,0,,Tronick 发现，当父母突然变得面无表情且不回应时，\N婴儿会很快做出抗议。
+Dialogue: 1,0:02:54.00,0:03:00.00,EN,,0,0,0,,Tronick's classic finding was that when a normally responsive parent\Nsuddenly goes neutral and unresponsive, babies protest quickly.
+
+Dialogue: 0,0:03:00.00,0:03:19.00,ZH,,0,0,0,,家庭版很简单：一分钟正常互动，最多三十秒静止脸，\N然后立即重新互动。把它当作一个严格限时的观察。
+Dialogue: 1,0:03:00.00,0:03:19.00,EN,,0,0,0,,The home version is simple: one minute of normal warm play,\Nup to thirty seconds of still face, then immediate reunion.
+
+Dialogue: 0,0:03:19.00,0:03:29.00,ZH,,0,0,0,,如果宝宝哭了、脸红了，或者你自己不舒服，\N立刻停止。重新互动不是可选项。
+Dialogue: 1,0:03:19.00,0:03:29.00,EN,,0,0,0,,If your baby cries, turns red, or if you feel uncomfortable,\Nstop right away. The reunion is not optional.
+
+Dialogue: 0,0:03:29.00,0:03:44.00,ZH,,0,0,0,,这说明大约四到五个月时，婴儿已经期待\N社交伙伴给予及时回应。当模式被打破时，他们注意到了。
+Dialogue: 1,0:03:29.00,0:03:44.00,EN,,0,0,0,,It shows that by four to five months, babies already expect social partners\Nto respond contingently. When that pattern breaks, they notice.
+
+Dialogue: 0,0:03:44.00,0:03:46.00,ZH,,0,0,0,,实验三可能是视觉效果最明显的。
+Dialogue: 1,0:03:44.00,0:03:46.00,EN,,0,0,0,,Experiment three may be the most visually rewarding.
+
+Dialogue: 0,0:03:46.00,0:04:05.00,ZH,,0,0,0,,经典研究中，婴儿学会了踢腿能让头顶的东西动起来。\N在家最安全的版本使用地面健身架和全程手动监护。
+Dialogue: 1,0:03:46.00,0:04:05.00,EN,,0,0,0,,In the classic studies, babies learned that kicking made something happen overhead.\NAt home, the safest version uses a floor play gym and full hands-on supervision.
+
+Dialogue: 0,0:04:05.00,0:04:14.00,ZH,,0,0,0,,先观察两分钟无连接的正常踢腿，\N然后连上让踢腿带动玩具，最后再断开。
+Dialogue: 1,0:04:05.00,0:04:14.00,EN,,0,0,0,,First, watch two minutes of normal kicking with no connection.\NThen add a loose connection so kicking moves the toy. Then remove it again.
+
+Dialogue: 0,0:04:14.00,0:04:41.00,ZH,,0,0,0,,观察的核心在于阶段对比。连接后踢腿是否更有目的性？\N断开后是否出现爆发性踢腿，像是在试图让效果重现？
+Dialogue: 1,0:04:14.00,0:04:41.00,EN,,0,0,0,,The observation lives in the contrast between phases. Does kicking become\Nmore deliberate when the toy responds? Do you see a burst after disconnect?
+
+Dialogue: 0,0:04:41.00,0:04:52.00,ZH,,0,0,0,,这就是因果探测：注意到"我做了这个，那个就发生了"。\N这本身就很了不起，不需要过度解读。
+Dialogue: 1,0:04:41.00,0:04:52.00,EN,,0,0,0,,That's contingency detection: noticing that when I do this, that happens.\NIt's remarkable on its own. You don't need to inflate it.
+
+Dialogue: 0,0:04:52.00,0:04:57.00,ZH,,0,0,0,,实验四是模仿——这里谨慎的版本才重要。
+Dialogue: 1,0:04:52.00,0:04:57.00,EN,,0,0,0,,Experiment four is imitation, and here the careful version matters.
+
+Dialogue: 0,0:04:57.00,0:05:04.00,ZH,,0,0,0,,"新生儿会模仿表情"的说法验证得并不好。\N更可靠的证据出现得稍晚，涉及对物体动作的模仿。
+Dialogue: 1,0:04:57.00,0:05:04.00,EN,,0,0,0,,The flashy claim that newborns imitate faces has not held up well.\NThe stronger evidence comes a little later, with object actions.
+
+Dialogue: 0,0:05:04.00,0:05:16.00,ZH,,0,0,0,,从最简单的版本开始：用摇铃做一个不寻常的动作三次，\N交给宝宝，安静等待。部分模仿就算成功。
+Dialogue: 1,0:05:04.00,0:05:16.00,EN,,0,0,0,,Start with the easiest version: perform an unusual action with a rattle\Nthree times, then hand it over and wait silently. A partial copy counts.
+
+Dialogue: 0,0:05:16.00,0:05:43.00,ZH,,0,0,0,,对大一点的宝宝，可以加入延迟：示范后收起来，\N做别的事十分钟，再不提示地拿回来。这区分了即时模仿和记忆。
+Dialogue: 1,0:05:16.00,0:05:43.00,EN,,0,0,0,,For older babies, add a short delay: demonstrate, put the object away,\Ndo something else for ten minutes, then bring it back with no reminder.
+
+Dialogue: 0,0:05:43.00,0:05:52.00,ZH,,0,0,0,,重要的不是完美的复制，而是宝宝是否保留了\N他们所看到的动作的某种表征。
+Dialogue: 1,0:05:43.00,0:05:52.00,EN,,0,0,0,,What matters is not perfect copying. It's whether your baby retained\Nsome representation of the action they saw.
+
+Dialogue: 0,0:05:52.00,0:05:57.00,ZH,,0,0,0,,家庭实验和随意玩耍的区别，在于你如何记录。
+Dialogue: 1,0:05:52.00,0:05:57.00,EN,,0,0,0,,The difference between a home experiment and random play\Nis how you write it down.
+
+Dialogue: 0,0:05:57.00,0:06:18.00,ZH,,0,0,0,,记录你看到了什么，而不是你觉得那意味着什么。\N"踢腿变多了"是观察。"理解了因果"是解读。
+Dialogue: 1,0:05:57.00,0:06:18.00,EN,,0,0,0,,Record what you saw, not what you think it means.\N"Baby kicked more" is an observation. "Baby understood cause and effect" is interpretation.
+
+Dialogue: 0,0:06:18.00,0:06:42.00,ZH,,0,0,0,,时机、气质和运气是巨大的干扰因素。一次试验是有趣的，\N但跨越不同天数的模式才更有说服力。
+Dialogue: 1,0:06:18.00,0:06:42.00,EN,,0,0,0,,Timing, temperament, and sheer luck are huge confounders.\NA single trial is interesting. A pattern across different days is much more informative.
+
+Dialogue: 0,0:06:42.00,0:06:50.00,ZH,,0,0,0,,我喜欢这些实验不是因为它们证明了什么宏大的东西，\N而是它们让早期认知变得可见。
+Dialogue: 1,0:06:42.00,0:06:50.00,EN,,0,0,0,,What I love about these experiments is not that they prove something grand.\NIt's that they make early cognition visible.
+
+Dialogue: 0,0:06:50.00,0:07:13.00,ZH,,0,0,0,,躲猫猫——预测。静止脸——社会期待。\N踢腿——因果探测。模仿——记忆的一瞥。
+Dialogue: 1,0:06:50.00,0:07:13.00,EN,,0,0,0,,Peekaboo lets you watch prediction. Still-face reveals social expectation.\NKick-to-move shows cause and effect. Imitation gives you a glimpse of memory.

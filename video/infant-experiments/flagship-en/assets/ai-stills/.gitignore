@@ -1,0 +1,4 @@
+# AI-generated base plates (too large for git, ~8MB each)
+# Regenerate via Nano Banana using prompts.md
+*.png
+!.gitignore

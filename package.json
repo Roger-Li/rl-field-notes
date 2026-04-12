@@ -8,7 +8,15 @@
     "start": "next start",
     "lint": "eslint",
     "generate-audio": "node scripts/generate-audio.mjs",
-    "validate-content": "node scripts/validate-content.mjs"
+    "validate-content": "node scripts/validate-content.mjs",
+    "video:infant-experiments:figures": "node scripts/render-infant-experiments-figures.mjs --output-dir video/infant-experiments/flagship-en/assets/article-figures",
+    "video:infant-experiments:prepare": "bash video/infant-experiments/flagship-en/prepare-assets.sh",
+    "video:infant-experiments:audio": "bash video/infant-experiments/flagship-en/render-audio.sh",
+    "video:infant-experiments:overlays": "node scripts/render-overlay-pngs.mjs --bundle video/infant-experiments/flagship-en",
+    "video:infant-experiments:assemble": "node scripts/assemble-video.mjs --bundle video/infant-experiments/flagship-en",
+    "video:infant-experiments:thumbnail": "node scripts/render-thumbnail.mjs --bundle video/infant-experiments/flagship-en",
+    "video:infant-experiments:retime": "node scripts/retime-shotlist.mjs --bundle video/infant-experiments/flagship-en",
+    "video:infant-experiments:render": "npm run video:infant-experiments:overlays && npm run video:infant-experiments:assemble && npm run video:infant-experiments:thumbnail"
   },
   "dependencies": {
     "@giscus/react": "^3.1.0",

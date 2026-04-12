@@ -1,0 +1,299 @@
+1
+00:00:00,000 --> 00:00:05,217
+If you've ever played peekaboo and felt like your baby somehow knew
+
+2
+00:00:05,217 --> 00:00:09,565
+what was coming, that intuition is backed by real developmental
+
+3
+00:00:09,565 --> 00:00:10,000
+psychology.
+
+4
+00:00:10,000 --> 00:00:13,000
+Long before babies can talk, they're already predicting social
+
+5
+00:00:13,000 --> 00:00:16,333
+patterns, detecting cause and effect, and storing simple memories of
+
+6
+00:00:16,333 --> 00:00:17,000
+new actions.
+
+7
+00:00:17,000 --> 00:00:26,103
+In this video, I'll walk through four classic infant experiments you
+
+8
+00:00:26,103 --> 00:00:36,862
+can adapt at home, and how to do them without turning a playful
+
+9
+00:00:36,862 --> 00:00:41,000
+observation into an overblown conclusion.
+
+10
+00:00:41,000 --> 00:00:44,000
+First, the big caveat: these are not diagnostic tests.
+
+11
+00:00:44,000 --> 00:00:49,000
+A single home session cannot tell you whether your baby is advanced,
+
+12
+00:00:49,000 --> 00:00:53,583
+delayed, or anything in between. Think of these as carefully observed
+
+13
+00:00:53,583 --> 00:00:54,000
+games.
+
+14
+00:00:54,000 --> 00:01:09,407
+For all four, use the same ground rules: choose a calm, alert baby,
+
+15
+00:01:09,407 --> 00:01:24,815
+keep the room quiet, stop if your baby fusses, and keep the session
+
+16
+00:01:24,815 --> 00:01:26,000
+short.
+
+17
+00:01:26,000 --> 00:01:31,000
+Experiment one is peekaboo, but done as a real protocol.
+
+18
+00:01:31,000 --> 00:01:42,917
+In the 1970s, Bruner argued that peekaboo works because it has a rigid
+
+19
+00:01:42,917 --> 00:01:50,250
+structure: disappearance, suspense, and reveal. That gives babies
+
+20
+00:01:50,250 --> 00:01:53,000
+something to predict.
+
+21
+00:01:53,000 --> 00:02:03,435
+At home, keep the script identical for three or four trials: eye
+
+22
+00:02:03,435 --> 00:02:13,000
+contact, the same ready cue, cover, pause two seconds, then reveal.
+
+23
+00:02:13,000 --> 00:02:19,875
+Once that baseline is stable, change one thing. Delay the reveal.
+
+24
+00:02:19,875 --> 00:02:23,000
+Reveal from the wrong side.
+
+25
+00:02:23,000 --> 00:02:27,783
+What you're watching for is anticipation: a smile before the reveal,
+
+26
+00:02:27,783 --> 00:02:33,000
+body tension during the pause, or eyes going where they expected you.
+
+27
+00:02:33,000 --> 00:02:40,222
+The point is not that your baby understands the game. It's that even
+
+28
+00:02:40,222 --> 00:02:46,889
+this simple social routine is giving them a structure they can learn
+
+29
+00:02:46,889 --> 00:02:48,000
+and predict.
+
+30
+00:02:48,000 --> 00:02:52,125
+Experiment two is the still-face paradigm, and this one is optional
+
+31
+00:02:52,125 --> 00:02:54,000
+because it's the most sensitive.
+
+32
+00:02:54,000 --> 00:02:57,333
+Tronick's classic finding was that when a normally responsive parent
+
+33
+00:02:57,333 --> 00:03:00,000
+suddenly goes neutral and unresponsive, babies protest quickly.
+
+34
+00:03:00,000 --> 00:03:11,762
+The home version is simple: one minute of normal warm play, up to
+
+35
+00:03:11,762 --> 00:03:19,000
+thirty seconds of still face, then immediate reunion.
+
+36
+00:03:19,000 --> 00:03:25,316
+If your baby cries, turns red, or if you feel uncomfortable, stop
+
+37
+00:03:25,316 --> 00:03:29,000
+right away. The reunion is not optional.
+
+38
+00:03:29,000 --> 00:03:37,182
+It shows that by four to five months, babies already expect social
+
+39
+00:03:37,182 --> 00:03:43,318
+partners to respond contingently. When that pattern breaks, they
+
+40
+00:03:43,318 --> 00:03:44,000
+notice.
+
+41
+00:03:44,000 --> 00:03:46,000
+Experiment three may be the most visually rewarding.
+
+42
+00:03:46,000 --> 00:03:53,308
+In the classic studies, babies learned that kicking made something
+
+43
+00:03:53,308 --> 00:04:02,808
+happen overhead. At home, the safest version uses a floor play gym and
+
+44
+00:04:02,808 --> 00:04:05,000
+full hands-on supervision.
+
+45
+00:04:05,000 --> 00:04:09,125
+First, watch two minutes of normal kicking with no connection. Then
+
+46
+00:04:09,125 --> 00:04:14,000
+add a loose connection so kicking moves the toy. Then remove it again.
+
+47
+00:04:14,000 --> 00:04:25,250
+The observation lives in the contrast between phases. Does kicking
+
+48
+00:04:25,250 --> 00:04:39,875
+become more deliberate when the toy responds? Do you see a burst after
+
+49
+00:04:39,875 --> 00:04:41,000
+disconnect?
+
+50
+00:04:41,000 --> 00:04:46,000
+That's contingency detection: noticing that when I do this, that
+
+51
+00:04:46,000 --> 00:04:52,000
+happens. It's remarkable on its own. You don't need to inflate it.
+
+52
+00:04:52,000 --> 00:04:57,000
+Experiment four is imitation, and here the careful version matters.
+
+53
+00:04:57,000 --> 00:05:01,136
+The flashy claim that newborns imitate faces has not held up well. The
+
+54
+00:05:01,136 --> 00:05:04,000
+stronger evidence comes a little later, with object actions.
+
+55
+00:05:04,000 --> 00:05:09,280
+Start with the easiest version: perform an unusual action with a
+
+56
+00:05:09,280 --> 00:05:15,040
+rattle three times, then hand it over and wait silently. A partial
+
+57
+00:05:15,040 --> 00:05:16,000
+copy counts.
+
+58
+00:05:16,000 --> 00:05:28,960
+For older babies, add a short delay: demonstrate, put the object away,
+
+59
+00:05:28,960 --> 00:05:41,920
+do something else for ten minutes, then bring it back with no
+
+60
+00:05:41,920 --> 00:05:43,000
+reminder.
+
+61
+00:05:43,000 --> 00:05:48,500
+What matters is not perfect copying. It's whether your baby retained
+
+62
+00:05:48,500 --> 00:05:52,000
+some representation of the action they saw.
+
+63
+00:05:52,000 --> 00:05:56,000
+The difference between a home experiment and random play is how you
+
+64
+00:05:56,000 --> 00:05:57,000
+write it down.
+
+65
+00:05:57,000 --> 00:06:08,870
+Record what you saw, not what you think it means. "Baby kicked more"
+
+66
+00:06:08,870 --> 00:06:17,087
+is an observation. "Baby understood cause and effect" is
+
+67
+00:06:17,087 --> 00:06:18,000
+interpretation.
+
+68
+00:06:18,000 --> 00:06:28,909
+Timing, temperament, and sheer luck are huge confounders. A single
+
+69
+00:06:28,909 --> 00:06:40,909
+trial is interesting. A pattern across different days is much more
+
+70
+00:06:40,909 --> 00:06:42,000
+informative.
+
+71
+00:06:42,000 --> 00:06:46,800
+What I love about these experiments is not that they prove something
+
+72
+00:06:46,800 --> 00:06:50,000
+grand. It's that they make early cognition visible.
+
+73
+00:06:50,000 --> 00:06:58,762
+Peekaboo lets you watch prediction. Still-face reveals social
+
+74
+00:06:58,762 --> 00:07:08,619
+expectation. Kick-to-move shows cause and effect. Imitation gives you
+
+75
+00:07:08,619 --> 00:07:13,000
+a glimpse of memory.
