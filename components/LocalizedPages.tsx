@@ -89,6 +89,11 @@ const timeline: {
   zh: string;
 }[] = [
   {
+    date: "2026-04-19",
+    en: 'Published "Measles, MMR, and Travel With Babies (U.S., April 2026)" — fast-follow guide on routine MMR timing, the 6–11 month travel dose, and post-exposure steps',
+    zh: "发布「麻疹、MMR 与带婴儿出行（美国，2026 年 4 月）」——常规 MMR 接种、6–11 个月旅行加种与暴露后处理的快速指南",
+  },
+  {
     date: "2026-04-09",
     en: 'Published "Classic Infant Psychology Experiments You Can Try at Home" — peekaboo protocols, still-face, contingency learning, and imitation suite for 4–6 month olds',
     zh: "发布「在家也能做的经典婴儿心理学实验」——躲猫猫、静止脸、踢腿联动与模仿套组，适合4–6个月宝宝",

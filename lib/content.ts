@@ -97,6 +97,26 @@ const _contentEntries = {
       },
     },
   },
+  "guides/measles-mmr-travel": {
+    date: "2026-04-19",
+    href: "/guides/measles-mmr-travel",
+    icon: "✈️",
+    giscusTerm: "/guides/measles-mmr-travel",
+    locales: {
+      en: {
+        tag: "Guide",
+        title: "Measles, MMR, and Travel With Babies (U.S., April 2026)",
+        description:
+          "Fast-follow guide for parents with infants under 12 months: routine MMR timing, the 6–11 month travel dose, and what to do before and after exposure.",
+      },
+      zh: {
+        tag: "指南",
+        title: "麻疹、MMR 与带婴儿出行（美国，2026 年 4 月）",
+        description:
+          "面向 12 月龄以下婴儿家庭的快速指南：常规 MMR 接种时间、6–11 个月旅行加种以及暴露前后的应对要点。",
+      },
+    },
+  },
   "her-notes/delivery": {
     date: "2026-03-21",
     href: "/her-notes/delivery",

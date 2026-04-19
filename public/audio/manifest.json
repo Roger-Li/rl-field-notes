@@ -78,5 +78,13 @@
   "guides--infant-experiments--zh.mp3": {
     "duration": 1010,
     "size": 16160427
+  },
+  "guides--measles-mmr-travel--en.mp3": {
+    "duration": 640,
+    "size": 10240173
+  },
+  "guides--measles-mmr-travel--zh.mp3": {
+    "duration": 637,
+    "size": 10193451
   }
 }
